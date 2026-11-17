@@ -1,0 +1,19 @@
+/* SchemeMode CodeMirror theme colors -- matching Processing Java IDE */
+
+/* FUNCTION1: entry points + constructors -- bold dark blue */
+.cm-schememode-f1 { color: #5b6aff !important; font-weight: bold; }
+
+/* FUNCTION2: API functions -- light blue */
+.cm-schememode-f2 { color: #5ba4ff !important; }
+
+/* KEYWORD3: control flow -- green */
+.cm-schememode-k3 { color: #4ec9a0 !important; }
+
+/* KEYWORD4: constants and built-in vars -- pink/magenta */
+.cm-schememode-k4 { color: #d46fd4 !important; }
+
+/* KEYWORD5: types -- orange */
+.cm-schememode-k5 { color: #e8a262 !important; }
+
+/* KEYWORD6: language keywords -- teal */
+.cm-schememode-k6 { color: #4ec9b0 !important; }

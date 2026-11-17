@@ -1,51 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tutorials | Processing Scheme Mode</title>
-<meta name="author" content="llamasjc">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Space Grotesk', sans-serif; color: #222; background: #fff; }
-  .layout { display: flex; min-height: calc(100vh - 50px); }
-  .sidebar-outer { width: 220px; flex-shrink: 0; border-right: 1px solid #eee; padding: 12px 8px; background: #fff; }
-  .page-body { flex: 1; min-width: 0; padding: 2.5rem 3rem; max-width: 900px; }
-  h1 { font-size: 2rem; font-weight: 600; margin-bottom: 1rem; color: #8a4fd1; }
-  h2 { font-size: 1.25rem; font-weight: 600; margin: 2rem 0 0.75rem; color: #5f3394; }
-  p { line-height: 1.8; color: #444; margin-bottom: 1rem; }
-  a { color: #5f3394; }
-  .notice { border-left: 4px solid #8a4fd1; background: #fafafa; padding: 1rem 1.25rem; border-radius: 4px; margin: 1.5rem 0; }
-  .btn { display: inline-block; background: #8a4fd1; color: #fff; padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: 600; margin-right: 0.5rem; }
-  .btn.ghost { background: none; color: #5f3394; border: 1px solid #8a4fd1; }
-  .mode-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; margin-top: 1rem; }
-  .mode-card { display: block; border: 1px solid #eee; border-top: 4px solid var(--mc); border-radius: 8px; padding: 1rem; text-decoration: none; color: #222; }
-  .mode-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
-  .mode-card strong { display: block; color: var(--mc); margin-bottom: 0.25rem; }
-  .mode-card span { font-size: 0.85rem; color: #777; }
-  footer { border-top: 1px solid #eee; padding: 1.5rem 3rem; font-size: 0.8rem; color: #999; }
-  @media (max-width: 800px) {
-    .sidebar-outer { position: fixed; top: 0; left: -240px; height: 100%; z-index: 50; transition: left 0.2s; box-shadow: 2px 0 12px rgba(0,0,0,0.08); }
-    .sidebar-outer.open { left: 0; }
-    .page-body { padding: 1.5rem 1rem; }
-    footer { padding: 1.5rem 1rem; }
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorials - Scheme Mode for Processing</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #111; background: #fff; }
+    a { color: #111; text-decoration: none; }
+    nav { border-bottom: 1px solid #e0e0e0; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; background: #fff; z-index: 100; }
+    .layout { display: flex; min-height: calc(100vh - 60px); }
+    .sidebar-outer { width: 220px; min-width: 220px; border-right: 1px solid #e0e0e0; display: flex; flex-direction: column; position: sticky; top: 60px; height: calc(100vh - 60px); overflow-y: auto; }
+    #site-sidebar { padding: 1.5rem 1.5rem 1rem; border-bottom: 1px solid #e0e0e0; display: flex; flex-direction: column; }
+    #site-sidebar a { font-size: 14px; color: #555; padding: 0.4rem 0; display: block; }
+    #site-sidebar a:hover { color: #111; }
+    #site-sidebar a.active { color: #111; font-weight: 500; }
+    .content { flex: 1; padding: 4rem; max-width: 860px; }
+    .content h1 { font-size: 2rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 0.5rem;  color: #8a4fd1; }
+    .content .subtitle { color: #666; font-size: 0.95rem; margin-bottom: 3rem; line-height: 1.7; }
+    .content h2 { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.4rem;  color: #5f3394; }
+    .content .section-desc { font-size: 14px; color: #666; line-height: 1.7; margin-bottom: 1.25rem; }
+    .content p { color: #444; line-height: 1.8; margin-bottom: 1rem; font-size: 0.95rem; }
+
+    .path { border: 1px solid #e0e0e0; border-radius: 12px; padding: 1.75rem 2rem; margin-bottom: 2.5rem; }
+    .path h2 { margin-bottom: 0.5rem; }
+
+    .tutorial-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      border: 1px solid #ebebeb;
+      border-radius: 8px;
+      margin-top: 0.75rem;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .tutorial-card:hover { border-color: #bbb; background: #fafafa; }
+    .tutorial-card .tc-body { flex: 1; }
+    .tutorial-card .tc-title { font-size: 14px; font-weight: 600; margin-bottom: 0.2rem; }
+    .tutorial-card .tc-desc { font-size: 13px; color: #777; line-height: 1.5; }
+    .tutorial-card .tc-arrow { color: #ccc; font-size: 18px; flex-shrink: 0; }
+
+    .divider { border: none; border-top: 1px solid #e0e0e0; margin: 2.5rem 0; }
+
+    .help-box { background: #f7f7f7; border-radius: 10px; padding: 1.5rem 1.75rem; margin-top: 1rem; }
+    .help-box p { font-size: 14px; color: #555; margin-bottom: 0; line-height: 1.8; }
+    .help-box a { border-bottom: 1px solid #ccc; }
+    .help-box a:hover { border-bottom-color: #111; }
+
+    footer { border-top: 1px solid #e0e0e0; padding: 2rem; text-align: center; font-size: 13px; color: #888; }
+    @media (max-width: 768px) {
+      .sidebar-outer { position: fixed; top: 60px; left: -240px; width: 240px; height: calc(100vh - 60px); background: #fff; z-index: 200; transition: left 0.25s ease; box-shadow: 2px 0 12px rgba(0,0,0,0.08); }
+      .sidebar-outer.open { left: 0; }
+      .content { padding: 2rem 1.25rem; }
+    }
+  </style>
 </head>
 <body>
 <nav id="site-nav"></nav>
 <div class="layout">
-  <div class="sidebar-outer"><div id="site-sidebar"></div></div>
-  <div class="page-body">
+  <div class="sidebar-outer">
+    <div id="site-sidebar"></div>
+  </div>
+  <div class="content">
     <h1>Tutorials</h1>
-    <p>Tutorials written for Scheme are on the way. Until then, the concepts in the C++ Mode tutorials carry over almost one to one, since every mode uses the same Processing API on top of libprocessing.</p>
-    <p><a class="btn" href="https://processing-cpp.github.io/tutorials/">Read the C++ tutorials</a></p>
+    <p class="subtitle">Scheme Mode comes in two forms. One is a plugin for the Processing IDE, which lets you write sketches inside Processing itself just like you normally would. The other is a standalone header library you can drop into any Scheme project and use from your own editor and build system. Pick the section that matches what you're trying to do.</p>
 
+    <div class="path">
+      <h2>Using Scheme Mode inside the Processing IDE</h2>
+      <p class="section-desc">This is for people who want the Processing experience they're already familiar with, writing <code style="font-family:monospace;background:#f4f4f4;padding:1px 5px;border-radius:3px;">setup()</code> and <code style="font-family:monospace;background:#f4f4f4;padding:1px 5px;border-radius:3px;">draw()</code> inside the Processing app, hitting Run, and seeing a window open. Scheme Mode compiles your sketch to native Scheme behind the scenes, but the workflow is identical to any other Processing mode.</p>
+
+      <a class="tutorial-card" href="/gettingstarted">
+        <div class="tc-body">
+          <div class="tc-title">Getting Started with Scheme Mode</div>
+          <div class="tc-desc">How to install the Scheme Mode plugin and write your first sketch in the Processing IDE.</div>
+        </div>
+        <div class="tc-arrow">›</div>
+      </a>
+
+      <a class="tutorial-card" href="/downloads#cpp-mode">
+        <div class="tc-body">
+          <div class="tc-title">Installing the plugin</div>
+          <div class="tc-desc">How to install Scheme Mode through the Processing Contribution Manager, with screenshots.</div>
+        </div>
+        <div class="tc-arrow">›</div>
+      </a>
+    </div>
+
+    <div class="path">
+      <h2>Using the header library in your own Scheme project</h2>
+      <p class="section-desc">This is for people who want to use the Processing-style API directly in a Scheme project, without opening the Processing IDE at all. You write <code style="font-family:monospace;background:#f4f4f4;padding:1px 5px;border-radius:3px;">#include "Processing.h"</code> at the top of your file and build with your own compiler and tools. Two setup options are available depending on whether you use CMake or not.</p>
+
+      <a class="tutorial-card" href="/downloads/plugandplay-setup.html">
+        <div class="tc-body">
+          <div class="tc-title">Plug and Play Setup</div>
+          <div class="tc-desc">The simplest path. Unzip one folder next to your source file and run a script to build. No CMake, no configuration. Good if you're just starting out or want something running quickly.</div>
+        </div>
+        <div class="tc-arrow">›</div>
+      </a>
+
+      <a class="tutorial-card" href="/downloads/cmake-setup.html">
+        <div class="tc-body">
+          <div class="tc-title">CMake Setup</div>
+          <div class="tc-desc">Adds the engine to your project as a proper CMake library target. Pick this if your project already uses CMake, or if you want a setup that scales as your project grows.</div>
+        </div>
+        <div class="tc-arrow">›</div>
+      </a>
+
+    </div>
+
+    <div class="help-box">
+      <p>Still not sure which one fits? If you know Processing and just want to keep working the same way, go with <a href="/gettingstarted">Getting Started</a>. If you want to use the engine in a Scheme project you're writing yourself, <a href="/downloads/plugandplay-setup.html">Plug and Play</a> is the quickest way in.</p>
+    </div>
   </div>
 </div>
-<footer>Contact: <a href="mailto:pep84c@gmail.com">pep84c@gmail.com</a></footer>
+<footer><p>Scheme Mode for Processing</p><p class="footer-contact"><a href="mailto:jose@llamasj.com">jose@llamasj.com</a></p></footer>
 <script src="../assets/nav.js"></script>
 </body>
 </html>

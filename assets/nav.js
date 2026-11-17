@@ -284,3 +284,19 @@
     } catch(e) {}
   })();
 })();
+
+/* dev-banner */
+(function () {
+  function add() {
+    if (document.getElementById('dev-banner')) return;
+    var nav = document.getElementById('site-nav');
+    var b = document.createElement('div');
+    b.id = 'dev-banner';
+    b.textContent = 'Under development';
+    b.style.cssText = 'background:#8a4fd1;color:#fff;text-align:center;font-family:"Space Grotesk",sans-serif;' +
+      'font-weight:700;font-size:clamp(1.6rem,5vw,3rem);letter-spacing:.02em;padding:.6em 1rem;line-height:1.1;';
+    if (nav && nav.parentNode) nav.parentNode.insertBefore(b, nav.nextSibling);
+    else document.body.insertBefore(b, document.body.firstChild);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', add); else add();
+})();

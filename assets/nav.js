@@ -73,6 +73,7 @@
       ${link('tutorials', 'Tutorials')}
       ${link('reference', 'Reference')}
       ${link('examples', 'Examples')}
+      ${link('editor', 'Editor')}
       ${link('about', 'About')}
       <a href="https://discord.gg/Un3DFmrUje" target="_blank" style="color:#5865F2;font-weight:600;">Discord</a>
     `;

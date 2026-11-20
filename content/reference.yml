@@ -1,0 +1,5681 @@
+sidebar:
+- category: Data
+  subcats:
+  - name: Composite
+    slugs:
+    - BufferedReader_class
+    - HashMap_class
+    - PFont_class
+    - PGraphics_class
+    - PImage_class
+    - PShape_class
+    - PVector
+    - PrintWriter_class
+    - TableRow_class
+    - Table_class
+    - XML_class
+  - name: Array Functions
+    slugs:
+    - append
+    - arrayCopy
+    - concat
+    - expand
+    - reverse_arr
+    - shorten
+    - sort_arr
+    - splice
+    - subset
+  - name: Conversion
+    slugs:
+    - binary
+    - hex
+    - str
+    - unbinary
+    - unhex
+  - name: Primitive
+    slugs:
+    - color_type
+  - name: String Functions
+    slugs:
+    - join
+    - matchAll
+    - match
+    - nf
+    - split
+    - splitTokens
+    - trim
+- category: Input
+  subcats:
+  - name: Files
+    slugs:
+    - createInput
+    - createReader
+    - launch
+    - loadBytes
+    - loadJSONArray
+    - loadJSONObject
+    - loadStrings
+    - loadTable
+    - loadXML
+    - parseJSONArray
+    - parseJSONObject
+    - parseXML
+    - selectFolder
+    - selectInput
+  - name: Time & Date
+    slugs:
+    - day
+    - hour
+    - millis
+    - minute
+    - month
+    - second
+    - year
+  - name: Keyboard
+    slugs:
+    - key
+    - keyPressed_var
+    - keyCode
+    - keyReleased
+    - keyPressed_fn
+    - keyTyped
+  - name: Mouse
+    slugs:
+    - mouseButton
+    - mouseClicked
+    - mouseDragged
+    - mouseMoved
+    - mousePressed_var
+    - mousePressed_fn
+    - mouseWheel
+    - mouseReleased
+    - mouseX
+    - mouseY
+    - pmouseX
+    - pmouseY
+    - mouseDX
+    - mouseDY
+- category: Constants
+  subcats:
+  - name: null
+    slugs:
+    - HALF_PI
+    - PI
+    - QUARTER_PI
+    - TAU
+    - TWO_PI
+- category: Typography
+  subcats:
+  - name: Loading & Displaying
+    slugs:
+    - PFont_class
+    - createFont
+    - loadFont
+    - textFont
+    - text
+  - name: Attributes
+    slugs:
+    - textAlign
+    - textLeading
+    - textMode
+    - textSize
+    - textWidth
+  - name: Metrics
+    slugs:
+    - textAscent
+    - textDescent
+- category: Rendering
+  subcats:
+  - name: null
+    slugs:
+    - PGraphics_class
+    - blendMode
+    - clip
+    - createGraphics
+    - hint
+    - noClip
+  - name: Shaders
+    slugs:
+    - loadShader
+    - resetShader
+    - shader_fn
+- category: Image
+  subcats:
+  - name: null
+    slugs:
+    - PImage_class
+    - createImage
+  - name: Pixels
+    slugs:
+    - blend_fn
+    - copy_fn
+    - filter
+    - get_pixel
+    - loadPixels
+    - mask_fn
+    - pixels_arr
+    - set_pixel
+    - updatePixels
+  - name: Loading & Displaying
+    slugs:
+    - image
+    - imageMode
+    - loadImage
+    - noTint
+    - tint
+  - name: Textures
+    slugs:
+    - texture
+    - textureMode
+    - textureWrap
+- category: Shape
+  subcats:
+  - name: null
+    slugs:
+    - PShape_class
+    - createShape
+    - loadShape
+  - name: 2D Primitives
+    slugs:
+    - arc
+    - circle
+    - ellipse
+    - line
+    - point
+    - quad
+    - rect
+    - square
+    - triangle
+  - name: Vertex
+    slugs:
+    - beginContour
+    - beginShape
+    - bezierVertex
+    - curveVertex
+    - endContour
+    - endShape
+    - quadraticVertex
+    - vertex
+  - name: Curves
+    slugs:
+    - bezierDetail
+    - bezierPoint
+    - bezierTangent
+    - bezier
+    - curveDetail
+    - curvePoint
+    - curveTangent
+    - curveTightness
+    - curve
+  - name: 3D Primitives
+    slugs:
+    - box
+    - sphere
+    - sphereDetail
+  - name: Attributes
+    slugs:
+    - ellipseMode
+    - rectMode
+    - strokeCap
+    - strokeJoin
+    - strokeWeight
+  - name: Loading & Displaying
+    slugs:
+    - shape
+    - shapeMode
+- category: Math
+  subcats:
+  - name: null
+    slugs:
+    - PVector
+  - name: Calculation
+    slugs:
+    - abs
+    - ceil
+    - constrain
+    - dist
+    - exp
+    - floor
+    - lerp
+    - log
+    - mag
+    - map
+    - max
+    - min
+    - norm
+    - pow
+    - round
+    - sq
+    - sqrt
+  - name: Trigonometry
+    slugs:
+    - acos
+    - asin
+    - atan2
+    - atan
+    - cos
+    - degrees
+    - radians
+    - sin
+    - tan
+  - name: Random
+    slugs:
+    - noise
+    - noiseDetail
+    - noiseSeed
+    - randomGaussian
+    - randomSeed
+    - random
+- category: Output
+  subcats:
+  - name: Files
+    slugs:
+    - PrintWriter_class
+    - createOutput
+    - createWriter
+    - saveBytes
+    - saveJSONArray
+    - saveJSONObject
+    - saveStrings
+    - saveTable
+    - saveXML
+    - selectOutput
+  - name: Text Area
+    slugs:
+    - print
+    - printArray
+    - println
+  - name: Image
+    slugs:
+    - save
+    - saveFrame
+- category: Color
+  subcats:
+  - name: Creating & Reading
+    slugs:
+    - alpha
+    - blue
+    - brightness
+    - color_fn
+    - green
+    - hue
+    - lerpColor
+    - red
+    - saturation
+  - name: Setting
+    slugs:
+    - background
+    - clear
+    - colorMode
+    - fill
+    - noFill
+    - noStroke
+    - stroke
+- category: Lights Camera
+  subcats:
+  - name: Lights
+    slugs:
+    - ambientLight
+    - directionalLight
+    - lightFalloff
+    - lightSpecular
+    - lights
+    - noLights
+    - normal
+    - pointLight
+    - spotLight
+  - name: Material Properties
+    slugs:
+    - ambient
+    - emissive
+    - shininess
+    - specular
+  - name: Camera
+    slugs:
+    - beginCamera
+    - camera
+    - endCamera
+    - frustum
+    - ortho
+    - perspective
+    - printCamera
+    - printProjection
+  - name: Coordinates
+    slugs:
+    - modelX
+    - modelY
+    - modelZ
+    - screenX
+    - screenY
+    - screenZ
+- category: Transform
+  subcats:
+  - name: null
+    slugs:
+    - applyMatrix
+    - popMatrix
+    - printMatrix
+    - pushMatrix
+    - resetMatrix
+    - rotateX
+    - rotateY
+    - rotateZ
+    - rotate
+    - scale
+    - shearX
+    - shearY
+    - translate
+- category: Structure
+  subcats:
+  - name: null
+    slugs:
+    - draw
+    - exit
+    - loop
+    - noLoop
+    - pop
+    - popMatrix
+    - popStyle
+    - push
+    - pushMatrix
+    - pushStyle
+    - redraw
+    - setup
+    - thread
+    - delay
+- category: Environment
+  subcats:
+  - name: null
+    slugs:
+    - captureMouse
+    - cursor
+    - deltaTime
+    - displayHeight
+    - displayWidth
+    - focused
+    - frameCount
+    - frameRate_var
+    - frameRate_fn
+    - fullScreen
+    - height
+    - hint
+    - noCursor
+    - noSmooth
+    - pixelDensity
+    - pixelHeight
+    - pixelWidth
+    - releaseMouse
+    - size
+    - smooth
+    - width
+    - windowMoved
+    - windowResizable
+    - windowResize
+    - windowResized
+    - windowTitle
+entries:
+- slug: BufferedReader_class
+  name: BufferedReader
+  cat_tag: Data / Composite
+  description: 'Reads text from a file line by line. Create with create-reader. Close when done. Methods take the object first: v.add(w) is (add v w).'
+  related:
+  - createReader
+  - loadStrings
+  params: []
+  returns: BufferedReader
+  uth: []
+  syntax: (define in (create-reader "file.txt"))
+  methods:
+  - sig: (read-line in)
+    desc: Reads and returns the next line as string. Returns empty string at EOF.
+  - sig: (close in)
+    desc: Closes the file
+- slug: HashMap_class
+  name: HashMap
+  cat_tag: Data / Composite
+  description: 'A templated key-value map. In Scheme Mode, map and unordered_map from the standard library are often more idiomatic, but HashMap is available for Processing Java compatibility. Methods take the object first: v.add(w) is (add v w).'
+  related: []
+  params: []
+  returns: hash table
+  uth: []
+  syntax: '(define m (make-hash-table))
+
+    (hash-table-set! m "key" 1)
+
+    (hash-table-ref m "key")'
+  methods:
+  - sig: (put m k v)
+    desc: Inserts or updates a key-value pair
+  - sig: (get m k)
+    desc: Returns reference to value for key
+  - sig: (remove m k)
+    desc: Removes a key-value pair
+  - sig: (size m)
+    desc: Returns number of entries
+  - sig: (clear m)
+    desc: Removes all entries
+  - sig: (values m)
+    desc: Returns a vector of all values
+- slug: PFont_class
+  name: PFont
+  cat_tag: Data / Composite
+  description: 'Datatype for storing fonts. Load with load-font or create with create-font. Methods take the object first: v.add(w) is (add v w).'
+  related:
+  - loadFont
+  - createFont
+  - textFont
+  params: []
+  returns: font
+  uth: []
+  syntax: (define f (create-font "name" size))
+  methods: []
+- slug: PGraphics_class
+  name: PGraphics
+  cat_tag: Data / Composite
+  description: 'An off-screen graphics buffer. Create with create-graphics. Draw into it with begin-draw/end-draw, then display with image(). Methods take the object first: v.add(w) is (add v w).'
+  related:
+  - createGraphics
+  - image
+  params: []
+  returns: graphics
+  uth: []
+  syntax: (define pg (create-graphics w h))
+  methods:
+  - sig: (begin-draw pg)
+    desc: Start drawing to the buffer
+  - sig: (end-draw pg)
+    desc: Stop drawing to the buffer
+  - sig: (background pg r g b)
+    desc: Clear the buffer
+  - sig: (fill pg r g b)
+    desc: Set fill color
+  - sig: (stroke pg r g b)
+    desc: Set stroke color
+  - sig: (ellipse pg x y w h)
+    desc: Draw ellipse
+  - sig: (rect pg x y w h)
+    desc: Draw rectangle
+- slug: PImage_class
+  name: PImage
+  cat_tag: Data / Composite
+  description: 'Datatype for storing and manipulating images. Load with load-image or create with create-image. Methods take the object first: v.add(w) is (add v w).'
+  related:
+  - loadImage
+  - createImage
+  - image
+  params: []
+  returns: image
+  uth: []
+  syntax: (define img (load-image "file.png"))
+  methods:
+  - sig: (load-pixels img)
+    desc: Load pixel data into pixels[]
+  - sig: (update-pixels img)
+    desc: Update image from pixels[]
+  - sig: (get img x y)
+    desc: Get pixel color at position
+  - sig: (set img x y c)
+    desc: Set pixel color at position
+  - sig: (resize img w h)
+    desc: Resize the image
+  - sig: (filter img mode)
+    desc: Apply an image filter
+  - sig: (mask img m)
+    desc: Apply an alpha mask
+- slug: PShape_class
+  name: PShape
+  cat_tag: Data / Composite
+  description: 'Datatype for storing shapes. Load with load-shape or build programmatically with create-shape. Methods take the object first: v.add(w) is (add v w).'
+  related:
+  - loadShape
+  - createShape
+  - shape
+  params: []
+  returns: shape
+  uth: []
+  syntax: (define s (load-shape "file.svg"))
+  methods:
+  - sig: (get-child s i)
+    desc: Get child shape by index
+  - sig: (get-child s name)
+    desc: Get child shape by name/id
+  - sig: (get-child-count s)
+    desc: Number of children
+  - sig: (get-vertex s i)
+    desc: Get vertex by index as PVector
+  - sig: (get-vertex-count s)
+    desc: Number of vertices
+  - sig: (set-vertex s i x y)
+    desc: Set vertex position
+  - sig: (disable-style s)
+    desc: Ignore the shape's own fill/stroke
+  - sig: (enable-style s)
+    desc: Use the shape's own fill/stroke
+  - sig: (set-fill s r g b)
+    desc: Set fill color
+  - sig: (set-stroke s r g b)
+    desc: Set stroke color
+- slug: PVector
+  name: PVector
+  cat_tag: Data / Composite
+  description: 'A class to describe a two or three dimensional vector. Commonly used to represent position, velocity, or direction. Methods take the object first: v.add(w) is (add v w).'
+  related: []
+  params: []
+  returns: vector
+  uth: []
+  syntax: (define v (PVector x y))
+  methods:
+  - sig: (mag v)
+    desc: Magnitude (length) of the list
+  - sig: (mag-sq v)
+    desc: Magnitude squared
+  - sig: (add v v2)
+    desc: Add another vector
+  - sig: (sub v v2)
+    desc: Subtract another vector
+  - sig: (mult v s)
+    desc: Multiply by scalar
+  - sig: (div v s)
+    desc: Divide by scalar
+  - sig: (normalize v)
+    desc: Normalize to unit length
+  - sig: (limit v max)
+    desc: Limit the magnitude
+  - sig: (set-mag v m)
+    desc: Set the magnitude
+  - sig: (dot v v2)
+    desc: Dot product
+  - sig: (cross v v2)
+    desc: Cross product
+  - sig: (dist v v2)
+    desc: Distance to another vector
+  - sig: (heading v)
+    desc: Angle the list makes with positive x-axis
+  - sig: (angle-between v v2)
+    desc: Angle between two vectors
+  - sig: (lerp v v2 t)
+    desc: Interpolate towards another vector
+  - sig: (rotate v angle)
+    desc: Rotate by an angle (2D)
+  - sig: (copy v)
+    desc: Return a copy
+  - sig: (to-string v)
+    desc: String representation
+- slug: PrintWriter_class
+  name: PrintWriter
+  cat_tag: Data / Composite
+  description: 'Writes text to a file. Create with create-writer. Always call close() or flush() when done. Methods take the object first: v.add(w) is (add v w).'
+  related:
+  - createWriter
+  - saveStrings
+  params: []
+  returns: PrintWriter
+  uth: []
+  syntax: (define out (create-writer "file.txt"))
+  methods:
+  - sig: (print out v)
+    desc: Writes a value without a newline
+  - sig: (println out v)
+    desc: Writes a value followed by a newline
+  - sig: (println out)
+    desc: Writes a blank line
+  - sig: (flush out)
+    desc: Flushes the buffer to disk
+  - sig: (close out)
+    desc: Closes the file
+- slug: TableRow_class
+  name: TableRow
+  cat_tag: Data / Composite
+  description: 'Represents a single row in a Table. Access values by column index or name. Methods take the object first: v.add(w) is (add v w).'
+  related:
+  - Table_class
+  - loadTable
+  params: []
+  returns: table row
+  uth: []
+  syntax: (define row (get-row t 0))
+  methods:
+  - sig: (get-string row i)
+    desc: Gets value at column index as string
+  - sig: (get-string row col)
+    desc: Gets value by column name as string
+  - sig: (get-int row i)
+    desc: Gets value at column index as int
+  - sig: (get-float row i)
+    desc: Gets value at column index as float
+  - sig: (set-string row i v)
+    desc: Sets value at column index
+  - sig: (set-int row i v)
+    desc: Sets value as int
+  - sig: (set-float row i v)
+    desc: Sets value as float
+- slug: Table_class
+  name: Table
+  cat_tag: Data / Composite
+  description: 'Stores data in rows and columns like a spreadsheet. Load with load-table. Column names are set by the header row. Methods take the object first: v.add(w) is (add v w).'
+  related:
+  - loadTable
+  - saveTable
+  - TableRow_class
+  params: []
+  returns: table
+  uth: []
+  syntax: (define t (load-table "data.csv" "header"))
+  methods:
+  - sig: (add-column t name)
+    desc: Adds a column
+  - sig: (add-row t)
+    desc: Adds a new row, returns reference
+  - sig: (get-row-count t)
+    desc: Returns number of rows
+  - sig: (get-column-count t)
+    desc: Returns number of columns
+  - sig: (get-string t row col)
+    desc: Gets a cell value as string
+  - sig: (get-string t row col)
+    desc: Gets a cell value by column name
+  - sig: (get-int t row col)
+    desc: Gets a cell value as int
+  - sig: (get-float t row col)
+    desc: Gets a cell value as float
+  - sig: (set-string t row col v)
+    desc: Sets a cell value
+  - sig: (set-int t row col v)
+    desc: Sets a cell value as int
+  - sig: (set-float t row col v)
+    desc: Sets a cell value as float
+  - sig: (remove-row t i)
+    desc: Removes a row
+- slug: XML_class
+  name: XML
+  cat_tag: Data / Composite
+  description: 'Represents an XML element. Load with load-xml or parse-xml. Access children and attributes by name. Methods take the object first: v.add(w) is (add v w).'
+  related:
+  - loadXML
+  - parseXML
+  - saveXML
+  params: []
+  returns: xml
+  uth: []
+  syntax: (define x (load-xml "data.xml"))
+  methods:
+  - sig: (get-name x)
+    desc: Returns the name of the element
+  - sig: (get-content x)
+    desc: Returns the text content of the element
+  - sig: (set-content x c)
+    desc: Sets the text content
+  - sig: (add-child x name)
+    desc: Adds a child element
+  - sig: (get-child x i)
+    desc: Gets child by index
+  - sig: (get-child x name)
+    desc: Gets child by tag name
+  - sig: (get-child-count x)
+    desc: Returns number of children
+  - sig: (get-children x name)
+    desc: Returns all children with given tag name
+- slug: append
+  name: (append)
+  cat_tag: Data / Array Functions
+  description: Expands a list by one element and adds value to the end.
+  related:
+  - concat
+  - expand
+  - shorten
+  params:
+  - name: arr
+    type: list
+    desc: the list to expand
+  - name: val
+    type: any
+    desc: the value to add
+  returns: list
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def append(*args): return [x for lst in args for x in (lst if isinstance(lst, _SEQ) else [lst])]'
+  syntax: (append arr val)
+- slug: arrayCopy
+  name: (array-copy)
+  cat_tag: Data / Array Functions
+  description: Copies the contents of one vector into another.
+  related:
+  - concat
+  - subset
+  params:
+  - name: src
+    type: list
+    desc: source vector
+  - name: dst
+    type: list
+    desc: destination vector
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def array_copy(src, *a):\n    if len(a) == 1: dst = a[0]; sp = 0; dp = 0; n = len(src)\n    elif len(a) == 2: dst, n = a; sp = 0; dp = 0\n    else: sp, dst, dp, n = a[0], a[1], a[2], a[3]\n    for i in range(int(n)): dst[int(dp) + i] = src[int(sp) + i]"
+  syntax: (array-copy src dst)
+- slug: concat
+  name: (concat)
+  cat_tag: Data / Array Functions
+  description: Concatenates two lists.
+  related:
+  - append
+  - splice
+  params:
+  - name: a
+    type: list
+    desc: first vector
+  - name: b
+    type: list
+    desc: second vector
+  returns: list
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def concat(a, b): return list(a) + list(b)'
+  syntax: (concat a b)
+- slug: expand
+  name: (expand)
+  cat_tag: Data / Array Functions
+  description: Increases the size of a list. With no second argument, doubles the size.
+  related:
+  - append
+  - shorten
+  params:
+  - name: arr
+    type: list
+    desc: the list to expand
+  - name: n
+    type: integer
+    desc: new size (optional, default doubles)
+  returns: list
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def expand(lst, n=None):\n    lst = list(lst)\n    n = int(n) if n is not None else max(1, len(lst) * 2)\n    if all(isinstance(v, (int, float)) and not isinstance(v, bool) for v in lst): pad = 0\n    elif lst and all(isinstance(v, str) for v in lst): pad = ''\n    else: pad = False\n    return lst + [pad] * max(0, n - len(lst))"
+  syntax: '(expand arr)
+
+    (expand arr n)'
+- slug: reverse_arr
+  name: (reverse)
+  cat_tag: Data / Array Functions
+  description: Reverses the order of a list.
+  related:
+  - sort_arr
+  params:
+  - name: arr
+    type: list
+    desc: the list to reverse
+  returns: list
+  uth: []
+  syntax: (reverse arr)
+- slug: shorten
+  name: (shorten)
+  cat_tag: Data / Array Functions
+  description: Decreases a list by one element. Removes the last element.
+  related:
+  - append
+  - expand
+  params:
+  - name: arr
+    type: list
+    desc: the list to shorten
+  returns: list
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def shorten(lst): return list(lst)[:-1]'
+  syntax: (shorten arr)
+- slug: sort_arr
+  name: (sort)
+  cat_tag: Data / Array Functions
+  description: Sorts a list in ascending order.
+  related:
+  - reverse_arr
+  params:
+  - name: arr
+    type: list
+    desc: the list to sort
+  returns: list
+  uth: []
+  syntax: (sort arr)
+- slug: splice
+  name: (splice)
+  cat_tag: Data / Array Functions
+  description: Inserts a value or vector of values into an existing vector at the given index.
+  related:
+  - concat
+  - append
+  params:
+  - name: arr
+    type: list
+    desc: the source vector
+  - name: val
+    type: any
+    desc: value to insert
+  - name: i
+    type: integer
+    desc: position to insert at
+  returns: list
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def splice(lst, value, index):\n    l = list(lst); i = int(index)\n    vals = list(value) if isinstance(value, _SEQ) and not isinstance(value, str) else [value]\n    return l[:i] + vals + l[i:]"
+  syntax: (splice arr val i)
+- slug: subset
+  name: (subset)
+  cat_tag: Data / Array Functions
+  description: Extracts an array of elements from an existing vector.
+  related:
+  - splice
+  - append
+  params:
+  - name: arr
+    type: list
+    desc: the source vector
+  - name: start
+    type: integer
+    desc: starting index
+  - name: count
+    type: integer
+    desc: number of elements (optional)
+  returns: list
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def subset(a, start, count=None):\n    lst = list(a); start = int(start)\n    return lst[start:] if count is None else lst[start:start + int(count)]"
+  syntax: '(subset arr start)
+
+    (subset arr start count)'
+- slug: binary
+  name: (binary)
+  cat_tag: Data / Conversion
+  description: Converts an integer to a binary string representation (32 characters).
+  related:
+  - unbinary
+  - hex
+  params:
+  - name: v
+    type: integer
+    desc: value to convert
+  returns: string
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def binary(v, digits=None):\n    s = format(v, 'b')\n    return s.rjust(digits, '0')[-digits:] if digits else s"
+  syntax: (binary v)
+- slug: hex
+  name: (hex)
+  cat_tag: Data / Conversion
+  description: Converts an integer to a hexadecimal string.
+  related:
+  - unhex
+  - binary
+  params:
+  - name: v
+    type: integer
+    desc: value to convert
+  - name: digits
+    type: integer
+    desc: number of digits (optional)
+  returns: string
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def hex(v, digits=None):\n    s = format(v & 0xFFFFFFFF if v < 0 else v, 'X')\n    return s.rjust(digits, '0')[-digits:] if digits else s.rjust(8, '0') if isinstance(v, int) and v > 0xFFFF else s"
+  syntax: '(hex v)
+
+    (hex v digits)'
+- slug: str
+  name: (str)
+  cat_tag: Data / Conversion
+  description: Converts an int, float, bool, or char to a string.
+  related:
+  - trim
+  - split
+  - join
+  params:
+  - name: v
+    type: any
+    desc: value to convert
+  returns: string
+  uth: []
+  syntax: (str v)
+- slug: unbinary
+  name: (unbinary)
+  cat_tag: Data / Conversion
+  description: Converts a binary string to an integer.
+  related:
+  - binary
+  params:
+  - name: s
+    type: string
+    desc: binary string
+  returns: integer
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def unbinary(s): return int(s, 2)'
+  syntax: (unbinary s)
+- slug: unhex
+  name: (unhex)
+  cat_tag: Data / Conversion
+  description: Converts a hexadecimal string to an integer.
+  related:
+  - hex
+  params:
+  - name: s
+    type: string
+    desc: hex string
+  returns: integer
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def unhex(s): return int(s, 16)'
+  syntax: (unhex s)
+- slug: color_type
+  name: color
+  cat_tag: Data / Primitive
+  description: Datatype for storing color values. Internally a 32-bit packed ARGB integer. Created with the color() function. Compatible with unsigned int.
+  related:
+  - color_fn
+  - fill
+  - stroke
+  params: []
+  returns: color
+  uth: []
+  syntax: color
+- slug: join
+  name: (join)
+  cat_tag: Data / String Functions
+  description: Combines a vector of strings into one string using a separator.
+  related:
+  - split
+  - splitTokens
+  params:
+  - name: v
+    type: list
+    desc: the strings to join
+  - name: sep
+    type: string
+    desc: separator string
+  returns: string
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def join(lst, sep): return sep.join(_txt(x) for x in lst)'
+  syntax: (join v sep)
+- slug: matchAll
+  name: (match-all)
+  cat_tag: Data / String Functions
+  description: Uses a regular expression to find all matches in a string.
+  related:
+  - match
+  params:
+  - name: s
+    type: string
+    desc: the string to search
+  - name: pattern
+    type: string
+    desc: regular expression pattern
+  returns: list
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def match_all(s, pattern):\n    ms = list(_re.finditer(pattern, s))\n    return False if not ms else [[m.group(0)] + list(m.groups()) for m in ms]"
+  syntax: (match-all s pattern)
+- slug: match
+  name: (match)
+  cat_tag: Data / String Functions
+  description: Uses a regular expression to match a string. Returns a vector of matches.
+  related:
+  - matchAll
+  params:
+  - name: s
+    type: string
+    desc: the string to search
+  - name: pattern
+    type: string
+    desc: regular expression pattern
+  returns: list
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def match(s, pattern):\n    m = _re.search(pattern, s)\n    return False if m is None else [m.group(0)] + list(m.groups())"
+  syntax: (match s pattern)
+- slug: nf
+  name: (nf)
+  cat_tag: Data / String Functions
+  description: Formats a number as a string with a specified number of digits.
+  related: []
+  params:
+  - name: v
+    type: number
+    desc: the number to format
+  - name: digits
+    type: integer
+    desc: number of decimal places or left digits
+  returns: string
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def nf(x, left=0, right=None): return _nfmap(lambda v, l, r: (''-'' if v < 0 else '''') + _nf1(v, l, r), x, left, right)'
+  syntax: '(nf v digits)
+
+    (nf v left right)'
+- slug: split
+  name: (split)
+  cat_tag: Data / String Functions
+  description: Splits a string into substrings using a delimiter character.
+  related:
+  - splitTokens
+  - join
+  - trim
+  params:
+  - name: s
+    type: string
+    desc: the string to split
+  - name: d
+    type: char
+    desc: delimiter character
+  returns: list
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def split(s, delim): return s.split(delim)'
+  syntax: (split s d)
+- slug: splitTokens
+  name: (split-tokens)
+  cat_tag: Data / String Functions
+  description: Splits a string into substrings using any character in the delimiters string.
+  related:
+  - split
+  - join
+  params:
+  - name: s
+    type: string
+    desc: the string to split
+  - name: delims
+    type: string
+    desc: string of delimiter characters
+  returns: list
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def split_tokens(s, delims=None):\n    if delims is None: return s.split()\n    return [t for t in _re.split('[' + _re.escape(delims) + ']', s) if t]"
+  syntax: (split-tokens s delims)
+- slug: trim
+  name: (trim)
+  cat_tag: Data / String Functions
+  description: Removes whitespace characters from the beginning and end of a string.
+  related:
+  - split
+  - join
+  params:
+  - name: s
+    type: string
+    desc: string to trim
+  returns: string
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def trim(x): return [v.strip() for v in x] if isinstance(x, _SEQ) else x.strip()'
+  syntax: (trim s)
+- slug: createInput
+  name: (create-input)
+  cat_tag: Input / Files
+  description: Opens a file for binary reading. Returns a ifstream value.
+  related:
+  - loadBytes
+  - createOutput
+  params:
+  - name: path
+    type: string
+    desc: path to the file
+  returns: std::ifstream
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def create_input(name):\n    try: return _ByteIn(_io.BytesIO(_fetch(name)))\n    except Exception: return False"
+  syntax: (create-input path)
+- slug: createReader
+  name: (create-reader)
+  cat_tag: Input / Files
+  description: Creates a BufferedReader object for reading text from a file line by line.
+  related:
+  - BufferedReader_class
+  - loadStrings
+  params:
+  - name: path
+    type: string
+    desc: path to the file
+  returns: BufferedReader
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def create_reader(name):\n    with open(_find_data(name), encoding='utf-8') as fh: return open_input_string(fh.read())"
+  syntax: (create-reader path)
+- slug: launch
+  name: (launch)
+  cat_tag: Input / Files
+  description: Opens a file, URL, or application using the operating system's default handler.
+  related: []
+  params:
+  - name: path
+    type: string
+    desc: path, URL, or application to launch
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def launch(*a):\n    try:\n        if len(a) == 1:\n            if _sys.platform == 'darwin': _sp.Popen(['open', str(a[0])])\n            elif _os.name == 'nt': _os.startfile(str(a[0]))\n            else: _sp.Popen(['xdg-open', str(a[0])])\n        else: _sp.Popen([str(x) for x in a])\n        return True\n    except Exception:\n        return False"
+  syntax: (launch path)
+- slug: loadBytes
+  name: (load-bytes)
+  cat_tag: Input / Files
+  description: Reads the contents of a file into a vector of bytes.
+  related:
+  - saveBytes
+  - loadStrings
+  params:
+  - name: path
+    type: string
+    desc: path to the file
+  returns: list
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def load_bytes(name):\n    with open(_find_data(name), 'rb') as fh: return list(fh.read())"
+  syntax: (load-bytes path)
+- slug: loadJSONArray
+  name: (load-json-array)
+  cat_tag: Input / Files
+  description: Loads a JSON array file and returns a JSONValue.
+  related:
+  - saveJSONArray
+  - loadJSONObject
+  params:
+  - name: path
+    type: string
+    desc: path to the JSON file
+  returns: JSONValue
+  uth: []
+  syntax: (load-json-array path)
+- slug: loadJSONObject
+  name: (load-json-object)
+  cat_tag: Input / Files
+  description: Loads a JSON file and returns a JSONValue object.
+  related:
+  - saveJSONObject
+  - loadJSONArray
+  params:
+  - name: path
+    type: string
+    desc: path to the JSON file
+  returns: JSONValue
+  uth: []
+  syntax: (load-json-object path)
+- slug: loadStrings
+  name: (load-strings)
+  cat_tag: Input / Files
+  description: Reads the contents of a file and creates a vector of strings, one per line.
+  related:
+  - saveStrings
+  - loadBytes
+  params:
+  - name: path
+    type: string
+    desc: path to the file
+  returns: list
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def load_strings(name):\n    with open(_find_data(name), encoding='utf-8') as fh: return fh.read().splitlines()"
+  syntax: (load-strings path)
+- slug: loadTable
+  name: (load-table)
+  cat_tag: Input / Files
+  description: Loads a CSV or TSV file into a Table object.
+  related:
+  - saveTable
+  params:
+  - name: path
+    type: string
+    desc: path to the file
+  - name: options
+    type: string
+    desc: '"header" to treat first row as column names'
+  returns: table
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def load_table(name, options=''):\n    delim = chr(9) if ('tsv' in options or name.endswith('.tsv')) else ','\n    with open(_find_data(name), encoding='utf-8', newline='') as fh:\n        rows = [r for r in _csv.reader(fh, delimiter=delim)]\n    if 'header' in options and rows: return _Table(rows[0], rows[1:])\n    return _Table([], rows)"
+  syntax: (load-table path options)
+- slug: loadXML
+  name: (load-xml)
+  cat_tag: Input / Files
+  description: Loads an XML file and returns an XML object.
+  related:
+  - saveXML
+  - parseXML
+  params:
+  - name: path
+    type: string
+    desc: path to the XML file
+  returns: xml
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def load_xml(name): return _XML(_ET.parse(_find_data(name)).getroot())'
+  syntax: (load-xml path)
+- slug: parseJSONArray
+  name: (parse-json-array)
+  cat_tag: Input / Files
+  description: Parses a JSON array string and returns a JSONValue.
+  related:
+  - loadJSONArray
+  - saveJSONArray
+  params:
+  - name: s
+    type: string
+    desc: JSON array string to parse
+  returns: JSONValue
+  uth: []
+  syntax: (parse-json-array s)
+- slug: parseJSONObject
+  name: (parse-json-object)
+  cat_tag: Input / Files
+  description: Parses a JSON string and returns a JSONValue object.
+  related:
+  - loadJSONObject
+  - saveJSONObject
+  params:
+  - name: s
+    type: string
+    desc: JSON string to parse
+  returns: JSONValue
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def parse_json_object(t): return _from_json(_json.loads(t))'
+  syntax: (parse-json-object s)
+- slug: parseXML
+  name: (parse-xml)
+  cat_tag: Input / Files
+  description: Parses an XML string and returns an XML object.
+  related:
+  - loadXML
+  - saveXML
+  - XML_class
+  params:
+  - name: src
+    type: string
+    desc: XML string to parse
+  returns: xml
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def parse_xml(t): return _XML(_ET.fromstring(t))'
+  syntax: (parse-xml src)
+- slug: selectFolder
+  name: (select-folder)
+  cat_tag: Input / Files
+  description: Opens a folder chooser dialog. Returns the selected folder path.
+  related:
+  - selectInput
+  - selectOutput
+  params:
+  - name: prompt
+    type: string
+    desc: dialog message
+  returns: string
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def select_folder(prompt, cb, *r): _select(''folder'', prompt, cb)'
+  syntax: (select-folder prompt)
+- slug: selectInput
+  name: (select-input)
+  cat_tag: Input / Files
+  description: Opens a file chooser dialog to select an input file. Returns the selected path.
+  related:
+  - selectOutput
+  - selectFolder
+  params:
+  - name: prompt
+    type: string
+    desc: dialog message
+  - name: filter
+    type: string
+    desc: file extension filter (optional)
+  returns: string
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def select_input(prompt, cb, *r): _select(''open'', prompt, cb)'
+  syntax: (select-input prompt filter)
+- slug: day
+  name: (day)
+  cat_tag: Input / Time & Date
+  description: Returns the current day as a value from 1 to 31.
+  related:
+  - month
+  - year
+  params: []
+  returns: integer
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def day(): return _dt.datetime.now().day'
+  syntax: (day)
+- slug: hour
+  name: (hour)
+  cat_tag: Input / Time & Date
+  description: Returns the current hour as a value from 0 to 23.
+  related:
+  - minute
+  - second
+  params: []
+  returns: integer
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def hour(): return _dt.datetime.now().hour'
+  syntax: (hour)
+- slug: millis
+  name: (millis)
+  cat_tag: Input / Time & Date
+  description: Returns the number of milliseconds since the sketch started.
+  related:
+  - second
+  - minute
+  - hour
+  - frameCount
+  params: []
+  returns: unsigned long
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def millis(): return int((_time.perf_counter() - _t0) * 1000)'
+  syntax: (millis)
+- slug: minute
+  name: (minute)
+  cat_tag: Input / Time & Date
+  description: Returns the current minute as a value from 0 to 59.
+  related:
+  - second
+  - hour
+  params: []
+  returns: integer
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def minute(): return _dt.datetime.now().minute'
+  syntax: (minute)
+- slug: month
+  name: (month)
+  cat_tag: Input / Time & Date
+  description: Returns the current month as a value from 1 to 12.
+  related:
+  - day
+  - year
+  params: []
+  returns: integer
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def month(): return _dt.datetime.now().month'
+  syntax: (month)
+- slug: second
+  name: (second)
+  cat_tag: Input / Time & Date
+  description: Returns the current second as a value from 0 to 59.
+  related:
+  - minute
+  - hour
+  - millis
+  params: []
+  returns: integer
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def second(): return _dt.datetime.now().second'
+  syntax: (second)
+- slug: year
+  name: (year)
+  cat_tag: Input / Time & Date
+  description: Returns the current year as an integer.
+  related:
+  - month
+  - day
+  params: []
+  returns: integer
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def year(): return _dt.datetime.now().year'
+  syntax: (year)
+- slug: key
+  name: key
+  cat_tag: Input / Keyboard
+  description: The system variable key always contains the value of the most recently pressed key. For special keys, key == CODED and you must use keyCode.
+  related:
+  - keyCode
+  - keyPressed_var
+  - keyPressed_fn
+  params: []
+  returns: char
+  uth: []
+  syntax: key
+- slug: keyPressed_var
+  name: key-is-pressed
+  cat_tag: Input / Keyboard
+  description: 'The boolean system variable keyPressed is #t if any key is pressed.'
+  related:
+  - key
+  - keyCode
+  - keyPressed_fn
+  params: []
+  returns: boolean
+  uth: []
+  syntax: key-is-pressed
+- slug: keyCode
+  name: key-code
+  cat_tag: Input / Keyboard
+  description: 'Used to detect special keys: UP, DOWN, LEFT, RIGHT, ALT, CONTROL, SHIFT, etc. Only valid when key == CODED.'
+  related:
+  - key
+  - keyPressed_fn
+  params: []
+  returns: integer
+  uth: []
+  syntax: key-code
+- slug: keyReleased
+  name: (key-released)
+  cat_tag: Input / Keyboard
+  description: Called once every time a key is released.
+  related:
+  - keyPressed_fn
+  - key
+  params: []
+  returns: ''
+  uth: []
+  syntax: "(define (key-released)\n  ...)"
+- slug: keyPressed_fn
+  name: (key-pressed)
+  cat_tag: Input / Keyboard
+  description: Called once every time a key is pressed. To ask whether it's held right now, read key-is-pressed.
+  related:
+  - keyReleased
+  - key
+  - keyCode
+  params: []
+  returns: ''
+  uth: []
+  syntax: "(define (key-pressed)\n  ...)"
+- slug: keyTyped
+  name: (key-typed)
+  cat_tag: Input / Keyboard
+  description: Called once every time a key is pressed, but action keys such as Ctrl, Shift, and Alt are ignored.
+  related:
+  - keyPressed_fn
+  - key
+  params: []
+  returns: ''
+  uth: []
+  syntax: "(define (key-typed)\n  ...)"
+- slug: mouseButton
+  name: mouse-button
+  cat_tag: Input / Mouse
+  description: 'When mousePressed is #t, mouseButton holds which button is pressed: LEFT, RIGHT, or CENTER.'
+  related:
+  - mousePressed_var
+  params: []
+  returns: integer
+  uth: []
+  syntax: mouse-button
+- slug: mouseClicked
+  name: (mouse-clicked)
+  cat_tag: Input / Mouse
+  description: Called after a mouse button is pressed and released.
+  related:
+  - mousePressed_fn
+  - mouseReleased
+  params: []
+  returns: ''
+  uth: []
+  syntax: "(define (mouse-clicked)\n  ...)"
+- slug: mouseDragged
+  name: (mouse-dragged)
+  cat_tag: Input / Mouse
+  description: Called once every time the mouse moves while a button is held.
+  related:
+  - mouseMoved
+  params: []
+  returns: ''
+  uth: []
+  syntax: "(define (mouse-dragged)\n  ...)"
+- slug: mouseMoved
+  name: (mouse-moved)
+  cat_tag: Input / Mouse
+  description: Called every time the mouse moves and no button is pressed.
+  related:
+  - mouseDragged
+  params: []
+  returns: ''
+  uth: []
+  syntax: "(define (mouse-moved)\n  ...)"
+- slug: mousePressed_var
+  name: mouse-is-pressed
+  cat_tag: Input / Mouse
+  description: Variable storing whether any mouse button is currently pressed.
+  related:
+  - mouseX
+  - mouseY
+  - mousePressed_fn
+  - mouseButton
+  params: []
+  returns: boolean
+  uth: []
+  syntax: mouse-is-pressed
+- slug: mousePressed_fn
+  name: (mouse-pressed)
+  cat_tag: Input / Mouse
+  description: Called once after every time a mouse button is pressed. To ask whether it's held right now, read mouse-is-pressed.
+  related:
+  - mouseReleased
+  - mouseClicked
+  - mousePressed_var
+  params: []
+  returns: ''
+  uth: []
+  syntax: "(define (mouse-pressed)\n  ...)"
+- slug: mouseWheel
+  name: (mouse-wheel)
+  cat_tag: Input / Mouse
+  description: Called when the mouse wheel moves. The count parameter is positive when scrolled down and negative when scrolled up.
+  related:
+  - mouseMoved
+  params: []
+  returns: ''
+  uth: []
+  syntax: "(define (mouse-wheel)\n  ...)"
+- slug: mouseReleased
+  name: (mouse-released)
+  cat_tag: Input / Mouse
+  description: Called every time a mouse button is released.
+  related:
+  - mousePressed_fn
+  params: []
+  returns: ''
+  uth: []
+  syntax: "(define (mouse-released)\n  ...)"
+- slug: mouseX
+  name: mouse-x
+  cat_tag: Input / Mouse
+  description: The system variable mouseX always contains the current horizontal position of the mouse.
+  related:
+  - mouseY
+  - pmouseX
+  - mousePressed_var
+  params: []
+  returns: number
+  uth: []
+  syntax: mouse-x
+- slug: mouseY
+  name: mouse-y
+  cat_tag: Input / Mouse
+  description: The system variable mouseY always contains the current vertical position of the mouse.
+  related:
+  - mouseX
+  - pmouseY
+  - mousePressed_var
+  params: []
+  returns: number
+  uth: []
+  syntax: mouse-y
+- slug: pmouseX
+  name: pmouse-x
+  cat_tag: Input / Mouse
+  description: The horizontal position of the mouse in the previous frame.
+  related:
+  - pmouseY
+  - mouseX
+  params: []
+  returns: number
+  uth: []
+  syntax: pmouse-x
+- slug: pmouseY
+  name: pmouse-y
+  cat_tag: Input / Mouse
+  description: The vertical position of the mouse in the previous frame.
+  related:
+  - pmouseX
+  - mouseY
+  params: []
+  returns: number
+  uth: []
+  syntax: pmouse-y
+- slug: mouseDX
+  name: moved-x
+  cat_tag: Input / Mouse
+  description: Accumulated horizontal mouse delta since the last frame. Updated on every raw cursor event, reset to 0 after draw(). Use this instead of mouseX-pmouseX for high-frequency input like FPS camera control.
+  related:
+  - mouseDY
+  - mouseX
+  - pmouseX
+  params: []
+  returns: number
+  uth: []
+  syntax: moved-x
+- slug: mouseDY
+  name: moved-y
+  cat_tag: Input / Mouse
+  description: Accumulated vertical mouse delta since the last frame. Updated on every raw cursor event, reset to 0 after draw(). Use this instead of mouseY-pmouseY for high-frequency input like FPS camera control.
+  related:
+  - mouseDX
+  - mouseY
+  - pmouseY
+  params: []
+  returns: number
+  uth: []
+  syntax: moved-y
+- slug: HALF_PI
+  name: HALF-PI
+  cat_tag: Constants
+  description: HALF_PI is a mathematical constant with the value 1.57079632679489661923.
+  related:
+  - PI
+  - TWO_PI
+  - QUARTER_PI
+  params: []
+  returns: number
+  uth: []
+  syntax: HALF-PI
+- slug: PI
+  name: PI
+  cat_tag: Constants
+  description: PI is a mathematical constant with the value 3.14159265358979323846.
+  related:
+  - TWO_PI
+  - HALF_PI
+  - QUARTER_PI
+  - TAU
+  params: []
+  returns: number
+  uth: []
+  syntax: PI
+- slug: QUARTER_PI
+  name: QUARTER-PI
+  cat_tag: Constants
+  description: QUARTER_PI is a mathematical constant with the value 0.7853982.
+  related:
+  - PI
+  - HALF_PI
+  params: []
+  returns: number
+  uth: []
+  syntax: QUARTER-PI
+- slug: TAU
+  name: TAU
+  cat_tag: Constants
+  description: TAU is an alias for TWO_PI with value 6.28318530717958647693.
+  related:
+  - PI
+  - TWO_PI
+  params: []
+  returns: number
+  uth: []
+  syntax: TAU
+- slug: TWO_PI
+  name: TWO-PI
+  cat_tag: Constants
+  description: TWO_PI is a mathematical constant with the value 6.28318530717958647693.
+  related:
+  - PI
+  - HALF_PI
+  - TAU
+  params: []
+  returns: number
+  uth: []
+  syntax: TWO-PI
+- slug: createFont
+  name: (create-font)
+  cat_tag: Typography / Loading & Displaying
+  description: Creates a PFont from a system font name and size.
+  related:
+  - loadFont
+  - textFont
+  params:
+  - name: name
+    type: string
+    desc: font name
+  - name: size
+    type: number
+    desc: font size
+  - name: smooth
+    type: boolean
+    desc: 'whether to anti-alias (default #t)'
+  returns: font
+  uth: []
+  syntax: (create-font name size smooth)
+- slug: loadFont
+  name: (load-font)
+  cat_tag: Typography / Loading & Displaying
+  description: Loads a font from the sketch's data folder. Supports .ttf and .otf files.
+  related:
+  - textFont
+  - createFont
+  params:
+  - name: filename
+    type: string
+    desc: name of the font file
+  returns: font
+  uth: []
+  syntax: (load-font filename)
+- slug: textFont
+  name: (text-font)
+  cat_tag: Typography / Loading & Displaying
+  description: Sets the current font for text rendering.
+  related:
+  - loadFont
+  - createFont
+  - text
+  params:
+  - name: font
+    type: font
+    desc: a PFont object
+  - name: size
+    type: number
+    desc: font size (optional)
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def text_font(f=None): return _gfx().text_font(f)'
+  syntax: '(text-font font)
+
+    (text-font font size)'
+- slug: text
+  name: (text)
+  cat_tag: Typography / Loading & Displaying
+  description: Draws text to the screen. With a bounding box (x, y, w, h), text wraps automatically.
+  related:
+  - textSize
+  - textFont
+  - textAlign
+  params:
+  - name: str
+    type: string
+    desc: the string to display
+  - name: x
+    type: number
+    desc: x-coordinate
+  - name: y
+    type: number
+    desc: y-coordinate
+  - name: w
+    type: number
+    desc: width of text box (optional)
+  - name: h
+    type: number
+    desc: height of text box (optional)
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def text(c, *r):\n    if True:  # SHAPE only matters for vector output, which SchemeMode does not have\n        return _text_base(c, *r)\n    return _text_shape(c, r[0], r[1])"
+  syntax: '(text str x y)
+
+    (text str x y w h)'
+- slug: textAlign
+  name: (text-align)
+  cat_tag: Typography / Attributes
+  description: Sets the alignment for drawing text. The first parameter can be LEFT, CENTER, or RIGHT. The second parameter (optional) can be TOP, BOTTOM, CENTER, or BASELINE.
+  related:
+  - text
+  - textSize
+  params:
+  - name: align-x
+    type: integer
+    desc: LEFT, CENTER, or RIGHT
+  - name: align-y
+    type: integer
+    desc: TOP, BOTTOM, CENTER, or BASELINE (optional)
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def text_align(h, v=None):\n    hs = h.lower() if isinstance(h, str) else _TA_HN.get(h, h)\n    vs = None if v is None else (v.lower() if isinstance(v, str) else _TA_VN.get(v, v))\n    g = _gfx()\n    try:\n        return g.text_align(hs) if vs is None else g.text_align(hs, vs)\n    except TypeError:\n        return g.text_align(_TA_H.get(hs, hs), None if vs is None else _TA_V.get(vs, vs))"
+  syntax: '(text-align align-x)
+
+    (text-align align-x align-y)'
+- slug: textLeading
+  name: (text-leading)
+  cat_tag: Typography / Attributes
+  description: Sets the spacing between lines of text in units of pixels.
+  related:
+  - text
+  - textSize
+  params:
+  - name: leading
+    type: number
+    desc: spacing between lines
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def text_leading(n): return _gfx().text_leading(n)'
+  syntax: (text-leading leading)
+- slug: textMode
+  name: (text-mode)
+  cat_tag: Typography / Attributes
+  description: Sets the way text draws to the screen, either as texture maps or as vector geometry.
+  related:
+  - text
+  params:
+  - name: mode
+    type: integer
+    desc: MODEL or SHAPE
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def text_mode(m): _text_mode[0] = m'
+  syntax: (text-mode mode)
+- slug: textSize
+  name: (text-size)
+  cat_tag: Typography / Attributes
+  description: Sets the current font size. This size will be used in all subsequent calls to text().
+  related:
+  - text
+  - textFont
+  - textWidth
+  params:
+  - name: size
+    type: number
+    desc: the size of the letters in pixels
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def text_size(n): return _gfx().text_size(n)'
+  syntax: (text-size size)
+- slug: textWidth
+  name: (text-width)
+  cat_tag: Typography / Attributes
+  description: Calculates and returns the width of any character or text string in the current font.
+  related:
+  - text
+  - textAscent
+  - textDescent
+  params:
+  - name: s
+    type: string
+    desc: the string to measure
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def text_width(c): return _gfx().text_width(_txt(c))'
+  syntax: (text-width s)
+- slug: textAscent
+  name: (text-ascent)
+  cat_tag: Typography / Metrics
+  description: Returns the ascent of the current font at its current size. The ascent is the height of the character above the baseline.
+  related:
+  - textDescent
+  - textSize
+  params: []
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def text_ascent(): return _gfx().text_ascent()'
+  syntax: (text-ascent)
+- slug: textDescent
+  name: (text-descent)
+  cat_tag: Typography / Metrics
+  description: Returns the descent of the current font at its current size. The descent is the distance below the baseline.
+  related:
+  - textAscent
+  - textSize
+  params: []
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def text_descent(): return _gfx().text_descent()'
+  syntax: (text-descent)
+- slug: blendMode
+  name: (blend-mode)
+  cat_tag: Rendering
+  description: Blends the pixels in the display window with the pixels underneath using a defined blend mode.
+  related: []
+  params:
+  - name: mode
+    type: integer
+    desc: BLEND, ADD, SUBTRACT, MULTIPLY, SCREEN, DARKEST, LIGHTEST, DIFFERENCE, EXCLUSION
+  returns: ''
+  uth: []
+  syntax: (blend-mode mode)
+- slug: clip
+  name: (clip)
+  cat_tag: Rendering
+  description: Limits the rendering to a rectangular area. Only pixels inside the clip region will be drawn.
+  related:
+  - noClip
+  params:
+  - name: x
+    type: number
+    desc: x-coordinate
+  - name: y
+    type: number
+    desc: y-coordinate
+  - name: w
+    type: number
+    desc: width of clip region
+  - name: h
+    type: number
+    desc: height of clip region
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def clip(x, y, w, h):\n    sx = globals().get('screen_x'); sy = globals().get('screen_y')\n    if callable(sx) and callable(sy) and not _mode3d[0]:\n        pts = [(sx(a, b), sy(a, b)) for a, b in ((x, y), (x + w, y), (x, y + h), (x + w, y + h))]\n        xs = [q[0] for q in pts]; ys = [q[1] for q in pts]\n        return _clip_screen(min(xs), min(ys), max(xs) - min(xs), max(ys) - min(ys))\n    return _clip_screen(x, y, w, h)"
+  syntax: (clip x y w h)
+- slug: createGraphics
+  name: (create-graphics)
+  cat_tag: Rendering
+  description: Creates an off-screen rendering surface (PGraphics). Draw into it using begin-draw/end-draw, then display with image().
+  related:
+  - PGraphics_class
+  - image
+  params:
+  - name: w
+    type: integer
+    desc: width of the graphics buffer
+  - name: h
+    type: integer
+    desc: height of the graphics buffer
+  returns: graphics
+  uth: []
+  syntax: (create-graphics w h)
+- slug: hint
+  name: (hint)
+  cat_tag: Rendering
+  description: Set hints for the renderer. Use ENABLE_DEPTH_TEST, DISABLE_DEPTH_TEST, ENABLE_DEPTH_SORT, etc.
+  related: []
+  params:
+  - name: which
+    type: integer
+    desc: a hint constant such as ENABLE_DEPTH_TEST or DISABLE_DEPTH_TEST
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def hint(*a): return None'
+  syntax: (hint which)
+- slug: noClip
+  name: (no-clip)
+  cat_tag: Rendering
+  description: Disables the clipping region set with clip().
+  related:
+  - clip
+  params: []
+  returns: ''
+  uth: []
+  syntax: (no-clip)
+- slug: loadShader
+  name: (load-shader)
+  cat_tag: Rendering / Shaders
+  description: Loads a GLSL shader from a file. Pass the fragment shader path and optionally the vertex shader path.
+  related:
+  - resetShader
+  params:
+  - name: frag-path
+    type: string
+    desc: path to fragment shader file
+  - name: vert-path
+    type: string
+    desc: path to vertex shader file (optional)
+  returns: PShader
+  uth: []
+  syntax: '(load-shader frag-path)
+
+    (load-shader frag-path vert-path)'
+- slug: resetShader
+  name: (reset-shader)
+  cat_tag: Rendering / Shaders
+  description: Restores the default rendering pipeline, removing any applied shader.
+  related:
+  - shader_fn
+  - loadShader
+  params: []
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def reset_shader(*a):\n    if _lit_frame[0] and _mw_roughness: return _mw_roughness(0.9)\n    if _mw_unlit: return _mw_unlit()"
+  syntax: (reset-shader)
+- slug: shader_fn
+  name: (shader)
+  cat_tag: Rendering / Shaders
+  description: Applies a PShader to the rendering pipeline.
+  related:
+  - loadShader
+  - resetShader
+  params:
+  - name: s
+    type: PShader
+    desc: the shader to apply
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def shader(sh, *a):\n    m = _shader_mats.get(id(sh))\n    if m is None:\n        m = _mw_create_material(sh); _shader_mats[id(sh)] = (sh, m)\n    else:\n        m = m[1]\n    return _mw_material_fn(m)"
+  syntax: (shader s)
+- slug: createImage
+  name: (create-image)
+  cat_tag: Image
+  description: Creates a new PImage (the datatype for storing images) with the given width and height.
+  related:
+  - loadImage
+  params:
+  - name: w
+    type: integer
+    desc: width in pixels
+  - name: h
+    type: integer
+    desc: height in pixels
+  - name: mode
+    type: integer
+    desc: ARGB or RGB
+  returns: image
+  uth: []
+  syntax: (create-image w h mode)
+- slug: blend_fn
+  name: (blend)
+  cat_tag: Image / Pixels
+  description: Copies a region of pixels from one image into another with full alpha channel blending. Blend modes include BLEND, ADD, SUBTRACT, MULTIPLY, SCREEN, DARKEST, LIGHTEST, DIFFERENCE, EXCLUSION.
+  related:
+  - blendMode
+  - copy_fn
+  - filter
+  params:
+  - name: sx
+    type: integer
+    desc: x-coordinate of source region
+  - name: sy
+    type: integer
+    desc: y-coordinate of source region
+  - name: sw
+    type: integer
+    desc: source region width
+  - name: sh
+    type: integer
+    desc: source region height
+  - name: dx
+    type: integer
+    desc: x-coordinate of destination
+  - name: dy
+    type: integer
+    desc: y-coordinate of destination
+  - name: dw
+    type: integer
+    desc: destination width
+  - name: dh
+    type: integer
+    desc: destination height
+  - name: mode
+    type: integer
+    desc: blend mode constant
+  returns: ''
+  uth: []
+  syntax: (blend sx sy sw sh dx dy dw dh mode)
+- slug: copy_fn
+  name: (copy)
+  cat_tag: Image / Pixels
+  description: Copies a region of the display window to another location on the display window.
+  related:
+  - blend_fn
+  - PImage_class
+  params:
+  - name: sx
+    type: integer
+    desc: x-coordinate of source
+  - name: sy
+    type: integer
+    desc: y-coordinate of source
+  - name: sw
+    type: integer
+    desc: source width
+  - name: sh
+    type: integer
+    desc: source height
+  - name: dx
+    type: integer
+    desc: x-coordinate of destination
+  - name: dy
+    type: integer
+    desc: y-coordinate of destination
+  - name: dw
+    type: integer
+    desc: destination width
+  - name: dh
+    type: integer
+    desc: destination height
+  returns: ''
+  uth: []
+  syntax: (copy sx sy sw sh dx dy dw dh)
+- slug: filter
+  name: (filter)
+  cat_tag: Image / Pixels
+  description: 'Applies a filter to the display. Available filters: GRAY, INVERT, THRESHOLD.'
+  related:
+  - loadPixels
+  params:
+  - name: mode
+    type: integer
+    desc: GRAY, INVERT, THRESHOLD, BLUR_FILTER, POSTERIZE
+  - name: param
+    type: number
+    desc: parameter for some filters (optional)
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def filter(*a):\n    if a and callable(a[0]): return list(_builtin_filter(a[0], *a[1:]))\n    return _filter_notice(*a)"
+  syntax: '(filter mode)
+
+    (filter mode param)'
+- slug: get_pixel
+  name: (get)
+  cat_tag: Image / Pixels
+  description: Reads the color of any pixel or grabs a section of a PImage.
+  related:
+  - set_pixel
+  - loadPixels
+  params:
+  - name: x
+    type: integer
+    desc: x-coordinate
+  - name: y
+    type: integer
+    desc: y-coordinate
+  returns: color
+  uth: []
+  syntax: (get x y)
+- slug: loadPixels
+  name: (load-pixels)
+  cat_tag: Image / Pixels
+  description: Loads the pixel data for the display window into the pixels[] array.
+  related:
+  - updatePixels
+  params: []
+  returns: ''
+  uth: []
+  syntax: (load-pixels)
+- slug: mask_fn
+  name: (mask)
+  cat_tag: Image / Pixels
+  description: Applies a mask to a PImage. The mask image is a grayscale image where white pixels are opaque and black pixels are transparent.
+  related:
+  - PImage_class
+  - loadPixels
+  - filter
+  params:
+  - name: m
+    type: image
+    desc: grayscale image to use as mask
+  returns: ''
+  uth: []
+  syntax: (mask m)
+- slug: set_pixel
+  name: (set)
+  cat_tag: Image / Pixels
+  description: Changes the color of any pixel or writes an image directly to the display window.
+  related:
+  - get_pixel
+  - loadPixels
+  params:
+  - name: x
+    type: integer
+    desc: x-coordinate
+  - name: y
+    type: integer
+    desc: y-coordinate
+  - name: c
+    type: color
+    desc: color value
+  returns: ''
+  uth: []
+  syntax: (set x y c)
+- slug: updatePixels
+  name: (update-pixels)
+  cat_tag: Image / Pixels
+  description: Updates the display window with the data in the pixels[] array.
+  related:
+  - loadPixels
+  params: []
+  returns: ''
+  uth: []
+  syntax: (update-pixels)
+- slug: image
+  name: (image)
+  cat_tag: Image / Loading & Displaying
+  description: Displays an image at the given position. Optionally specify width and height.
+  related:
+  - loadImage
+  - imageMode
+  - tint
+  params:
+  - name: img
+    type: image
+    desc: the image to display
+  - name: x
+    type: number
+    desc: x-coordinate
+  - name: y
+    type: number
+    desc: y-coordinate
+  - name: w
+    type: number
+    desc: width (optional)
+  - name: h
+    type: number
+    desc: height (optional)
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def image(*a, **k):\n    res = _image_unrecorded(*a, **k)\n    r = _rec[0]\n    if r is not None and a and not isinstance(a[0], (int, float)) and len(a) >= 3:\n        try:\n            img = a[0]\n            w = float(a[3]) if len(a) > 3 else float(_dim(img, 'width', 'pixel_width'))\n            h = float(a[4]) if len(a) > 4 else float(_dim(img, 'height', 'pixel_height'))\n            r.ops.append(('image', list(r.m), None, None, 0.0, (img, float(a[1]), float(a[2]), w, h), r.tsize))\n        except Exception:\n            pass\n    return res"
+  syntax: '(image img x y)
+
+    (image img x y w h)'
+- slug: imageMode
+  name: (image-mode)
+  cat_tag: Image / Loading & Displaying
+  description: Modifies the location from which images are drawn. Default is CORNER.
+  related:
+  - image
+  params:
+  - name: mode
+    type: integer
+    desc: CORNER, CORNERS, or CENTER
+  returns: ''
+  uth: []
+  syntax: (image-mode mode)
+- slug: loadImage
+  name: (load-image)
+  cat_tag: Image / Loading & Displaying
+  description: 'Loads an image into a variable of type PImage. Supported formats: PNG, JPG, GIF, TGA. Images are loaded from the sketch''s data folder.'
+  related:
+  - image
+  - createImage
+  params:
+  - name: path
+    type: string
+    desc: path to the image file
+  returns: image
+  uth: []
+  syntax: (load-image path)
+- slug: noTint
+  name: (no-tint)
+  cat_tag: Image / Loading & Displaying
+  description: Removes the current fill value for displaying images.
+  related:
+  - tint
+  params: []
+  returns: ''
+  uth: []
+  syntax: (no-tint)
+- slug: tint
+  name: (tint)
+  cat_tag: Image / Loading & Displaying
+  description: Sets the fill value for displaying images. Images can be tinted to specified colors.
+  related:
+  - noTint
+  - image
+  params:
+  - name: gray
+    type: number
+    desc: grayscale value
+  - name: r
+    type: number
+    desc: red component
+  - name: g
+    type: number
+    desc: green component
+  - name: b
+    type: number
+    desc: blue component
+  - name: a
+    type: number
+    desc: alpha (optional)
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def tint(*a): return _mw_tint(*_as_color(a))'
+  syntax: '(tint gray)
+
+    (tint gray a)
+
+    (tint r g b)
+
+    (tint r g b a)'
+- slug: texture
+  name: (texture)
+  cat_tag: Image / Textures
+  description: Sets a texture to be applied to vertex points. Must be called between begin-shape and end-shape.
+  related:
+  - textureMode
+  - textureWrap
+  - vertex
+  params:
+  - name: img
+    type: image
+    desc: image to use as texture
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def texture(*a, **k):\n    if a and _tex_wrap[0] is not None and _Sampler is not None and hasattr(a[0], 'sampler'):\n        key = (id(a[0]), _tex_wrap[0])\n        if key not in _tex_wrapped:\n            try:\n                a[0].sampler(_Sampler(wrap=_tex_wrap[0])); _tex_wrapped[key] = True\n            except Exception: _tex_wrapped[key] = False\n    return _texture_base(*a, **k)"
+  syntax: (texture img)
+- slug: textureMode
+  name: (texture-mode)
+  cat_tag: Image / Textures
+  description: Sets the coordinate space for texture mapping. IMAGE uses pixel coordinates, NORMAL uses 0.0 to 1.0.
+  related:
+  - texture
+  - textureWrap
+  params:
+  - name: mode
+    type: integer
+    desc: IMAGE or NORMAL
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def texture_mode(mode): _tex_mode[0] = mode'
+  syntax: (texture-mode mode)
+- slug: textureWrap
+  name: (texture-wrap)
+  cat_tag: Image / Textures
+  description: Defines if textures repeat or clamp when outside the texture boundary.
+  related:
+  - texture
+  - textureMode
+  params:
+  - name: mode
+    type: integer
+    desc: CLAMP or REPEAT
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def texture_wrap(mode): _tex_wrap[0] = mode'
+  syntax: (texture-wrap mode)
+- slug: createShape
+  name: (create-shape)
+  cat_tag: Shape
+  description: Creates a new PShape object. Optionally pass a kind constant.
+  related:
+  - loadShape
+  - beginShape
+  params:
+  - name: kind
+    type: integer
+    desc: 'shape kind (optional): POINTS, LINES, TRIANGLES, etc.'
+  returns: shape
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def create_shape(*a):\n    if not a: return _PShape('path')\n    k = a[0]\n    if k == GROUP: return _PShape('group')\n    if k == PATH: return _PShape('path')\n    fn = _PRIM_BY.get(k)\n    if fn is None: raise _SchemeError('create-shape: unknown kind ' + _show(k, True))\n    return _PShape('prim', fn, a[1:])"
+  syntax: '(create-shape)
+
+    (create-shape kind)'
+- slug: loadShape
+  name: (load-shape)
+  cat_tag: Shape
+  description: Loads geometry into a variable of type PShape. Supports SVG and OBJ files.
+  related:
+  - shape
+  - createShape
+  params:
+  - name: path
+    type: string
+    desc: path to the SVG or OBJ file
+  returns: shape
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def load_shape(name, *a):\n    path = _find_data(name)\n    low = name.lower()\n    if low.endswith('.svg'): return _load_svg(path)\n    if low.endswith('.obj'): return _load_obj(path)\n    raise _SchemeError('load-shape: only .svg and .obj files are supported, got ' + name)"
+  syntax: (load-shape path)
+- slug: arc
+  name: (arc)
+  cat_tag: Shape / 2D Primitives
+  description: Draws an arc in the display window. Angles are given in radians.
+  related:
+  - ellipse
+  - ellipseMode
+  params:
+  - name: cx
+    type: number
+    desc: x-coordinate of the center
+  - name: cy
+    type: number
+    desc: y-coordinate of the center
+  - name: w
+    type: number
+    desc: width of the arc
+  - name: h
+    type: number
+    desc: height of the arc
+  - name: start
+    type: number
+    desc: angle to start the arc (radians)
+  - name: stop
+    type: number
+    desc: angle to stop the arc (radians)
+  - name: mode
+    type: integer
+    desc: OPEN, CHORD, or PIE (optional)
+  returns: ''
+  uth: []
+  syntax: '(arc cx cy w h start stop)
+
+    (arc cx cy w h start stop mode)'
+- slug: circle
+  name: (circle)
+  cat_tag: Shape / 2D Primitives
+  description: Draws a circle to the screen. By default, the first two parameters set the location of the center, and the third sets the shape's diameter.
+  related:
+  - ellipse
+  - arc
+  params:
+  - name: cx
+    type: number
+    desc: x-coordinate of the center
+  - name: cy
+    type: number
+    desc: y-coordinate of the center
+  - name: d
+    type: number
+    desc: diameter of the circle
+  returns: ''
+  uth: []
+  syntax: (circle cx cy d)
+- slug: ellipse
+  name: (ellipse)
+  cat_tag: Shape / 2D Primitives
+  description: Draws an ellipse (oval) to the screen. The first two parameters set the location, and the third and fourth parameters set the width and height.
+  related:
+  - circle
+  - arc
+  - ellipseMode
+  params:
+  - name: cx
+    type: number
+    desc: x-coordinate of the center
+  - name: cy
+    type: number
+    desc: y-coordinate of the center
+  - name: w
+    type: number
+    desc: width of the ellipse
+  - name: h
+    type: number
+    desc: height of the ellipse
+  returns: ''
+  uth: []
+  syntax: (ellipse cx cy w h)
+- slug: line
+  name: (line)
+  cat_tag: Shape / 2D Primitives
+  description: Draws a line between two points. Supports both 2D and 3D.
+  related:
+  - point
+  - strokeWeight
+  params:
+  - name: x1
+    type: number
+    desc: x-coordinate of the first point
+  - name: y1
+    type: number
+    desc: y-coordinate of the first point
+  - name: x2
+    type: number
+    desc: x-coordinate of the second point
+  - name: y2
+    type: number
+    desc: y-coordinate of the second point
+  - name: z1/z2
+    type: number
+    desc: z-coordinates (3D only, optional)
+  returns: ''
+  uth: []
+  syntax: '(line x1 y1 x2 y2)
+
+    (line x1 y1 z1 x2 y2 z2)'
+- slug: point
+  name: (point)
+  cat_tag: Shape / 2D Primitives
+  description: Draws a point at the given coordinates.
+  related:
+  - line
+  params:
+  - name: x
+    type: number
+    desc: x-coordinate
+  - name: y
+    type: number
+    desc: y-coordinate
+  - name: z
+    type: number
+    desc: z-coordinate (optional, 3D)
+  returns: ''
+  uth: []
+  syntax: '(point x y)
+
+    (point x y z)'
+- slug: quad
+  name: (quad)
+  cat_tag: Shape / 2D Primitives
+  description: Draws a quadrilateral (a four-sided polygon) using the x and y coordinates of its four vertices.
+  related:
+  - triangle
+  - rect
+  params:
+  - name: x1
+    type: number
+    desc: x of first vertex
+  - name: y1
+    type: number
+    desc: y of first vertex
+  - name: x2
+    type: number
+    desc: x of second vertex
+  - name: y2
+    type: number
+    desc: y of second vertex
+  - name: x3
+    type: number
+    desc: x of third vertex
+  - name: y3
+    type: number
+    desc: y of third vertex
+  - name: x4
+    type: number
+    desc: x of fourth vertex
+  - name: y4
+    type: number
+    desc: y of fourth vertex
+  returns: ''
+  uth: []
+  syntax: (quad x1 y1 x2 y2 x3 y3 x4 y4)
+- slug: rect
+  name: (rect)
+  cat_tag: Shape / 2D Primitives
+  description: Draws a rectangle to the screen. The fourth parameter can be a corner radius.
+  related:
+  - square
+  - rectMode
+  params:
+  - name: x
+    type: number
+    desc: x-coordinate of the upper-left corner
+  - name: y
+    type: number
+    desc: y-coordinate of the upper-left corner
+  - name: w
+    type: number
+    desc: width
+  - name: h
+    type: number
+    desc: height
+  - name: r
+    type: number
+    desc: corner radius (optional)
+  returns: ''
+  uth: []
+  syntax: '(rect x y w h)
+
+    (rect x y w h r)'
+- slug: square
+  name: (square)
+  cat_tag: Shape / 2D Primitives
+  description: Draws a square to the screen.
+  related:
+  - rect
+  params:
+  - name: x
+    type: number
+    desc: x-coordinate of the upper-left corner
+  - name: y
+    type: number
+    desc: y-coordinate of the upper-left corner
+  - name: s
+    type: number
+    desc: side length
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def square(*a):\n    if len(a) == 1: return a[0] * a[0]\n    return _mw_square(*a)"
+  syntax: (square x y s)
+- slug: triangle
+  name: (triangle)
+  cat_tag: Shape / 2D Primitives
+  description: Draws a triangle to the screen using the coordinates of its three vertices.
+  related:
+  - quad
+  params:
+  - name: x1
+    type: number
+    desc: x-coordinate of the first vertex
+  - name: y1
+    type: number
+    desc: y-coordinate of the first vertex
+  - name: x2
+    type: number
+    desc: x-coordinate of the second vertex
+  - name: y2
+    type: number
+    desc: y-coordinate of the second vertex
+  - name: x3
+    type: number
+    desc: x-coordinate of the third vertex
+  - name: y3
+    type: number
+    desc: y-coordinate of the third vertex
+  returns: ''
+  uth: []
+  syntax: (triangle x1 y1 x2 y2 x3 y3)
+- slug: beginContour
+  name: (begin-contour)
+  cat_tag: Shape / Vertex
+  description: Use begin-contour and end-contour to cut out areas within a shape (like holes).
+  related:
+  - endContour
+  - beginShape
+  params: []
+  returns: ''
+  uth: []
+  syntax: (begin-contour)
+- slug: beginShape
+  name: (begin-shape)
+  cat_tag: Shape / Vertex
+  description: Using begin-shape and end-shape allows creating complex forms. Optionally pass a shape kind.
+  related:
+  - endShape
+  - vertex
+  params:
+  - name: kind
+    type: integer
+    desc: POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, QUAD_STRIP (optional)
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def begin_shape(*a):\n    if _is_shape(a):\n        sh = a[0]; sh.verts = []; sh.skind = a[1] if len(a) > 1 else None\n        return None\n    return _mw_begin_shape(*a)"
+  syntax: '(begin-shape)
+
+    (begin-shape kind)'
+- slug: bezierVertex
+  name: (bezier-vertex)
+  cat_tag: Shape / Vertex
+  description: Specifies vertex coordinates for bezier curves inside begin-shape/end-shape.
+  related:
+  - beginShape
+  - vertex
+  - curveVertex
+  params:
+  - name: cx1
+    type: number
+    desc: x of first control point
+  - name: cy1
+    type: number
+    desc: y of first control point
+  - name: cx2
+    type: number
+    desc: x of second control point
+  - name: cy2
+    type: number
+    desc: y of second control point
+  - name: x
+    type: number
+    desc: x of anchor point
+  - name: y
+    type: number
+    desc: y of anchor point
+  returns: ''
+  uth: []
+  syntax: (bezier-vertex cx1 cy1 cx2 cy2 x y)
+- slug: curveVertex
+  name: (curve-vertex)
+  cat_tag: Shape / Vertex
+  description: Specifies vertex coordinates for curves inside begin-shape/end-shape. At least 4 points required.
+  related:
+  - beginShape
+  - vertex
+  - bezierVertex
+  params:
+  - name: x
+    type: number
+    desc: x-coordinate of the vertex
+  - name: y
+    type: number
+    desc: y-coordinate of the vertex
+  returns: ''
+  uth: []
+  syntax: (curve-vertex x y)
+- slug: endContour
+  name: (end-contour)
+  cat_tag: Shape / Vertex
+  description: The companion to begin-contour.
+  related:
+  - beginContour
+  - endShape
+  params: []
+  returns: ''
+  uth: []
+  syntax: (end-contour)
+- slug: endShape
+  name: (end-shape)
+  cat_tag: Shape / Vertex
+  description: The companion to begin-shape. Pass CLOSE to close the shape.
+  related:
+  - beginShape
+  - vertex
+  params:
+  - name: mode
+    type: integer
+    desc: CLOSE to close the shape (optional)
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def end_shape(*a):\n    if _is_shape(a):\n        a[0].close = len(a) > 1 and a[1] == globals().get('CLOSE')\n        return None\n    return _mw_end_shape(*a)"
+  syntax: '(end-shape)
+
+    (end-shape mode)'
+- slug: quadraticVertex
+  name: (quadratic-vertex)
+  cat_tag: Shape / Vertex
+  description: Specifies a vertex with a single control point for quadratic bezier curves.
+  related:
+  - bezierVertex
+  - vertex
+  params:
+  - name: cx
+    type: number
+    desc: x of control point
+  - name: cy
+    type: number
+    desc: y of control point
+  - name: x
+    type: number
+    desc: x of anchor point
+  - name: y
+    type: number
+    desc: y of anchor point
+  returns: ''
+  uth: []
+  syntax: (quadratic-vertex cx cy x y)
+- slug: vertex
+  name: (vertex)
+  cat_tag: Shape / Vertex
+  description: Adds a vertex to a shape defined with begin-shape.
+  related:
+  - beginShape
+  - endShape
+  - bezierVertex
+  - curveVertex
+  params:
+  - name: x
+    type: number
+    desc: x-coordinate
+  - name: y
+    type: number
+    desc: y-coordinate
+  - name: z
+    type: number
+    desc: z-coordinate (optional, 3D)
+  - name: u
+    type: number
+    desc: horizontal texture coordinate (optional)
+  - name: v
+    type: number
+    desc: vertical texture coordinate (optional)
+  returns: ''
+  uth: []
+  syntax: '(vertex x y)
+
+    (vertex x y z)
+
+    (vertex x y u v)
+
+    (vertex x y z u v)'
+- slug: bezierDetail
+  name: (bezier-detail)
+  cat_tag: Shape / Curves
+  description: Sets the resolution at which bezier curves display. Default is 20.
+  related:
+  - bezier
+  params:
+  - name: d
+    type: integer
+    desc: resolution of the bezier curve
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def bezier_detail(n): _bdetail[0] = max(1, int(n))'
+  syntax: (bezier-detail d)
+- slug: bezierPoint
+  name: (bezier-point)
+  cat_tag: Shape / Curves
+  description: Evaluates the bezier at parameter t, returning a point on the curve.
+  related:
+  - bezier
+  - bezierTangent
+  params:
+  - name: a
+    type: number
+    desc: coordinate of first point
+  - name: b
+    type: number
+    desc: coordinate of first control point
+  - name: c
+    type: number
+    desc: coordinate of second control point
+  - name: d
+    type: number
+    desc: coordinate of second point
+  - name: t
+    type: number
+    desc: value between 0 and 1
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def bezier_point(a, b, c, d, t):\n    mt = 1.0 - t\n    return mt * mt * mt * a + 3 * mt * mt * t * b + 3 * mt * t * t * c + t * t * t * d"
+  syntax: (bezier-point a b c d t)
+- slug: bezierTangent
+  name: (bezier-tangent)
+  cat_tag: Shape / Curves
+  description: Calculates the tangent of a point on a bezier curve.
+  related:
+  - bezier
+  - bezierPoint
+  params:
+  - name: a
+    type: number
+    desc: coordinate of first point
+  - name: b
+    type: number
+    desc: coordinate of first control point
+  - name: c
+    type: number
+    desc: coordinate of second control point
+  - name: d
+    type: number
+    desc: coordinate of second point
+  - name: t
+    type: number
+    desc: value between 0 and 1
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def bezier_tangent(a, b, c, d, t):\n    return 3 * t * t * (-a + 3 * b - 3 * c + d) + 6 * t * (a - 2 * b + c) + 3 * (-a + b)"
+  syntax: (bezier-tangent a b c d t)
+- slug: bezier
+  name: (bezier)
+  cat_tag: Shape / Curves
+  description: Draws a cubic bezier curve on the screen.
+  related:
+  - bezierVertex
+  - curve
+  params:
+  - name: x1
+    type: number
+    desc: x of start point
+  - name: y1
+    type: number
+    desc: y of start point
+  - name: cx1
+    type: number
+    desc: x of first control point
+  - name: cy1
+    type: number
+    desc: y of first control point
+  - name: cx2
+    type: number
+    desc: x of second control point
+  - name: cy2
+    type: number
+    desc: y of second control point
+  - name: x2
+    type: number
+    desc: x of end point
+  - name: y2
+    type: number
+    desc: y of end point
+  returns: ''
+  uth: []
+  syntax: (bezier x1 y1 cx1 cy1 cx2 cy2 x2 y2)
+- slug: curveDetail
+  name: (curve-detail)
+  cat_tag: Shape / Curves
+  description: Sets the resolution at which curves display. Default is 20.
+  related:
+  - curve
+  - curveTightness
+  params:
+  - name: d
+    type: integer
+    desc: resolution of the curve
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def curve_detail(n): _cdetail[0] = max(1, int(n))'
+  syntax: (curve-detail d)
+- slug: curvePoint
+  name: (curve-point)
+  cat_tag: Shape / Curves
+  description: Evaluates the Catmull-Rom curve at parameter t.
+  related:
+  - curve
+  - curveTangent
+  params:
+  - name: a
+    type: number
+    desc: coordinate of first control point
+  - name: b
+    type: number
+    desc: coordinate of first point
+  - name: c
+    type: number
+    desc: coordinate of second point
+  - name: d
+    type: number
+    desc: coordinate of second control point
+  - name: t
+    type: number
+    desc: value between 0 and 1
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def curve_point(a, b, c, d, t):\n    k = (1.0 - _tight[0]) / 2.0\n    m1 = k * (c - a); m2 = k * (d - b); t2 = t * t; t3 = t2 * t\n    return (2 * t3 - 3 * t2 + 1) * b + (t3 - 2 * t2 + t) * m1 + (-2 * t3 + 3 * t2) * c + (t3 - t2) * m2"
+  syntax: (curve-point a b c d t)
+- slug: curveTangent
+  name: (curve-tangent)
+  cat_tag: Shape / Curves
+  description: Calculates the tangent of a point on a Catmull-Rom curve.
+  related:
+  - curve
+  - curvePoint
+  params:
+  - name: a
+    type: number
+    desc: coordinate of first control point
+  - name: b
+    type: number
+    desc: coordinate of first point
+  - name: c
+    type: number
+    desc: coordinate of second point
+  - name: d
+    type: number
+    desc: coordinate of second control point
+  - name: t
+    type: number
+    desc: value between 0 and 1
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def curve_tangent(a, b, c, d, t):\n    k = (1.0 - _tight[0]) / 2.0\n    m1 = k * (c - a); m2 = k * (d - b); t2 = t * t\n    return (6 * t2 - 6 * t) * b + (3 * t2 - 4 * t + 1) * m1 + (-6 * t2 + 6 * t) * c + (3 * t2 - 2 * t) * m2"
+  syntax: (curve-tangent a b c d t)
+- slug: curveTightness
+  name: (curve-tightness)
+  cat_tag: Shape / Curves
+  description: Modifies the quality of curves drawn with curve(). Default is 0.
+  related:
+  - curve
+  - curveDetail
+  params:
+  - name: t
+    type: number
+    desc: amount of deformation from the original vertices
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def curve_tightness(t):\n    _tight[0] = float(t)\n    return None"
+  syntax: (curve-tightness t)
+- slug: curve
+  name: (curve)
+  cat_tag: Shape / Curves
+  description: Draws a curved line on the screen (Catmull-Rom spline).
+  related:
+  - bezier
+  - curveVertex
+  params:
+  - name: x0
+    type: number
+    desc: x of beginning control point
+  - name: y0
+    type: number
+    desc: y of beginning control point
+  - name: x1
+    type: number
+    desc: x of first point
+  - name: y1
+    type: number
+    desc: y of first point
+  - name: x2
+    type: number
+    desc: x of second point
+  - name: y2
+    type: number
+    desc: y of second point
+  - name: x3
+    type: number
+    desc: x of ending control point
+  - name: y3
+    type: number
+    desc: y of ending control point
+  returns: ''
+  uth: []
+  syntax: (curve x0 y0 x1 y1 x2 y2 x3 y3)
+- slug: box
+  name: (box)
+  cat_tag: Shape / 3D Primitives
+  description: A box is an extruded rectangle. Use in P3D mode. A box with equal dimensions is a cube.
+  related:
+  - sphere
+  - size
+  params:
+  - name: size
+    type: number
+    desc: dimension of the box in all directions
+  - name: w
+    type: number
+    desc: width
+  - name: h
+    type: number
+    desc: height
+  - name: d
+    type: number
+    desc: depth
+  returns: ''
+  uth: []
+  syntax: '(box size)
+
+    (box w h d)'
+- slug: sphere
+  name: (sphere)
+  cat_tag: Shape / 3D Primitives
+  description: Draws a sphere. Use sphere-detail to control tessellation. Must be in P3D mode.
+  related:
+  - box
+  - sphereDetail
+  params:
+  - name: r
+    type: number
+    desc: radius of the sphere
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def sphere(*a):\n    if a and isinstance(a[0], _OBJ_TYPES): return _sphere_base(*a)\n    if _sdetail[0] and len(a) == 1: return _sphere_base(a[0], *_sdetail[0])\n    return _sphere_base(*a)"
+  syntax: (sphere r)
+- slug: sphereDetail
+  name: (sphere-detail)
+  cat_tag: Shape / 3D Primitives
+  description: Controls the detail used to render a sphere by adjusting the number of vertices.
+  related:
+  - sphere
+  params:
+  - name: res
+    type: integer
+    desc: number of segments (higher = smoother)
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def sphere_detail(ures, vres=None): _sdetail[0] = (int(ures), int(vres if vres is not None else ures))'
+  syntax: (sphere-detail res)
+- slug: ellipseMode
+  name: (ellipse-mode)
+  cat_tag: Shape / Attributes
+  description: Modifies the location from which ellipses are drawn. Default is CENTER.
+  related:
+  - ellipse
+  - circle
+  params:
+  - name: mode
+    type: integer
+    desc: CENTER, RADIUS, CORNER, or CORNERS
+  returns: ''
+  uth: []
+  syntax: (ellipse-mode mode)
+- slug: rectMode
+  name: (rect-mode)
+  cat_tag: Shape / Attributes
+  description: Modifies the location from which rectangles are drawn. Default is CORNER.
+  related:
+  - rect
+  - square
+  params:
+  - name: mode
+    type: integer
+    desc: CORNER, CORNERS, CENTER, or RADIUS
+  returns: ''
+  uth: []
+  syntax: (rect-mode mode)
+- slug: strokeCap
+  name: (stroke-cap)
+  cat_tag: Shape / Attributes
+  description: 'Sets the style for rendering line endings. Options: ROUND, SQUARE, PROJECT.'
+  related:
+  - stroke
+  - strokeJoin
+  - strokeWeight
+  params:
+  - name: cap
+    type: integer
+    desc: ROUND, SQUARE, or PROJECT
+  returns: ''
+  uth: []
+  syntax: (stroke-cap cap)
+- slug: strokeJoin
+  name: (stroke-join)
+  cat_tag: Shape / Attributes
+  description: 'Sets the style of the joints which connect line segments. Options: MITER, BEVEL, ROUND.'
+  related:
+  - stroke
+  - strokeCap
+  - strokeWeight
+  params:
+  - name: join
+    type: integer
+    desc: MITER, BEVEL, or ROUND
+  returns: ''
+  uth: []
+  syntax: (stroke-join join)
+- slug: strokeWeight
+  name: (stroke-weight)
+  cat_tag: Shape / Attributes
+  description: Sets the width of the stroke used for lines, points, and shape borders.
+  related:
+  - stroke
+  - strokeCap
+  - strokeJoin
+  params:
+  - name: w
+    type: number
+    desc: stroke weight in pixels
+  returns: ''
+  uth: []
+  syntax: (stroke-weight w)
+- slug: shape
+  name: (shape)
+  cat_tag: Shape / Loading & Displaying
+  description: Draws a shape to the display window.
+  related:
+  - loadShape
+  - createShape
+  - shapeMode
+  params:
+  - name: s
+    type: shape
+    desc: the shape to draw
+  - name: x
+    type: number
+    desc: x-coordinate
+  - name: y
+    type: number
+    desc: y-coordinate
+  - name: w
+    type: number
+    desc: width (optional)
+  - name: h
+    type: number
+    desc: height (optional)
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def shape(sh, x=0, y=0, *wh):\n    if sh.kind == 'group' and len(sh.args) == 2 and len(wh) >= 2 and sh.args[0] and sh.args[1]:\n        push_matrix()\n        _XF['translate'](x, y)\n        _XF['scale'](wh[0] / sh.args[0], wh[1] / sh.args[1])\n        _replay(sh)\n        pop_matrix()\n        return None\n    return _shape_base(sh, x, y, *wh)"
+  syntax: '(shape s x y)
+
+    (shape s x y w h)'
+- slug: shapeMode
+  name: (shape-mode)
+  cat_tag: Shape / Loading & Displaying
+  description: Modifies the location from which shapes are drawn. Default is CORNER.
+  related:
+  - shape
+  params:
+  - name: mode
+    type: integer
+    desc: CORNER, CORNERS, or CENTER
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def shape_mode(m): _shape_mode[0] = m'
+  syntax: (shape-mode mode)
+- slug: abs
+  name: (abs)
+  cat_tag: Math / Calculation
+  description: Calculates the absolute value (magnitude) of a number.
+  related:
+  - sq
+  - sqrt
+  params:
+  - name: x
+    type: number
+    desc: number to process
+  returns: number
+  uth: []
+  syntax: (abs x)
+- slug: ceil
+  name: (ceil)
+  cat_tag: Math / Calculation
+  description: Calculates the closest integer that is greater than or equal to the value of the parameter.
+  related:
+  - floor
+  - round
+  params:
+  - name: x
+    type: number
+    desc: number to evaluate
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def ceil(x): return _math.ceil(x)'
+  syntax: (ceil x)
+- slug: constrain
+  name: (constrain)
+  cat_tag: Math / Calculation
+  description: Constrains a value to not exceed a maximum and minimum value.
+  related:
+  - min
+  - max
+  - map
+  params:
+  - name: v
+    type: number
+    desc: the value to constrain
+  - name: lo
+    type: number
+    desc: minimum limit
+  - name: hi
+    type: number
+    desc: maximum limit
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def constrain(v, lo, hi): return lo if v < lo else hi if v > hi else v'
+  syntax: (constrain v lo hi)
+- slug: dist
+  name: (dist)
+  cat_tag: Math / Calculation
+  description: Calculates the distance between two points. Supports 2D and 3D.
+  related:
+  - mag
+  params:
+  - name: x1/y1
+    type: number
+    desc: x,y of the first point
+  - name: x2/y2
+    type: number
+    desc: x,y of the second point
+  - name: z1/z2
+    type: number
+    desc: z-coordinates (optional, 3D)
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def dist(*a):\n    h = len(a) // 2\n    return _math.sqrt(sum((a[i] - a[i + h]) ** 2 for i in range(h)))"
+  syntax: '(dist x1 y1 x2 y2)
+
+    (dist x1 y1 z1 x2 y2 z2)'
+- slug: exp
+  name: (exp)
+  cat_tag: Math / Calculation
+  description: Returns Euler's number e raised to the power of the parameter.
+  related:
+  - log
+  - pow
+  params:
+  - name: x
+    type: number
+    desc: exponent
+  returns: number
+  uth: []
+  syntax: (exp x)
+- slug: floor
+  name: (floor)
+  cat_tag: Math / Calculation
+  description: Calculates the closest integer that is less than or equal to the value of the parameter.
+  related:
+  - ceil
+  - round
+  params:
+  - name: x
+    type: number
+    desc: number to evaluate
+  returns: number
+  uth: []
+  syntax: (floor x)
+- slug: lerp
+  name: (lerp)
+  cat_tag: Math / Calculation
+  description: Calculates a number between two numbers at a specific increment. amt 0.0 returns a, amt 1.0 returns b.
+  related:
+  - map
+  - norm
+  - lerpColor
+  params:
+  - name: a
+    type: number
+    desc: first value
+  - name: b
+    type: number
+    desc: second value
+  - name: t
+    type: number
+    desc: between 0.0 and 1.0
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def lerp(a, b, t): return a + (b - a) * t'
+  syntax: (lerp a b t)
+- slug: log
+  name: (log)
+  cat_tag: Math / Calculation
+  description: Calculates the natural logarithm (base e) of a number.
+  related:
+  - exp
+  params:
+  - name: x
+    type: number
+    desc: number greater than 0
+  returns: number
+  uth: []
+  syntax: (log x)
+- slug: mag
+  name: (mag)
+  cat_tag: Math / Calculation
+  description: Calculates the magnitude (length) of a vector. Supports 2D and 3D.
+  related:
+  - dist
+  params:
+  - name: x
+    type: number
+    desc: x component
+  - name: y
+    type: number
+    desc: y component
+  - name: z
+    type: number
+    desc: z component (optional)
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def mag(*a): return _math.sqrt(sum(x * x for x in a))'
+  syntax: '(mag x y)
+
+    (mag x y z)'
+- slug: map
+  name: (map)
+  cat_tag: Math / Calculation
+  description: Re-maps a number from one range to another.
+  related:
+  - norm
+  - lerp
+  - constrain
+  params:
+  - name: value
+    type: number
+    desc: the incoming value to be converted
+  - name: start1
+    type: number
+    desc: lower bound of the input range
+  - name: stop1
+    type: number
+    desc: upper bound of the input range
+  - name: start2
+    type: number
+    desc: lower bound of the output range
+  - name: stop2
+    type: number
+    desc: upper bound of the output range
+  returns: number
+  uth: []
+  syntax: (map value start1 stop1 start2 stop2)
+- slug: max
+  name: (max)
+  cat_tag: Math / Calculation
+  description: Determines the largest value in a sequence of numbers. Supports two or three arguments.
+  related:
+  - min
+  - constrain
+  params:
+  - name: a
+    type: number
+    desc: first value
+  - name: b
+    type: number
+    desc: second value
+  - name: c
+    type: number
+    desc: third value (optional)
+  returns: number
+  uth: []
+  syntax: '(max a b)
+
+    (max a b c)'
+- slug: min
+  name: (min)
+  cat_tag: Math / Calculation
+  description: Determines the smallest value in a sequence of numbers. Supports two or three arguments.
+  related:
+  - max
+  - constrain
+  params:
+  - name: a
+    type: number
+    desc: first value
+  - name: b
+    type: number
+    desc: second value
+  - name: c
+    type: number
+    desc: third value (optional)
+  returns: number
+  uth: []
+  syntax: '(min a b)
+
+    (min a b c)'
+- slug: norm
+  name: (norm)
+  cat_tag: Math / Calculation
+  description: Normalizes a number from a range into a value between 0.0 and 1.0.
+  related:
+  - map
+  - lerp
+  params:
+  - name: v
+    type: number
+    desc: incoming value
+  - name: lo
+    type: number
+    desc: lower bound
+  - name: hi
+    type: number
+    desc: upper bound
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def norm(v, lo, hi): return (v - lo) / (hi - lo)'
+  syntax: (norm v lo hi)
+- slug: pow
+  name: (pow)
+  cat_tag: Math / Calculation
+  description: Facilitates exponential expressions. Calculates b raised to the power e.
+  related:
+  - sqrt
+  - sq
+  - exp
+  params:
+  - name: b
+    type: number
+    desc: base of the expression
+  - name: e
+    type: number
+    desc: power by which to raise the base
+  returns: number
+  uth: []
+  syntax: (pow b e)
+- slug: round
+  name: (round)
+  cat_tag: Math / Calculation
+  description: Calculates the integer closest to the parameter.
+  related:
+  - floor
+  - ceil
+  params:
+  - name: x
+    type: number
+    desc: number to round
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def round(x, *n): return _builtins.round(x, *n)'
+  syntax: (round x)
+- slug: sq
+  name: (sq)
+  cat_tag: Math / Calculation
+  description: Squares a number (multiplies a number by itself). Same as x*x.
+  related:
+  - sqrt
+  - pow
+  - abs
+  params:
+  - name: x
+    type: number
+    desc: number to square
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def sq(x): return x * x'
+  syntax: (sq x)
+- slug: sqrt
+  name: (sqrt)
+  cat_tag: Math / Calculation
+  description: Calculates the square root of a number.
+  related:
+  - sq
+  - pow
+  params:
+  - name: x
+    type: number
+    desc: non-negative number
+  returns: number
+  uth: []
+  syntax: (sqrt x)
+- slug: acos
+  name: (acos)
+  cat_tag: Math / Trigonometry
+  description: The inverse of cos, returns the arc cosine of a value.
+  related:
+  - cos
+  - asin
+  - atan
+  params:
+  - name: x
+    type: number
+    desc: value between -1 and 1
+  returns: number
+  uth: []
+  syntax: (acos x)
+- slug: asin
+  name: (asin)
+  cat_tag: Math / Trigonometry
+  description: The inverse of sin, returns the arc sine of a value.
+  related:
+  - sin
+  - acos
+  - atan
+  params:
+  - name: x
+    type: number
+    desc: value between -1 and 1
+  returns: number
+  uth: []
+  syntax: (asin x)
+- slug: atan2
+  name: (atan2)
+  cat_tag: Math / Trigonometry
+  description: Calculates the angle formed by a point relative to the positive x-axis. More useful than atan for full-circle angles.
+  related:
+  - atan
+  - sin
+  - cos
+  params:
+  - name: y
+    type: number
+    desc: y-coordinate
+  - name: x
+    type: number
+    desc: x-coordinate
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def atan2(y, x): return _math.atan2(y, x)'
+  syntax: (atan2 y x)
+- slug: atan
+  name: (atan)
+  cat_tag: Math / Trigonometry
+  description: The inverse of tan, returns the arc tangent of a value.
+  related:
+  - tan
+  - atan2
+  - asin
+  - acos
+  params:
+  - name: x
+    type: number
+    desc: value
+  returns: number
+  uth: []
+  syntax: (atan x)
+- slug: cos
+  name: (cos)
+  cat_tag: Math / Trigonometry
+  description: Calculates the cosine of an angle in radians.
+  related:
+  - sin
+  - tan
+  - radians
+  params:
+  - name: angle
+    type: number
+    desc: angle in radians
+  returns: number
+  uth: []
+  syntax: (cos angle)
+- slug: degrees
+  name: (degrees)
+  cat_tag: Math / Trigonometry
+  description: Converts a radian measurement to its corresponding value in degrees.
+  related:
+  - radians
+  params:
+  - name: r
+    type: number
+    desc: angle in radians
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def degrees(r): return r * 180.0 / _math.pi'
+  syntax: (degrees r)
+- slug: radians
+  name: (radians)
+  cat_tag: Math / Trigonometry
+  description: Converts a degree measurement to its corresponding value in radians.
+  related:
+  - degrees
+  params:
+  - name: d
+    type: number
+    desc: angle in degrees
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def radians(d): return d * _math.pi / 180.0'
+  syntax: (radians d)
+- slug: sin
+  name: (sin)
+  cat_tag: Math / Trigonometry
+  description: Calculates the sine of an angle in radians.
+  related:
+  - cos
+  - tan
+  - radians
+  params:
+  - name: angle
+    type: number
+    desc: angle in radians
+  returns: number
+  uth: []
+  syntax: (sin angle)
+- slug: tan
+  name: (tan)
+  cat_tag: Math / Trigonometry
+  description: Calculates the ratio of the sine and cosine of an angle.
+  related:
+  - sin
+  - cos
+  params:
+  - name: angle
+    type: number
+    desc: angle in radians
+  returns: number
+  uth: []
+  syntax: (tan angle)
+- slug: noise
+  name: (noise)
+  cat_tag: Math / Random
+  description: Returns the Perlin noise value at specified coordinates. Produces smoother and more natural sequences than random().
+  related:
+  - noiseSeed
+  - noiseDetail
+  - random
+  params:
+  - name: x
+    type: number
+    desc: x-coordinate in noise space
+  - name: y
+    type: number
+    desc: y-coordinate (optional)
+  - name: z
+    type: number
+    desc: z-coordinate (optional)
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def noise(x, y=0.0, z=0.0):\n    tot = 0.0; amp = 0.5; f = 1.0; norm = 0.0\n    for k in range(_noise_oct):\n        o = _noise_off[k % 8]\n        tot += amp * (_perlin(x * f + o, y * f + o, z * f + o) * 0.5 + 0.5)\n        norm += amp; amp *= _noise_fall; f *= 2\n    return min(1.0, max(0.0, tot / norm))"
+  syntax: '(noise x)
+
+    (noise x y)
+
+    (noise x y z)'
+- slug: noiseDetail
+  name: (noise-detail)
+  cat_tag: Math / Random
+  description: Adjusts the character and level of detail produced by the Perlin noise function.
+  related:
+  - noise
+  - noiseSeed
+  params:
+  - name: octaves
+    type: integer
+    desc: number of octaves (1-8 typical)
+  - name: falloff
+    type: number
+    desc: falloff factor for each octave (default 0.5)
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def noise_detail(lod, falloff=None):\n    global _noise_oct, _noise_fall\n    _noise_oct = max(1, int(lod))\n    if falloff is not None: _noise_fall = falloff"
+  syntax: (noise-detail octaves falloff)
+- slug: noiseSeed
+  name: (noise-seed)
+  cat_tag: Math / Random
+  description: Sets the seed value for noise().
+  related:
+  - noise
+  - noiseDetail
+  params:
+  - name: seed
+    type: integer
+    desc: seed value
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def noise_seed(seed):\n    global _np\n    q = list(range(256)); _random.Random(seed).shuffle(q); _np = q + q"
+  syntax: (noise-seed seed)
+- slug: randomGaussian
+  name: (random-gaussian)
+  cat_tag: Math / Random
+  description: Returns a float from a random series of numbers having a mean of 0 and standard deviation of 1.
+  related:
+  - random
+  - randomSeed
+  params: []
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def random_gaussian(): return _random.gauss(0, 1)'
+  syntax: (random-gaussian)
+- slug: randomSeed
+  name: (random-seed)
+  cat_tag: Math / Random
+  description: Sets the seed value for random(). Repeated calls with the same seed will produce the same sequence.
+  related:
+  - random
+  params:
+  - name: s
+    type: integer
+    desc: seed value
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def random_seed(n): _random.seed(n)'
+  syntax: (random-seed s)
+- slug: random
+  name: (random)
+  cat_tag: Math / Random
+  description: Generates random numbers. With one argument, returns a value from 0 up to (but not including) the parameter. With two arguments, returns a value from the first to the second.
+  related:
+  - randomSeed
+  - noise
+  - randomGaussian
+  params:
+  - name: high
+    type: number
+    desc: upper bound
+  - name: low
+    type: number
+    desc: lower bound (optional)
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def random(*args):\n    if len(args)==1: return _random.uniform(0, args[0])\n    return _random.uniform(args[0], args[1])"
+  syntax: '(random high)
+
+    (random low high)'
+- slug: createOutput
+  name: (create-output)
+  cat_tag: Output / Files
+  description: Opens a file for binary writing. Returns a ofstream value.
+  related:
+  - saveBytes
+  - createInput
+  params:
+  - name: path
+    type: string
+    desc: path to the file
+  returns: std::ofstream
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def create_output(name): return _ByteOut(open(_out_path(name), ''wb''))'
+  syntax: (create-output path)
+- slug: createWriter
+  name: (create-writer)
+  cat_tag: Output / Files
+  description: Creates a PrintWriter object for writing text to a file.
+  related:
+  - PrintWriter_class
+  - saveStrings
+  params:
+  - name: path
+    type: string
+    desc: path to the file
+  returns: PrintWriter
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def create_writer(name): return _Writer(open(_out_path(name), ''w'', encoding=''utf-8''))'
+  syntax: (create-writer path)
+- slug: saveBytes
+  name: (save-bytes)
+  cat_tag: Output / Files
+  description: Writes a vector of bytes to a file.
+  related:
+  - loadBytes
+  - saveStrings
+  params:
+  - name: path
+    type: string
+    desc: path to write to
+  - name: data
+    type: list
+    desc: bytes to write
+  returns: boolean
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def save_bytes(name, data):\n    with open(_out_path(name), 'wb') as fh: fh.write(bytes(int(b) & 255 for b in data))"
+  syntax: (save-bytes path data)
+- slug: saveJSONArray
+  name: (save-json-array)
+  cat_tag: Output / Files
+  description: Saves a JSONValue array to a file.
+  related:
+  - loadJSONArray
+  - saveJSONObject
+  params:
+  - name: path
+    type: string
+    desc: path to write to
+  - name: v
+    type: JSONValue
+    desc: the JSON array value
+  - name: indent
+    type: integer
+    desc: indentation spaces (default 2)
+  returns: boolean
+  uth: []
+  syntax: (save-json-array path v indent)
+- slug: saveJSONObject
+  name: (save-json-object)
+  cat_tag: Output / Files
+  description: Saves a JSONValue to a file as formatted JSON.
+  related:
+  - loadJSONObject
+  - saveJSONArray
+  params:
+  - name: path
+    type: string
+    desc: path to write to
+  - name: v
+    type: JSONValue
+    desc: the JSON value
+  - name: indent
+    type: integer
+    desc: indentation spaces (default 2)
+  returns: boolean
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def save_json_object(a, b): return save_json(a, b) if isinstance(a, str) else save_json(b, a)'
+  syntax: (save-json-object path v indent)
+- slug: saveStrings
+  name: (save-strings)
+  cat_tag: Output / Files
+  description: Writes an array of strings to a file, one per line.
+  related:
+  - loadStrings
+  - saveBytes
+  params:
+  - name: path
+    type: string
+    desc: path to write to
+  - name: lines
+    type: list
+    desc: strings to write
+  returns: boolean
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def save_strings(name, lines):\n    with open(_out_path(name), 'w', encoding='utf-8') as fh: fh.write(chr(10).join(_txt(x) for x in lines) + chr(10))"
+  syntax: (save-strings path lines)
+- slug: saveTable
+  name: (save-table)
+  cat_tag: Output / Files
+  description: Saves a Table to a CSV or TSV file.
+  related:
+  - loadTable
+  params:
+  - name: path
+    type: string
+    desc: path to write to
+  - name: t
+    type: table
+    desc: the table to save
+  - name: ext
+    type: string
+    desc: '"csv" or "tsv" (default csv)'
+  returns: boolean
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def save_table(t, name, options=''):\n    delim = chr(9) if ('tsv' in options or name.endswith('.tsv')) else ','\n    with open(_out_path(name), 'w', encoding='utf-8', newline='') as fh:\n        w = _csv.writer(fh, delimiter=delim)\n        if t.columns: w.writerow(t.columns)\n        for r in t.data: w.writerow([x if isinstance(x, str) else _txt(x) for x in r])"
+  syntax: (save-table path t ext)
+- slug: saveXML
+  name: (save-xml)
+  cat_tag: Output / Files
+  description: Saves an XML object to a file.
+  related:
+  - loadXML
+  - parseXML
+  - XML_class
+  params:
+  - name: path
+    type: string
+    desc: path to write to
+  - name: x
+    type: xml
+    desc: the XML object to save
+  returns: boolean
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def save_xml(x, name): _ET.ElementTree(x.el).write(_out_path(name), encoding=''utf-8'', xml_declaration=True)'
+  syntax: (save-xml path x)
+- slug: selectOutput
+  name: (select-output)
+  cat_tag: Output / Files
+  description: Opens a file chooser dialog to select an output file. Returns the path.
+  related:
+  - selectInput
+  - selectFolder
+  params:
+  - name: prompt
+    type: string
+    desc: dialog message
+  - name: filter
+    type: string
+    desc: file extension filter (optional)
+  returns: string
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def select_output(prompt, cb, *r): _select(''save'', prompt, cb)'
+  syntax: (select-output prompt filter)
+- slug: print
+  name: (print)
+  cat_tag: Output / Text Area
+  description: Writes to the console. Does not add a newline. Accepts any type.
+  related:
+  - println
+  params:
+  - name: v
+    type: any
+    desc: the value to print
+  returns: ''
+  uth: []
+  syntax: (print v)
+- slug: printArray
+  name: (print-array)
+  cat_tag: Output / Text Area
+  description: Prints the contents of a list to the console with indices.
+  related:
+  - println
+  params:
+  - name: a
+    type: list
+    desc: the list to print
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def print_array(a):\n    for i, v in enumerate(a): _sys.stdout.write('[' + str(i) + '] ' + _show(v, True) + chr(10))\n    _sys.stdout.flush()"
+  syntax: (print-array a)
+- slug: println
+  name: (println)
+  cat_tag: Output / Text Area
+  description: Writes to the console, followed by a newline. Call with no args for a blank line.
+  related:
+  - print
+  params:
+  - name: v
+    type: any
+    desc: the value to print (optional)
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def println(*a):\n    if a and isinstance(a[0], _Writer):\n        a[0].fh.write(' '.join(_show(x) for x in a[1:]) + chr(10)); return None\n    return _println_base(*a)"
+  syntax: '(println)
+
+    (println v)'
+- slug: save
+  name: (save)
+  cat_tag: Output / Image
+  description: Saves an image from the display window. The filename must include an extension (PNG, JPG).
+  related:
+  - saveFrame
+  params:
+  - name: filename
+    type: string
+    desc: filename with extension
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def save(*a):\n    if _os.environ.get('SCHEME_OUTPUT_DIR') and a:\n        if isinstance(a[0], str): a = (_out_abs(a[0]),) + a[1:]\n        elif len(a) > 1 and isinstance(a[1], str): a = (a[0], _out_abs(a[1])) + a[2:]\n    return _save_native(*a)"
+  syntax: (save filename)
+- slug: saveFrame
+  name: (save-frame)
+  cat_tag: Output / Image
+  description: 'Saves a numbered image file. Use #### as a placeholder for the frame number.'
+  related:
+  - save
+  params:
+  - name: filename
+    type: string
+    desc: filename template, e.g. frame-####.png
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def save_frame(*a):\n    if not _os.environ.get('SCHEME_OUTPUT_DIR'): return _save_frame_native(*a)\n    name = str(a[0]) if a else 'screen-####.png'\n    name = __import__('re').sub('#+', lambda m: str(int(globals().get('frame_count', 0) or 0)).zfill(len(m.group(0))), name)\n    return _save_frame_native(_out_abs(name), *a[1:])"
+  syntax: (save-frame filename)
+- slug: alpha
+  name: (alpha)
+  cat_tag: Color / Creating & Reading
+  description: Extracts the alpha value from a color.
+  related:
+  - red
+  - green
+  - blue
+  params:
+  - name: c
+    type: color
+    desc: any color value
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def alpha(c): return _c255(_rgba(c)[3])'
+  syntax: (alpha c)
+- slug: blue
+  name: (blue)
+  cat_tag: Color / Creating & Reading
+  description: Extracts the blue value from a color.
+  related:
+  - red
+  - green
+  - alpha
+  params:
+  - name: c
+    type: color
+    desc: any color value
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def blue(c): return _c255(_rgba(c)[2])'
+  syntax: (blue c)
+- slug: brightness
+  name: (brightness)
+  cat_tag: Color / Creating & Reading
+  description: Extracts the brightness value from a color (HSB mode).
+  related:
+  - hue
+  - saturation
+  - colorMode
+  params:
+  - name: c
+    type: color
+    desc: any color value
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def brightness(c): return _c255(_hsv(c)[2])'
+  syntax: (brightness c)
+- slug: color_fn
+  name: (color)
+  cat_tag: Color / Creating & Reading
+  description: Creates colors for storing in variables. Respects the current colorMode.
+  related:
+  - fill
+  - stroke
+  - lerpColor
+  params:
+  - name: gray
+    type: number
+    desc: grayscale value
+  - name: r
+    type: number
+    desc: red component
+  - name: g
+    type: number
+    desc: green component
+  - name: b
+    type: number
+    desc: blue component
+  - name: a
+    type: number
+    desc: alpha (optional)
+  returns: color
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def color(*a): return _as_color(a)[0] if a and isinstance(a[0], (int, float)) and not isinstance(a[0], bool) else _mw_color(*a)'
+  syntax: '(color gray)
+
+    (color gray a)
+
+    (color r g b)
+
+    (color r g b a)'
+- slug: green
+  name: (green)
+  cat_tag: Color / Creating & Reading
+  description: Extracts the green value from a color.
+  related:
+  - red
+  - blue
+  - alpha
+  params:
+  - name: c
+    type: color
+    desc: any color value
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def green(c): return _c255(_rgba(c)[1])'
+  syntax: (green c)
+- slug: hue
+  name: (hue)
+  cat_tag: Color / Creating & Reading
+  description: Extracts the hue value from a color (HSB mode).
+  related:
+  - saturation
+  - brightness
+  - colorMode
+  params:
+  - name: c
+    type: color
+    desc: any color value
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def hue(c): return _c255(_hsv(c)[0])'
+  syntax: (hue c)
+- slug: lerpColor
+  name: (lerp-color)
+  cat_tag: Color / Creating & Reading
+  description: Calculates a color between two colors at a specific increment.
+  related:
+  - lerp
+  - color_fn
+  params:
+  - name: c1
+    type: color
+    desc: interpolate from this color
+  - name: c2
+    type: color
+    desc: interpolate to this color
+  - name: t
+    type: number
+    desc: between 0.0 and 1.0
+  returns: color
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def lerp_color(c1, c2, t):\n    a, b = _rgba(c1), _rgba(c2)\n    k = 255.0 if _NATIVE255 else 1.0\n    return _mw_color(*[float(a[i] + (b[i] - a[i]) * t) * k for i in range(4)])"
+  syntax: (lerp-color c1 c2 t)
+- slug: red
+  name: (red)
+  cat_tag: Color / Creating & Reading
+  description: Extracts the red value from a color.
+  related:
+  - green
+  - blue
+  - alpha
+  - hue
+  - saturation
+  - brightness
+  params:
+  - name: c
+    type: color
+    desc: any color value
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def red(c): return _c255(_rgba(c)[0])'
+  syntax: (red c)
+- slug: saturation
+  name: (saturation)
+  cat_tag: Color / Creating & Reading
+  description: Extracts the saturation value from a color (HSB mode).
+  related:
+  - hue
+  - brightness
+  - colorMode
+  params:
+  - name: c
+    type: color
+    desc: any color value
+  returns: number
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def saturation(c): return _c255(_hsv(c)[1])'
+  syntax: (saturation c)
+- slug: background
+  name: (background)
+  cat_tag: Color / Setting
+  description: Sets the color used for the background of the Processing window. Called in draw() to clear the canvas each frame.
+  related:
+  - fill
+  - stroke
+  params:
+  - name: gray
+    type: number
+    desc: grayscale value (0-255)
+  - name: r
+    type: number
+    desc: red component
+  - name: g
+    type: number
+    desc: green component
+  - name: b
+    type: number
+    desc: blue component
+  - name: a
+    type: number
+    desc: alpha (optional)
+  - name: img
+    type: image
+    desc: image to use as background
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def background(*a): return _mw_background(*_as_color(a))'
+  syntax: '(background gray)
+
+    (background gray a)
+
+    (background r g b)
+
+    (background r g b a)
+
+    (background c)
+
+    (background img)'
+- slug: clear
+  name: (clear)
+  cat_tag: Color / Setting
+  description: Clears the pixels within a buffer. Equivalent to background with 0 alpha.
+  related:
+  - background
+  params: []
+  returns: ''
+  uth: []
+  syntax: (clear)
+- slug: colorMode
+  name: (color-mode)
+  cat_tag: Color / Setting
+  description: Changes the way Processing interprets color data. Default is RGB with range 0-255.
+  related:
+  - fill
+  - stroke
+  - background
+  params:
+  - name: mode
+    type: integer
+    desc: RGB or HSB
+  - name: max
+    type: number
+    desc: range for all channels (optional)
+  - name: m-h
+    type: number
+    desc: range for hue
+  - name: m-s
+    type: number
+    desc: range for saturation
+  - name: m-b
+    type: number
+    desc: range for brightness
+  - name: m-a
+    type: number
+    desc: range for alpha
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def color_mode(mode, *mx):\n    _cm['rgb255'] = (mode == _RGB_MODE) and all(m == 255 for m in mx)\n    return _mw_color_mode(mode, *mx)"
+  syntax: '(color-mode mode)
+
+    (color-mode mode max)
+
+    (color-mode mode m-h m-s m-b m-a)'
+- slug: fill
+  name: (fill)
+  cat_tag: Color / Setting
+  description: Sets the color used to fill shapes.
+  related:
+  - noFill
+  - stroke
+  - background
+  params:
+  - name: gray
+    type: number
+    desc: grayscale value
+  - name: r
+    type: number
+    desc: red component
+  - name: g
+    type: number
+    desc: green component
+  - name: b
+    type: number
+    desc: blue component
+  - name: a
+    type: number
+    desc: alpha (optional)
+  - name: c
+    type: color
+    desc: a color value
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def fill(*a): return _mw_fill(*_as_color(a))'
+  syntax: '(fill gray)
+
+    (fill gray a)
+
+    (fill r g b)
+
+    (fill r g b a)
+
+    (fill c)'
+- slug: noFill
+  name: (no-fill)
+  cat_tag: Color / Setting
+  description: Disables filling geometry. Shapes will only have a stroke outline.
+  related:
+  - fill
+  params: []
+  returns: ''
+  uth: []
+  syntax: (no-fill)
+- slug: noStroke
+  name: (no-stroke)
+  cat_tag: Color / Setting
+  description: Disables drawing the stroke (outline).
+  related:
+  - stroke
+  params: []
+  returns: ''
+  uth: []
+  syntax: (no-stroke)
+- slug: stroke
+  name: (stroke)
+  cat_tag: Color / Setting
+  description: Sets the color used to draw lines and borders around shapes.
+  related:
+  - noStroke
+  - fill
+  - strokeWeight
+  params:
+  - name: gray
+    type: number
+    desc: grayscale value
+  - name: r
+    type: number
+    desc: red component
+  - name: g
+    type: number
+    desc: green component
+  - name: b
+    type: number
+    desc: blue component
+  - name: a
+    type: number
+    desc: alpha (optional)
+  - name: c
+    type: color
+    desc: a color value
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def stroke(*a): return _mw_stroke(*_as_color(a))'
+  syntax: '(stroke gray)
+
+    (stroke gray a)
+
+    (stroke r g b)
+
+    (stroke r g b a)
+
+    (stroke c)'
+- slug: ambientLight
+  name: (ambient-light)
+  cat_tag: Lights Camera / Lights
+  description: Adds an ambient light. Ambient light has no position or direction.
+  related:
+  - lights
+  - directionalLight
+  - pointLight
+  params:
+  - name: r
+    type: number
+    desc: red component
+  - name: g
+    type: number
+    desc: green component
+  - name: b
+    type: number
+    desc: blue component
+  - name: x/y/z
+    type: number
+    desc: position (optional)
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def ambient_light(*a, **k):\n    if not _mw_ambient: return _amb_notice()\n    if _native(a) or k: return _mw_ambient(*a, **k)\n    r, g, b = (a[0], a[0], a[0]) if len(a) == 1 else a[:3]\n    _enable_lit()\n    _amb['now'] = True\n    return _mw_ambient(_rgb01(r, g, b), _AMBIENT_BRIGHTNESS)"
+  syntax: '(ambient-light r g b)
+
+    (ambient-light r g b x y z)'
+- slug: directionalLight
+  name: (directional-light)
+  cat_tag: Lights Camera / Lights
+  description: Adds a directional light. Comes uniformly from one direction, like sunlight.
+  related:
+  - lights
+  - ambientLight
+  - pointLight
+  - spotLight
+  params:
+  - name: r
+    type: number
+    desc: red component
+  - name: g
+    type: number
+    desc: green component
+  - name: b
+    type: number
+    desc: blue component
+  - name: nx
+    type: number
+    desc: x direction
+  - name: ny
+    type: number
+    desc: y direction
+  - name: nz
+    type: number
+    desc: z direction
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def directional_light(*a, **k):\n    if _native(a) or k: return _mw_dir_light(*a, **k)\n    r, g, b, nx, ny, nz = a\n    return _light('dir', lambda: _mw_dir_light(_rgb01(r, g, b), _LIGHT_DIR_ILLUMINANCE), (0.0, 0.0, 0.0), (nx, ny, nz))"
+  syntax: (directional-light r g b nx ny nz)
+- slug: lightFalloff
+  name: (light-falloff)
+  cat_tag: Lights Camera / Lights
+  description: Sets the falloff rates for point lights, spot lights, and ambient lights.
+  related:
+  - lights
+  - pointLight
+  params:
+  - name: constant
+    type: number
+    desc: constant falloff factor
+  - name: linear
+    type: number
+    desc: linear falloff factor
+  - name: quadratic
+    type: number
+    desc: quadratic falloff factor
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def light_falloff(c, l=0.0, q=0.0):\n    _falloff[0], _falloff[1], _falloff[2] = float(c), float(l), float(q)\n    return _light_falloff_range(c, l, q)"
+  syntax: (light-falloff constant linear quadratic)
+- slug: lightSpecular
+  name: (light-specular)
+  cat_tag: Lights Camera / Lights
+  description: Sets the specular color for lights. Affects materials with specular component.
+  related:
+  - specular
+  - lights
+  params:
+  - name: r
+    type: number
+    desc: red component
+  - name: g
+    type: number
+    desc: green component
+  - name: b
+    type: number
+    desc: blue component
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def light_specular(*a):\n    _spec['light'] = _spec_level(*a); _apply_rough()"
+  syntax: (light-specular r g b)
+- slug: lights
+  name: (lights)
+  cat_tag: Lights Camera / Lights
+  description: Sets the default ambient light, directional light, falloff, and specular values. Equivalent to calling ambient-light and directional-light with default parameters.
+  related:
+  - noLights
+  - ambientLight
+  - directionalLight
+  params: []
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def lights():\n    ambient_light(128, 128, 128)\n    directional_light(128, 128, 128, 0.0, 0.0, -1.0)"
+  syntax: (lights)
+- slug: noLights
+  name: (no-lights)
+  cat_tag: Lights Camera / Lights
+  description: Disables all lighting. Geometry will be rendered flat with fill color only.
+  related:
+  - lights
+  params: []
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def no_lights():\n    _lit_frame[0] = False\n    if _mw_unlit: _mw_unlit()"
+  syntax: (no-lights)
+- slug: normal
+  name: (normal)
+  cat_tag: Lights Camera / Lights
+  description: Sets the current normal vector. Used to specify the surface orientation for lighting calculations.
+  related:
+  - lights
+  - beginShape
+  params:
+  - name: nx
+    type: number
+    desc: x component of normal
+  - name: ny
+    type: number
+    desc: y component of normal
+  - name: nz
+    type: number
+    desc: z component of normal
+  returns: ''
+  uth: []
+  syntax: (normal nx ny nz)
+- slug: pointLight
+  name: (point-light)
+  cat_tag: Lights Camera / Lights
+  description: Adds a point light. Emanates from a specific position in all directions.
+  related:
+  - lights
+  - directionalLight
+  - spotLight
+  params:
+  - name: r
+    type: number
+    desc: red component
+  - name: g
+    type: number
+    desc: green component
+  - name: b
+    type: number
+    desc: blue component
+  - name: x
+    type: number
+    desc: x-position
+  - name: y
+    type: number
+    desc: y-position
+  - name: z
+    type: number
+    desc: z-position
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def point_light(*a, **k):\n    if _native(a) or k: return _mw_point_light(*a, **k)\n    r, g, b, x, y, z = a\n    inten, d = _pl_intensity(float(x), float(y), float(z))\n    rng = max(float(_LIGHT_RANGE), 3.0 * d) if _falloff[1] <= 0 and _falloff[2] <= 0 else float(_LIGHT_RANGE)\n    _fresh_light('point', inten)\n    return _light('point', lambda: _mw_point_light(_rgb01(r, g, b), inten, rng, _LIGHT_RADIUS), (x, y, z), None)"
+  syntax: (point-light r g b x y z)
+- slug: spotLight
+  name: (spot-light)
+  cat_tag: Lights Camera / Lights
+  description: Adds a spotlight. Creates a cone of light from a specific position pointing in a direction.
+  related:
+  - lights
+  - pointLight
+  - directionalLight
+  params:
+  - name: r/g/b
+    type: number
+    desc: color components
+  - name: x/y/z
+    type: number
+    desc: position
+  - name: nx/ny/nz
+    type: number
+    desc: direction
+  - name: angle
+    type: number
+    desc: cone angle in radians
+  - name: concentration
+    type: number
+    desc: exponent determining center bias
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def spot_light(*a, **k):\n    if _native(a) or k: return _mw_spot_light(*a, **k)\n    r, g, b, x, y, z, nx, ny, nz = a[:9]\n    angle = a[9] if len(a) > 9 else _math.pi / 3\n    inten, d = _pl_intensity(float(x), float(y), float(z))\n    rng = max(float(_LIGHT_RANGE), 3.0 * d) if _falloff[1] <= 0 and _falloff[2] <= 0 else float(_LIGHT_RANGE)\n    _fresh_light('spot', inten)\n    return _light('spot', lambda: _mw_spot_light(_rgb01(r, g, b), inten, rng, _LIGHT_RADIUS, 0.0, angle),\n                  (x, y, z), (x + nx, y + ny, z + nz))"
+  syntax: (spot-light r g b x y z nx ny nz angle concentration)
+- slug: ambient
+  name: (ambient)
+  cat_tag: Lights Camera / Material Properties
+  description: Sets the ambient reflectance for shapes. Used with lighting.
+  related:
+  - lights
+  - specular
+  - emissive
+  - shininess
+  params:
+  - name: r
+    type: number
+    desc: red component
+  - name: g
+    type: number
+    desc: green component
+  - name: b
+    type: number
+    desc: blue component
+  - name: c
+    type: color
+    desc: a color value
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def ambient(*a): return None'
+  syntax: '(ambient r g b)
+
+    (ambient c)'
+- slug: emissive
+  name: (emissive)
+  cat_tag: Lights Camera / Material Properties
+  description: Sets the emissive color of a shape. Emissive color appears to glow.
+  related:
+  - ambient
+  - specular
+  - shininess
+  params:
+  - name: r
+    type: number
+    desc: red component
+  - name: g
+    type: number
+    desc: green component
+  - name: b
+    type: number
+    desc: blue component
+  - name: c
+    type: color
+    desc: a color value
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def emissive(*a): return _mw_emissive(*_as_color(a))'
+  syntax: '(emissive r g b)
+
+    (emissive c)'
+- slug: shininess
+  name: (shininess)
+  cat_tag: Lights Camera / Material Properties
+  description: Sets the amount of gloss in the surface of shapes. Used with specular().
+  related:
+  - specular
+  - ambient
+  - emissive
+  params:
+  - name: s
+    type: number
+    desc: degree of shininess
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def shininess(s):\n    _spec['shin'] = float(s); _apply_rough()"
+  syntax: (shininess s)
+- slug: specular
+  name: (specular)
+  cat_tag: Lights Camera / Material Properties
+  description: Sets the specular color of the materials used for shapes drawn to the screen.
+  related:
+  - shininess
+  - ambient
+  - emissive
+  - lightSpecular
+  params:
+  - name: r
+    type: number
+    desc: red component
+  - name: g
+    type: number
+    desc: green component
+  - name: b
+    type: number
+    desc: blue component
+  - name: c
+    type: color
+    desc: a color value
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def specular(*a):\n    _spec['mat'] = _spec_level(*a); _apply_rough()"
+  syntax: '(specular r g b)
+
+    (specular c)'
+- slug: beginCamera
+  name: (begin-camera)
+  cat_tag: Lights Camera / Camera
+  description: Opens a section of code that can include shapes to be rendered into the camera-space. Must be paired with end-camera.
+  related:
+  - endCamera
+  - camera
+  params: []
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def begin_camera(): _cam_m[0] = _cam_from(_cam_args[0])'
+  syntax: (begin-camera)
+- slug: camera
+  name: (camera)
+  cat_tag: Lights Camera / Camera
+  description: Sets the position of the camera by defining the eye position, center of the scene, and up direction.
+  related:
+  - perspective
+  - ortho
+  - beginCamera
+  - endCamera
+  params:
+  - name: eye-x/y/z
+    type: number
+    desc: position of the camera eye
+  - name: center-x/y/z
+    type: number
+    desc: center of the scene
+  - name: up-x/y/z
+    type: number
+    desc: up direction vector
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def camera(*a):\n    _cam_args[0] = a if a else None\n    return _camera_rec(*a)"
+  syntax: '(camera)
+
+    (camera eye-x eye-y eye-z center-x center-y center-z up-x up-y up-z)'
+- slug: endCamera
+  name: (end-camera)
+  cat_tag: Lights Camera / Camera
+  description: Closes a camera definition started with begin-camera.
+  related:
+  - beginCamera
+  - camera
+  params: []
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def end_camera():\n    m = _cam_m[0]; _cam_m[0] = None\n    if m is None: return None\n    e = _m4_ap(m, (0.0, 0.0, 0.0)); c = _m4_ap(m, (0.0, 0.0, -1000.0)); u = _m4_ap(m, (0.0, 1.0, 0.0), 0.0)\n    return camera(e[0], e[1], e[2], c[0], c[1], c[2], u[0], u[1], u[2])"
+  syntax: (end-camera)
+- slug: frustum
+  name: (frustum)
+  cat_tag: Lights Camera / Camera
+  description: Sets a perspective matrix as defined by the parameters. An off-axis frustum.
+  related:
+  - perspective
+  - ortho
+  params:
+  - name: left
+    type: number
+    desc: left coordinate of the clipping plane
+  - name: right
+    type: number
+    desc: right coordinate
+  - name: bottom
+    type: number
+    desc: bottom coordinate
+  - name: top
+    type: number
+    desc: top coordinate
+  - name: near
+    type: number
+    desc: near z-plane
+  - name: far
+    type: number
+    desc: far z-plane
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def frustum(left, right, bottom, top, near, far):\n    g = _gfx()\n    if hasattr(g, 'frustum'):\n        return g.frustum(float(left), float(right), float(bottom), float(top), float(near), float(far))\n    return _frustum_fallback(left, right, bottom, top, near, far)"
+  syntax: (frustum left right bottom top near far)
+- slug: ortho
+  name: (ortho)
+  cat_tag: Lights Camera / Camera
+  description: Sets an orthographic projection, where objects appear flat and no foreshortening occurs.
+  related:
+  - perspective
+  - camera
+  params:
+  - name: left
+    type: number
+    desc: left clipping plane
+  - name: right
+    type: number
+    desc: right clipping plane
+  - name: bottom
+    type: number
+    desc: bottom clipping plane
+  - name: top
+    type: number
+    desc: top clipping plane
+  - name: near
+    type: number
+    desc: near clipping plane
+  - name: far
+    type: number
+    desc: far clipping plane
+  returns: ''
+  uth: []
+  syntax: '(ortho)
+
+    (ortho left right bottom top near far)'
+- slug: perspective
+  name: (perspective)
+  cat_tag: Lights Camera / Camera
+  description: Sets a perspective projection. Simulates natural foreshortening. No args sets default.
+  related:
+  - ortho
+  - camera
+  - frustum
+  params:
+  - name: fov
+    type: number
+    desc: field of view angle in radians
+  - name: aspect
+    type: number
+    desc: width/height ratio
+  - name: z-near
+    type: number
+    desc: near clipping plane
+  - name: z-far
+    type: number
+    desc: far clipping plane
+  returns: ''
+  uth: []
+  syntax: '(perspective)
+
+    (perspective fov aspect z-near z-far)'
+- slug: printCamera
+  name: (print-camera)
+  cat_tag: Lights Camera / Camera
+  description: Prints the current camera matrix to the console.
+  related:
+  - camera
+  - printProjection
+  params: []
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def print_camera():\n    w = float(globals().get('width', 100)); h = float(globals().get('height', 100))\n    zc = (h / 2.0) / _math.tan(_math.pi / 6)\n    a = _cam_args[0] or (w / 2, h / 2, zc, w / 2, h / 2, 0.0, 0.0, 1.0, 0.0)\n    ex, ey, ez, cx, cy, cz = (float(v) for v in a[:6])\n    ux, uy, uz = (float(v) for v in a[6:9]) if len(a) >= 9 else (0.0, 1.0, 0.0)\n    fx, fy, fz = cx - ex, cy - ey, cz - ez; fl = _math.sqrt(fx * fx + fy * fy + fz * fz) or 1.0\n    fx, fy, fz = fx / fl, fy / fl, fz / fl\n    sx, sy, sz = fy * uz - fz * uy, fz * ux - fx * uz, fx * uy - fy * ux; sl = _math.sqrt(sx * sx + sy * sy + sz * sz) or 1.0\n    sx, sy, sz = sx / sl, sy / sl, sz / sl\n    tx, ty, tz = sy * fz - sz * fy, sz * fx - sx * fz, sx * fy - sy * fx\n    _print_mat([[sx, sy, sz, -(sx * ex + sy * ey + sz * ez)], [tx, ty, tz, -(tx * ex + ty * ey + tz * ez)],\n                [-fx, -fy, -fz, fx * ex + fy * ey + fz * ez], [0.0, 0.0, 0.0, 1.0]])"
+  syntax: (print-camera)
+- slug: printProjection
+  name: (print-projection)
+  cat_tag: Lights Camera / Camera
+  description: Prints the current projection matrix to the console.
+  related:
+  - perspective
+  - printCamera
+  params: []
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def print_projection():\n    w = float(globals().get('width', 100)); h = float(globals().get('height', 100))\n    zc = (h / 2.0) / _math.tan(_math.pi / 6)\n    name, a = _proj_args[0] or ('perspective', (_math.pi / 3, w / h, zc / 10, zc * 10))\n    a = [float(v) for v in a]\n    if name == 'perspective':\n        fov, asp, n, f = (a + [_math.pi / 3, w / h, zc / 10, zc * 10][len(a):])[:4]\n        t = 1.0 / _math.tan(fov / 2)\n        _print_mat([[t / asp, 0, 0, 0], [0, t, 0, 0], [0, 0, (f + n) / (n - f), 2 * f * n / (n - f)], [0, 0, -1, 0]])\n    elif name == 'ortho':\n        l, r, b, t, n, f = (a + [-w / 2, w / 2, -h / 2, h / 2, 0.0, max(w, h)][len(a):])[:6]\n        _print_mat([[2 / (r - l), 0, 0, -(r + l) / (r - l)], [0, 2 / (t - b), 0, -(t + b) / (t - b)], [0, 0, -2 / (f - n), -(f + n) / (f - n)], [0, 0, 0, 1]])\n    else:\n        l, r, b, t, n, f = a[:6]\n        _print_mat([[2 * n / (r - l), 0, (r + l) / (r - l), 0], [0, 2 * n / (t - b), (t + b) / (t - b), 0], [0, 0, (f +\
+      \ n) / (n - f), 2 * f * n / (n - f)], [0, 0, -1, 0]])"
+  syntax: (print-projection)
+- slug: modelX
+  name: (model-x)
+  cat_tag: Lights Camera / Coordinates
+  description: Returns the x-coordinate of a 3D point in model space after applying the current transformation matrix.
+  related:
+  - modelY
+  - modelZ
+  - screenX
+  params:
+  - name: x
+    type: number
+    desc: 3D x-coordinate
+  - name: y
+    type: number
+    desc: 3D y-coordinate
+  - name: z
+    type: number
+    desc: 3D z-coordinate
+  returns: number
+  uth: []
+  syntax: (model-x x y z)
+- slug: modelY
+  name: (model-y)
+  cat_tag: Lights Camera / Coordinates
+  description: Returns the y-coordinate of a 3D point in model space after applying the current transformation matrix.
+  related:
+  - modelX
+  - modelZ
+  - screenY
+  params:
+  - name: x
+    type: number
+    desc: 3D x-coordinate
+  - name: y
+    type: number
+    desc: 3D y-coordinate
+  - name: z
+    type: number
+    desc: 3D z-coordinate
+  returns: number
+  uth: []
+  syntax: (model-y x y z)
+- slug: modelZ
+  name: (model-z)
+  cat_tag: Lights Camera / Coordinates
+  description: Returns the z-coordinate of a 3D point in model space after applying the current transformation matrix.
+  related:
+  - modelX
+  - modelY
+  - screenZ
+  params:
+  - name: x
+    type: number
+    desc: 3D x-coordinate
+  - name: y
+    type: number
+    desc: 3D y-coordinate
+  - name: z
+    type: number
+    desc: 3D z-coordinate
+  returns: number
+  uth: []
+  syntax: (model-z x y z)
+- slug: screenX
+  name: (screen-x)
+  cat_tag: Lights Camera / Coordinates
+  description: Takes a three-dimensional X, Y, Z position and returns the X value for where it will appear on a 2D screen.
+  related:
+  - screenY
+  - screenZ
+  - modelX
+  params:
+  - name: x
+    type: number
+    desc: 3D x-coordinate
+  - name: y
+    type: number
+    desc: 3D y-coordinate
+  - name: z
+    type: number
+    desc: 3D z-coordinate
+  returns: number
+  uth: []
+  syntax: (screen-x x y z)
+- slug: screenY
+  name: (screen-y)
+  cat_tag: Lights Camera / Coordinates
+  description: Takes a three-dimensional X, Y, Z position and returns the Y value for where it will appear on a 2D screen.
+  related:
+  - screenX
+  - screenZ
+  - modelY
+  params:
+  - name: x
+    type: number
+    desc: 3D x-coordinate
+  - name: y
+    type: number
+    desc: 3D y-coordinate
+  - name: z
+    type: number
+    desc: 3D z-coordinate
+  returns: number
+  uth: []
+  syntax: (screen-y x y z)
+- slug: screenZ
+  name: (screen-z)
+  cat_tag: Lights Camera / Coordinates
+  description: Takes a three-dimensional X, Y, Z position and returns the Z value for where it will appear on a 2D screen.
+  related:
+  - screenX
+  - screenY
+  - modelZ
+  params:
+  - name: x
+    type: number
+    desc: 3D x-coordinate
+  - name: y
+    type: number
+    desc: 3D y-coordinate
+  - name: z
+    type: number
+    desc: 3D z-coordinate
+  returns: number
+  uth: []
+  syntax: (screen-z x y z)
+- slug: applyMatrix
+  name: (apply-matrix)
+  cat_tag: Transform
+  description: Multiplies the current matrix by the specified 4x4 matrix.
+  related:
+  - resetMatrix
+  - pushMatrix
+  params:
+  - name: n00-n33
+    type: number
+    desc: 16 values of a 4x4 matrix
+  returns: ''
+  uth: []
+  syntax: (apply-matrix n00 n01 n02 n03 ...)
+- slug: popMatrix
+  name: (pop-matrix)
+  cat_tag: Transform
+  description: Pops the current transformation matrix off the matrix stack.
+  related:
+  - pushMatrix
+  - push
+  - pop
+  params: []
+  returns: ''
+  uth: []
+  syntax: (pop-matrix)
+- slug: printMatrix
+  name: (print-matrix)
+  cat_tag: Transform
+  description: Prints the current matrix to the console.
+  related:
+  - applyMatrix
+  - resetMatrix
+  params: []
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def print_matrix(*a):\n    gm = globals().get('get_matrix')\n    _sys.stdout.write(_show(gm()) if gm else '(no matrix available)')\n    _sys.stdout.write(chr(10)); _sys.stdout.flush()"
+  syntax: (print-matrix)
+- slug: pushMatrix
+  name: (push-matrix)
+  cat_tag: Transform
+  description: Pushes the current transformation matrix onto the matrix stack.
+  related:
+  - popMatrix
+  - push
+  - pop
+  params: []
+  returns: ''
+  uth: []
+  syntax: (push-matrix)
+- slug: resetMatrix
+  name: (reset-matrix)
+  cat_tag: Transform
+  description: Replaces the current matrix with the identity matrix.
+  related:
+  - applyMatrix
+  - printMatrix
+  params: []
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def reset_matrix(*a):\n    if _is_shape(a):\n        a[0].ops = []\n        return None\n    return _mw_reset_matrix(*a)"
+  syntax: (reset-matrix)
+- slug: rotateX
+  name: (rotate-x)
+  cat_tag: Transform
+  description: Rotates around the x-axis. Use in P3D mode.
+  related:
+  - rotate
+  - rotateY
+  - rotateZ
+  params:
+  - name: angle
+    type: number
+    desc: angle in radians
+  returns: ''
+  uth: []
+  syntax: (rotate-x angle)
+- slug: rotateY
+  name: (rotate-y)
+  cat_tag: Transform
+  description: Rotates around the y-axis. Use in P3D mode.
+  related:
+  - rotate
+  - rotateX
+  - rotateZ
+  params:
+  - name: angle
+    type: number
+    desc: angle in radians
+  returns: ''
+  uth: []
+  syntax: (rotate-y angle)
+- slug: rotateZ
+  name: (rotate-z)
+  cat_tag: Transform
+  description: Rotates around the z-axis. Use in P3D mode.
+  related:
+  - rotate
+  - rotateX
+  - rotateY
+  params:
+  - name: angle
+    type: number
+    desc: angle in radians
+  returns: ''
+  uth: []
+  syntax: (rotate-z angle)
+- slug: rotate
+  name: (rotate)
+  cat_tag: Transform
+  description: Rotates a shape by the angle parameter. Angles are in radians.
+  related:
+  - rotateX
+  - rotateY
+  - rotateZ
+  - translate
+  - scale
+  params:
+  - name: angle
+    type: number
+    desc: angle in radians
+  returns: ''
+  uth: []
+  syntax: (rotate angle)
+- slug: scale
+  name: (scale)
+  cat_tag: Transform
+  description: Increases or decreases the size of shapes by expanding and contracting vertices.
+  related:
+  - translate
+  - rotate
+  params:
+  - name: s
+    type: number
+    desc: percentage to scale uniformly
+  - name: sx
+    type: number
+    desc: x-axis scale factor
+  - name: sy
+    type: number
+    desc: y-axis scale factor
+  returns: ''
+  uth: []
+  syntax: '(scale s)
+
+    (scale sx sy)'
+- slug: shearX
+  name: (shear-x)
+  cat_tag: Transform
+  description: Shears a shape around the x-axis the amount specified by the angle parameter.
+  related:
+  - shearY
+  - translate
+  params:
+  - name: angle
+    type: number
+    desc: angle in radians
+  returns: ''
+  uth: []
+  syntax: (shear-x angle)
+- slug: shearY
+  name: (shear-y)
+  cat_tag: Transform
+  description: Shears a shape around the y-axis the amount specified by the angle parameter.
+  related:
+  - shearX
+  - translate
+  params:
+  - name: angle
+    type: number
+    desc: angle in radians
+  returns: ''
+  uth: []
+  syntax: (shear-y angle)
+- slug: translate
+  name: (translate)
+  cat_tag: Transform
+  description: Specifies an amount to displace objects. Supports 2D and 3D.
+  related:
+  - rotate
+  - scale
+  - push
+  - pop
+  params:
+  - name: x
+    type: number
+    desc: left/right displacement
+  - name: y
+    type: number
+    desc: up/down displacement
+  - name: z
+    type: number
+    desc: forward/backward displacement (optional, 3D)
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def translate(x, y, z=0):\n    if z: _tz_notice()\n    return _mw_translate(x, y)"
+  syntax: '(translate x y)
+
+    (translate x y z)'
+- slug: draw
+  name: (draw)
+  cat_tag: Structure
+  description: Continuously executes the code inside its block until the program is stopped or no-loop is called.
+  related:
+  - setup
+  - noLoop
+  - loop
+  - redraw
+  params: []
+  returns: ''
+  uth: []
+  syntax: "(define (draw)\n  ...)"
+- slug: exit
+  name: (exit)
+  cat_tag: Structure
+  description: Quits the sketch. Internally calls exit_sketch().
+  related:
+  - setup
+  params: []
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def exit(): _sys.stdout.flush(); _os._exit(0)'
+  syntax: (exit)
+- slug: loop
+  name: (loop)
+  cat_tag: Structure
+  description: Causes Processing to continuously execute the code within draw().
+  related:
+  - noLoop
+  - draw
+  - redraw
+  params: []
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def loop(): _looping[0] = True; return _mw_loop()'
+  syntax: (loop)
+- slug: noLoop
+  name: (no-loop)
+  cat_tag: Structure
+  description: Stops Processing from continuously executing the code within draw(). draw() is called once and then stops.
+  related:
+  - loop
+  - draw
+  - redraw
+  params: []
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def no_loop(): _looping[0] = False; return _mw_no_loop()'
+  syntax: (no-loop)
+- slug: pop
+  name: (pop)
+  cat_tag: Structure
+  description: Restores the previous drawing style settings and transformations saved with push().
+  related:
+  - push
+  - popStyle
+  - popMatrix
+  params: []
+  returns: ''
+  uth: []
+  syntax: (pop)
+- slug: popStyle
+  name: (pop-style)
+  cat_tag: Structure
+  description: Restores the previous style settings saved with push-style.
+  related:
+  - pushStyle
+  - push
+  - pop
+  params: []
+  returns: ''
+  uth: []
+  syntax: (pop-style)
+- slug: push
+  name: (push)
+  cat_tag: Structure
+  description: Saves the current drawing style settings and transformations. Use pop() to restore.
+  related:
+  - pop
+  - pushStyle
+  - pushMatrix
+  params: []
+  returns: ''
+  uth: []
+  syntax: (push)
+- slug: pushStyle
+  name: (push-style)
+  cat_tag: Structure
+  description: Saves the current style settings (fill, stroke, font, etc.) onto a stack.
+  related:
+  - popStyle
+  - push
+  - pop
+  params: []
+  returns: ''
+  uth: []
+  syntax: (push-style)
+- slug: redraw
+  name: (redraw)
+  cat_tag: Structure
+  description: Executes the code within draw() one time.
+  related:
+  - draw
+  - loop
+  - noLoop
+  params: []
+  returns: ''
+  uth: []
+  syntax: (redraw)
+- slug: setup
+  name: (setup)
+  cat_tag: Structure
+  description: Called once when the program starts. Define initial environment properties such as screen size and background color.
+  related:
+  - draw
+  params: []
+  returns: ''
+  uth: []
+  syntax: "(define (setup)\n  ...)"
+- slug: thread
+  name: (thread)
+  cat_tag: Structure
+  description: Runs a function on a new detached thread. Accepts a lambda or function.
+  related:
+  - delay
+  params:
+  - name: fn
+    type: procedure
+    desc: the function to run on a separate thread
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def thread(f):\n    fn = globals().get(f.replace('-', '_')) if isinstance(f, str) else f\n    if not callable(fn): raise _SchemeError('thread: no function named ' + _show(f, True))\n    _threading.Thread(target=fn, daemon=True).start()"
+  syntax: (thread fn)
+- slug: delay
+  name: (delay)
+  cat_tag: Structure
+  description: Halts the program for the specified number of milliseconds.
+  related:
+  - millis
+  params:
+  - name: ms
+    type: integer
+    desc: number of milliseconds to pause
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def delay(ms): _time.sleep(max(0.0, float(ms)) / 1000.0)'
+  syntax: (delay ms)
+- slug: captureMouse
+  name: (capture-mouse)
+  cat_tag: Environment
+  description: Locks the cursor to the window and enables raw mouse input, removing OS acceleration. Essential for FPS-style games. Use release-mouse to unlock.
+  related:
+  - releaseMouse
+  - mouseDX
+  - mouseDY
+  params: []
+  returns: ''
+  uth: []
+  syntax: (capture-mouse)
+- slug: cursor
+  name: (cursor)
+  cat_tag: Environment
+  description: Sets the cursor to a predefined shape or restores the default cursor.
+  related:
+  - noCursor
+  params:
+  - name: type
+    type: integer
+    desc: ARROW, CROSS, HAND, MOVE, TEXT_CURSOR, WAIT (optional)
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def cursor(*a):\n    if a:\n        try: return _mw_cursor(a[0])\n        except TypeError: _cursor_shape_notice()\n    return _mw_cursor()"
+  syntax: '(cursor)
+
+    (cursor type)'
+- slug: deltaTime
+  name: delta-time
+  cat_tag: Environment
+  description: Seconds elapsed since the last frame. Useful for frame-rate-independent animation.
+  related:
+  - frameRate_var
+  - millis
+  params: []
+  returns: number
+  uth: []
+  syntax: delta-time
+- slug: displayHeight
+  name: display-height
+  cat_tag: Environment
+  description: System variable storing the full monitor height in pixels.
+  related:
+  - displayWidth
+  - height
+  params: []
+  returns: integer
+  uth: []
+  syntax: display-height
+- slug: displayWidth
+  name: display-width
+  cat_tag: Environment
+  description: System variable storing the full monitor width in pixels.
+  related:
+  - displayHeight
+  - width
+  params: []
+  returns: integer
+  uth: []
+  syntax: display-width
+- slug: focused
+  name: focused
+  cat_tag: Environment
+  description: Confirms if the sketch window is focused, meaning it is active and will accept keyboard or mouse input. True when focused.
+  related: []
+  params: []
+  returns: boolean
+  uth: []
+  syntax: focused
+- slug: frameCount
+  name: frame-count
+  cat_tag: Environment
+  description: System variable storing the number of frames displayed since the sketch started.
+  related:
+  - frameRate_var
+  params: []
+  returns: integer
+  uth: []
+  syntax: frame-count
+- slug: frameRate_var
+  name: frame-rate
+  cat_tag: Environment
+  description: System variable storing the approximate current frame rate.
+  related:
+  - frameRate_fn
+  - frameCount
+  params: []
+  returns: number
+  uth: []
+  syntax: frame-rate
+- slug: frameRate_fn
+  name: (frame-rate)
+  cat_tag: Environment
+  description: Sets the target number of frames to display per second.
+  related:
+  - frameRate_var
+  - frameCount
+  params:
+  - name: fps
+    type: integer
+    desc: target frames per second
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def frame_rate(n=None):\n    if n is None: return _fps_measured[0]\n    _fps_target[0] = n"
+  syntax: (frame-rate fps)
+- slug: fullScreen
+  name: (full-screen)
+  cat_tag: Environment
+  description: Opens the sketch in fullscreen mode.
+  related:
+  - size
+  params: []
+  returns: ''
+  uth: []
+  syntax: (full-screen)
+- slug: height
+  name: height
+  cat_tag: Environment
+  description: System variable storing the height of the display window as set by size().
+  related:
+  - width
+  - size
+  params: []
+  returns: integer
+  uth: []
+  syntax: height
+- slug: noCursor
+  name: (no-cursor)
+  cat_tag: Environment
+  description: Hides the cursor from view.
+  related:
+  - cursor
+  params: []
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - 'def no_cursor(): return _mw_no_cursor()'
+  syntax: (no-cursor)
+- slug: noSmooth
+  name: (no-smooth)
+  cat_tag: Environment
+  description: Draws all geometry with jagged (aliased) edges.
+  related:
+  - smooth
+  params: []
+  returns: ''
+  uth: []
+  syntax: (no-smooth)
+- slug: pixelDensity
+  name: (pixel-density)
+  cat_tag: Environment
+  description: Sets the pixel density for high-DPI (HiDPI/Retina) displays.
+  related:
+  - pixelWidth
+  - pixelHeight
+  params:
+  - name: d
+    type: integer
+    desc: pixel density (1 or 2)
+  returns: ''
+  uth: []
+  syntax: (pixel-density d)
+- slug: pixelHeight
+  name: pixel-height
+  cat_tag: Environment
+  description: Actual framebuffer height in pixels. Differs from height on HiDPI screens.
+  related:
+  - pixelWidth
+  - pixelDensity
+  params: []
+  returns: integer
+  uth: []
+  syntax: pixel-height
+- slug: pixelWidth
+  name: pixel-width
+  cat_tag: Environment
+  description: Actual framebuffer width in pixels. Differs from width on HiDPI screens.
+  related:
+  - pixelHeight
+  - pixelDensity
+  params: []
+  returns: integer
+  uth: []
+  syntax: pixel-width
+- slug: releaseMouse
+  name: (release-mouse)
+  cat_tag: Environment
+  description: Unlocks the cursor from the window and restores normal OS cursor behavior. Call after capture-mouse when the player opens a menu or pauses.
+  related:
+  - captureMouse
+  - mouseDX
+  - mouseDY
+  params: []
+  returns: ''
+  uth: []
+  syntax: (release-mouse)
+- slug: size
+  name: (size)
+  cat_tag: Environment
+  description: Defines the dimension of the display window. Call in setup(). Optionally pass P2D or P3D as renderer.
+  related:
+  - width
+  - height
+  - fullScreen
+  params:
+  - name: w
+    type: integer
+    desc: width of the window in pixels
+  - name: h
+    type: integer
+    desc: height of the window in pixels
+  - name: renderer
+    type: integer
+    desc: P2D or P3D (optional)
+  returns: ''
+  uth:
+  - - src/java/processing/mode/scheme/Transpiler.java, the Python every sketch runs with
+    - "def size(w, h, *r):\n    out = _mw_size(w, h)\n    if r and r[0] == 'P3D': mode_3d()\n    return out"
+  syntax: '(size w h)
+
+    (size w h renderer)'
+- slug: smooth
+  name: (smooth)
+  cat_tag: Environment
+  description: Draws all geometry with smooth (anti-aliased) edges. Enabled by default.
+  related:
+  - noSmooth
+  params: []
+  returns: ''
+  uth: []
+  syntax: (smooth)
+- slug: width
+  name: width
+  cat_tag: Environment
+  description: System variable storing the width of the display window as set by size().
+  related:
+  - height
+  - size
+  params: []
+  returns: integer
+  uth: []
+  syntax: width
+- slug: windowMoved
+  name: (window-moved)
+  cat_tag: Environment
+  description: Called when the sketch window is moved. Define this function in your sketch to respond to window move events.
+  related:
+  - windowResized
+  params: []
+  returns: ''
+  uth: []
+  syntax: "(define (window-moved)\n  ...)"
+- slug: windowResizable
+  name: (window-resizable)
+  cat_tag: Environment
+  description: Makes the window resizable by the user.
+  related:
+  - windowResize
+  params:
+  - name: r
+    type: boolean
+    desc: '#t to allow resizing'
+  returns: ''
+  uth: []
+  syntax: (window-resizable r)
+- slug: windowResize
+  name: (window-resize)
+  cat_tag: Environment
+  description: Resizes the window to the specified dimensions.
+  related:
+  - windowResizable
+  - size
+  params:
+  - name: w
+    type: integer
+    desc: new width
+  - name: h
+    type: integer
+    desc: new height
+  returns: ''
+  uth: []
+  syntax: (window-resize w h)
+- slug: windowResized
+  name: (window-resized)
+  cat_tag: Environment
+  description: Called when the sketch window is resized. Define this function in your sketch to respond to window resize events.
+  related:
+  - windowMoved
+  - windowResizable
+  - windowResize
+  params: []
+  returns: ''
+  uth: []
+  syntax: "(define (window-resized)\n  ...)"
+- slug: windowTitle
+  name: (window-title)
+  cat_tag: Environment
+  description: Sets the title of the sketch window.
+  related: []
+  params:
+  - name: t
+    type: string
+    desc: the title string
+  returns: ''
+  uth: []
+  syntax: (window-title t)
+- slug: pixels_arr
+  name: pixels
+  cat_tag: Image / Pixels
+  description: Array containing the values for all the pixels in the display window or PImage. Must call load-pixels before reading and update-pixels after writing. Each value is a packed ARGB color integer. In Scheme Mode it's a vector, counted from 0 like in Processing.
+  related:
+  - loadPixels
+  - updatePixels
+  - get_pixel
+  - set_pixel
+  params: []
+  returns: vector
+  uth: []
+  syntax: '(load-pixels)
+
+    (vector-set! pixels (+ x (* y width)) (color 255 0 0))
+
+    (update-pixels)'

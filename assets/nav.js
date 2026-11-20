@@ -86,12 +86,16 @@
       pre#code-pre { display:none !important; }
       .syntax-block, .impl-block { visibility:hidden; }
       .CodeMirror-scroll { border:none !important; background:transparent !important; }
-      .CodeMirror-hscrollbar, .CodeMirror-vscrollbar { display:none !important; }
+      .cm-fit .CodeMirror { height:auto; }
+      .cm-fit .CodeMirror-scroll { height:auto; max-height:none; overflow-x:auto !important; overflow-y:hidden !important; }
+      .CodeMirror-vscrollbar { display:none !important; }
 
       pre#code-pre { display:none !important; }
       .syntax-block, .impl-block { visibility:hidden; }
       .CodeMirror-scroll { border:none !important; background:transparent !important; }
-      .CodeMirror-hscrollbar, .CodeMirror-vscrollbar { display:none !important; }
+      .cm-fit .CodeMirror { height:auto; }
+      .cm-fit .CodeMirror-scroll { height:auto; max-height:none; overflow-x:auto !important; overflow-y:hidden !important; }
+      .CodeMirror-vscrollbar { display:none !important; }
 
       #site-nav {
         border-bottom: 1px solid #e0e0e0;
@@ -151,6 +155,7 @@
             if (!code) return;
             el.style.display = 'none';
             const wrap = document.createElement('div');
+            wrap.className = 'cm-fit';
             el.parentNode.insertBefore(wrap, el);
             const cm = CodeMirror(wrap, {
               value: code,
@@ -159,10 +164,10 @@
               readOnly: true,
               lineNumbers: false,
               lineWrapping: false,
-              scrollbarStyle: 'null',
+              scrollbarStyle: 'native',
               viewportMargin: Infinity,
             });
-            cm.setSize('100%', cm.defaultTextHeight() * cm.lineCount() + 10);
+            cm.setSize('100%', 'auto');
           });
         });
       });

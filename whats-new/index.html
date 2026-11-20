@@ -66,106 +66,53 @@
   <div class="content">
     <h1>What's New</h1>
     <p class="prelude">
-      Scheme Mode is designed to feel as close to Processing Java as possible.
-      <strong>Most of what you already know works exactly the same.</strong>
-      <code>setup()</code>, <code>draw()</code>, <code>ellipse()</code>, <code>background()</code>,
-      <code>mouseX</code>, <code>mouseY</code>, <code>fill()</code>, <code>stroke()</code> all work the same way.
-      The changes below are the only things you need to learn.
-      Everything else carries over from Processing Java without modification.
+      Scheme Mode keeps Processing's names, written the Scheme way: lowercase with dashes.
+      <code>noStroke()</code> is <code>(no-stroke)</code>, <code>mouseX</code> is <code>mouse-x</code>,
+      <code>TWO_PI</code> is <code>TWO-PI</code>. These are the other things to know.
     </p>
     <div class="wn-grid">
       <div class="wn-card">
         <div class="wn-tag changed">Changed</div>
-        <div class="wn-card-title">PGraphics, PImage, PShape and PFont use pointer notation</div>
+        <div class="wn-card-title">Everything is a list</div>
         <div class="wn-card-body">
-          <p>In Processing Java, graphics objects are references and you access their methods with a dot. In Scheme Mode they are pointers, so you declare them with <code>*</code> and access their members with <code>-&gt;</code> instead of <code>.</code>.</p>
-          <pre>// Java (does not work in Scheme Mode):
-PGraphics pg = createGraphics(400, 300);
-pg.beginDraw();
-pg.background(255);
-pg.endDraw();
-
-// Scheme Mode:
-PGraphics* pg = createGraphics(400, 300);
-pg-&gt;beginDraw();
-pg-&gt;background(255);
-pg-&gt;endDraw();</pre>
-          <p>The same applies to <code>PImage*</code>, <code>PShape*</code>, <code>PFont*</code>, and <code>PShader*</code>. Forgetting the <code>*</code> or using <code>.</code> instead of <code>-&gt;</code> produces a compiler error.</p>
+          <p>A call puts the function first, inside parentheses: <code>ellipse(x, y, 20, 20)</code> is <code>(ellipse x y 20 20)</code>, and <code>a + b * c</code> is <code>(+ a (* b c))</code>.</p>
         </div>
       </div>
       <div class="wn-card">
         <div class="wn-tag changed">Changed</div>
-        <div class="wn-card-title">_mousePressed and _keyPressed</div>
+        <div class="wn-card-title">Variables are defined and set</div>
         <div class="wn-card-body">
-          <p>In Processing Java, <code>mousePressed</code> is both a boolean variable that tells you if the mouse is held right now, and an event callback function that fires once on click. Scheme does not allow a variable and a function to share the same name in the same scope, so the boolean variables are renamed with an underscore prefix to avoid the collision.</p>
-          <p>The event callbacks keep their original names unchanged. Only the state variables change.</p>
-          <pre>// Check if mouse is currently held down:
-if (_mousePressed) { ... }
-// Check if any key is currently held down:
-if (_keyPressed) { ... }
-// Event callbacks are unchanged:
-void mousePressed() { ... }
-void mouseReleased() { ... }
-void keyPressed()   { ... }
-void keyReleased()  { ... }</pre>
+          <p><code>(define x 10)</code> makes a variable, and <code>(set! x (+ x 1))</code> changes it. There are no types to write.</p>
         </div>
       </div>
       <div class="wn-card">
-        <div class="wn-tag new">New</div>
-        <div class="wn-card-title">captureMouse() and releaseMouse()</div>
+        <div class="wn-tag changed">Changed</div>
+        <div class="wn-card-title">Loops</div>
         <div class="wn-card-body">
-          <p><code>captureMouse()</code> locks the cursor to the window and enables raw mouse input, completely bypassing OS acceleration and cursor boundaries. This is the right approach for first-person and shooter games where the mouse needs to rotate a camera freely without hitting the edge of the screen.</p>
-          <p><code>releaseMouse()</code> restores normal cursor behavior. Call it when you open a menu, show a dialog, or pause the game.</p>
-          <pre>void setup() {
-    size(640, 360, P3D);
-    captureMouse();
-}
-void draw() {
-    // camera controlled by mouse freely
-}
-void keyPressed() {
-    if (key == ESC) releaseMouse();
-}</pre>
+          <p>A Java <code>for</code> loop is a <code>do</code> loop:</p>
+          <pre>(do ((i 0 (+ i 1))) ((>= i 10))
+  (rect (* i 20) 0 10 10))</pre>
         </div>
       </div>
       <div class="wn-card">
-        <div class="wn-tag new">New</div>
-        <div class="wn-card-title">mouseDX and mouseDY</div>
+        <div class="wn-tag changed">Changed</div>
+        <div class="wn-card-title">Classes are records</div>
         <div class="wn-card-body">
-          <p>Two new variables that accumulate raw mouse movement between frames. Unlike <code>mouseX - pmouseX</code>, these capture every cursor event that occurs between frames so fast mouse movement is never dropped or lost at high frame rates.</p>
-          <p>They reset to <code>0</code> automatically after each <code>draw()</code> call. Use them for FPS camera rotation, turret aiming, or any other input that needs to be frame-rate independent.</p>
-          <pre>float yaw = 0, pitch = 0;
-void setup() {
-    size(640, 360, P3D);
-    captureMouse();
-}
-void draw() {
-    yaw   += mouseDX * 0.002;
-    pitch += mouseDY * 0.002;
-    pitch  = constrain(pitch, -PI/2, PI/2);
-    camera(0, 0, 0,
-           cos(pitch) * sin(yaw),
-           sin(pitch),
-           cos(pitch) * cos(yaw),
-           0, 1, 0);
-    background(20);
-    lights();
-    box(100);
-}</pre>
+          <p>A class becomes a <code>define-record-type</code> with a function for each method, so <code>ball.move()</code> is <code>(ball-move ball)</code> and <code>ball.x = 5</code> is <code>(set-ball-x! ball 5)</code>.</p>
         </div>
       </div>
       <div class="wn-card">
-        <div class="wn-tag new">New</div>
-        <div class="wn-card-title">Full Scheme Standard Library included</div>
+        <div class="wn-tag changed">Changed</div>
+        <div class="wn-card-title">Methods take the object first</div>
         <div class="wn-card-body">
-          <p>Every Scheme standard library header is included automatically. You do not need a single <code>#include</code> anywhere in your sketch. Threads, algorithms, containers, all of modern Scheme is just there.</p>
-          <pre>// All of this just works with no includes:
-std::vector&lt;float&gt; data = {3, 1, 2};
-std::sort(data.begin(), data.end());
-std::thread t([] { doWork(); });
-t.detach();
-std::unordered_map&lt;std::string, int&gt; scores;
-std::optional&lt;int&gt; val = 42;</pre>
+          <p><code>img.get(x, y)</code> is <code>(get img x y)</code>, <code>v.add(w)</code> is <code>(add v w)</code> and <code>pg.beginDraw()</code> is <code>(begin-draw pg)</code>.</p>
+        </div>
+      </div>
+      <div class="wn-card">
+        <div class="wn-tag same">Same</div>
+        <div class="wn-card-title">mousePressed works both ways</div>
+        <div class="wn-card-body">
+          <p><code>(define (mouse-pressed) ...)</code> runs once per click, and <code>mouse-is-pressed</code> is true while the mouse is held.</p>
         </div>
       </div>
     </div>

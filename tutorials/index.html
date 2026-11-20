@@ -65,53 +65,44 @@
   </div>
   <div class="content">
     <h1>Tutorials</h1>
-    <p class="subtitle">Scheme Mode comes in two forms. One is a plugin for the Processing IDE, which lets you write sketches inside Processing itself just like you normally would. The other is a standalone header library you can drop into any Scheme project and use from your own editor and build system. Pick the section that matches what you're trying to do.</p>
+    <p class="subtitle">Scheme Mode is a plugin for the Processing IDE. You write sketches in Scheme inside Processing, hit Run, and a window opens.</p>
 
     <div class="path">
       <h2>Using Scheme Mode inside the Processing IDE</h2>
-      <p class="section-desc">This is for people who want the Processing experience they're already familiar with, writing <code style="font-family:monospace;background:#f4f4f4;padding:1px 5px;border-radius:3px;">setup()</code> and <code style="font-family:monospace;background:#f4f4f4;padding:1px 5px;border-radius:3px;">draw()</code> inside the Processing app, hitting Run, and seeing a window open. Scheme Mode compiles your sketch to native Scheme behind the scenes, but the workflow is identical to any other Processing mode.</p>
+      <p class="section-desc">Write <code style="font-family:monospace;background:#f4f4f4;padding:1px 5px;border-radius:3px;">(define (setup) ...)</code> and <code style="font-family:monospace;background:#f4f4f4;padding:1px 5px;border-radius:3px;">(define (draw) ...)</code>, hit Run, and a window opens. Processing's functions keep their names, written with dashes: <code style="font-family:monospace;background:#f4f4f4;padding:1px 5px;border-radius:3px;">noStroke()</code> is <code style="font-family:monospace;background:#f4f4f4;padding:1px 5px;border-radius:3px;">(no-stroke)</code> and <code style="font-family:monospace;background:#f4f4f4;padding:1px 5px;border-radius:3px;">mouseX</code> is <code style="font-family:monospace;background:#f4f4f4;padding:1px 5px;border-radius:3px;">mouse-x</code>.</p>
 
       <a class="tutorial-card" href="/gettingstarted">
         <div class="tc-body">
           <div class="tc-title">Getting Started with Scheme Mode</div>
-          <div class="tc-desc">How to install the Scheme Mode plugin and write your first sketch in the Processing IDE.</div>
+          <div class="tc-desc">How to install Scheme Mode and write your first sketch in the Processing IDE.</div>
         </div>
         <div class="tc-arrow">›</div>
       </a>
 
-      <a class="tutorial-card" href="/downloads#cpp-mode">
+      <a class="tutorial-card" href="/downloads#scheme-mode">
         <div class="tc-body">
-          <div class="tc-title">Installing the plugin</div>
-          <div class="tc-desc">How to install Scheme Mode through the Processing Contribution Manager, with screenshots.</div>
+          <div class="tc-title">Installing the mode</div>
+          <div class="tc-desc">Where to download Scheme Mode and where to put it.</div>
+        </div>
+        <div class="tc-arrow">›</div>
+      </a>
+
+      <a class="tutorial-card" href="/whats-new">
+        <div class="tc-body">
+          <div class="tc-title">Coming from Processing Java</div>
+          <div class="tc-desc">How the same sketch looks when it's written in Scheme.</div>
         </div>
         <div class="tc-arrow">›</div>
       </a>
     </div>
 
     <div class="path">
-      <h2>Using the header library in your own Scheme project</h2>
-      <p class="section-desc">This is for people who want to use the Processing-style API directly in a Scheme project, without opening the Processing IDE at all. You write <code style="font-family:monospace;background:#f4f4f4;padding:1px 5px;border-radius:3px;">#include "Processing.h"</code> at the top of your file and build with your own compiler and tools. Two setup options are available depending on whether you use CMake or not.</p>
-
-      <a class="tutorial-card" href="/downloads/plugandplay-setup.html">
-        <div class="tc-body">
-          <div class="tc-title">Plug and Play Setup</div>
-          <div class="tc-desc">The simplest path. Unzip one folder next to your source file and run a script to build. No CMake, no configuration. Good if you're just starting out or want something running quickly.</div>
-        </div>
-        <div class="tc-arrow">›</div>
-      </a>
-
-      <a class="tutorial-card" href="/downloads/cmake-setup.html">
-        <div class="tc-body">
-          <div class="tc-title">CMake Setup</div>
-          <div class="tc-desc">Adds the engine to your project as a proper CMake library target. Pick this if your project already uses CMake, or if you want a setup that scales as your project grows.</div>
-        </div>
-        <div class="tc-arrow">›</div>
-      </a>
-
+      <h2>Sharing what you made</h2>
+      <p class="section-desc"><strong>File &gt; Export Application</strong> makes a folder with your sketch, its data folder and its own Python, ready to run on a computer without Processing.</p>
     </div>
 
     <div class="help-box">
-      <p>Still not sure which one fits? If you know Processing and just want to keep working the same way, go with <a href="/gettingstarted">Getting Started</a>. If you want to use the engine in a Scheme project you're writing yourself, <a href="/downloads/plugandplay-setup.html">Plug and Play</a> is the quickest way in.</p>
+      <p>New to all of this? Start with <a href="/gettingstarted">Getting Started</a>, then open any of the <a href="/examples">examples</a>. Every one of them is the Processing example you may already know, written in Scheme.</p>
     </div>
   </div>
 </div>

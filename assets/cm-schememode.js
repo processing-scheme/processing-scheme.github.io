@@ -1,232 +1,54 @@
-// CodeMirror mode for Scheme Mode for Processing
-// Matches Processing Java IDE keyword coloring:
-//   FUNCTION1 = entry points / constructors (bold dark blue, paren-sensitive)
-//   FUNCTION2 = API functions (light blue, always paren-sensitive)
-//   KEYWORD3  = control flow (green)
-//   KEYWORD4  = constants / variables (pink)
-//   KEYWORD5  = types (orange)
-//   KEYWORD6  = language keywords (teal)
-
-(function(mod) {
-  if (typeof exports == "object" && typeof module == "object") mod(require("codemirror"));
-  else if (typeof define == "function" && define.amd) define(["codemirror"], mod);
-  else mod(CodeMirror);
-})(function(CodeMirror) {
-
-// ── Keyword tables ────────────────────────────────────────────────────────────
-// FUNCTION1: colored only when followed by ( -- entry points and color/PVector constructors
-const FUNCTION1_PAREN = new Set([
-  "color","PVector","PImage","PGraphics","PFont","PShape",
-  "ArrayList","IntList","FloatList","StringList",
-  "HashMap","HashSet",
-]);
-// FUNCTION1: always colored (setup/draw/event handlers)
-const FUNCTION1_ALWAYS = new Set([
-  "setup","draw","mousePressed","mouseReleased","mouseClicked",
-  "mouseMoved","mouseDragged","mouseWheel",
-  "keyPressed","keyReleased","keyTyped",
-  "settings",
-]);
-// FUNCTION2: API functions -- colored only when followed by (
-const FUNCTION2 = new Set([
-  "size","fullScreen","smooth","noSmooth","frameRate","cursor","noCursor","exit",
-  "background","fill","noFill","stroke","noStroke","strokeWeight","strokeCap","strokeJoin",
-  "colorMode","lerpColor","red","green","blue","alpha","hue","saturation","brightness",
-  "rect","ellipse","circle","square","line","point","triangle","quad","arc",
-  "bezier","bezierVertex","bezierPoint","bezierTangent",
-  "curve","curveVertex","curvePoint","curveTangent","curveTightness",
-  "beginShape","endShape","vertex","curveVertex","bezierVertex","quadraticVertex",
-  "pushMatrix","popMatrix","translate","rotate","rotateX","rotateY","rotateZ",
-  "scale","shearX","shearY","resetMatrix","applyMatrix","printMatrix",
-  "pushStyle","popStyle","push","pop",
-  "image","imageMode","tint","noTint","texture","textureMode","textureWrap",
-  "text","textSize","textAlign","textLeading","textWidth","textAscent","textDescent",
-  "textFont","loadFont","createFont",
-  "loadImage","requestImage","saveFrame","save",
-  "loadPixels","updatePixels","get","set","copy","mask","filter","blend",
-  "createGraphics","createImage","createShape",
-  "lights","noLights","ambientLight","directionalLight","pointLight","spotLight",
-  "lightFalloff","lightSpecular","normal","shininess","specular","emissive","ambient",
-  "camera","perspective","ortho","frustum","printCamera","printProjection",
-  "box","sphere","sphereDetail","beginCamera","endCamera",
-  "noise","noiseDetail","noiseSeed","random","randomSeed","randomGaussian",
-  "abs","ceil","floor","round","constrain","dist","lerp","mag","map","max","min","norm","sq","sqrt",
-  "acos","asin","atan","atan2","cos","degrees","exp","log","pow","radians","sin","tan",
-  "nf","nfc","nfp","nfs","hex","unhex","binary","unbinary",
-  "str","int","boolean","byte","char","join","split","splitTokens","trim","toLowerCase","toUpperCase",
-  "append","concat","expand","reverse","shorten","sort","splice","subset",
-  "year","month","day","hour","minute","second","millis",
-  "delay","print","println",
-  "rectMode","ellipseMode","imageMode",
-  "hint","blendMode","clip","noClip",
-  "selectInput","selectOutput","selectFolder",
-  "loadStrings","saveStrings","loadBytes","saveBytes",
-  "loadJSON","saveJSON","loadXML","saveXML","loadTable","saveTable",
-  "selectInput","selectOutput",
-]);
-// KEYWORD3: control flow -- always colored
-const KEYWORD3 = new Set([
-  "if","else","for","while","do","switch","case","break","continue","return",
-  "default","goto","try","catch","throw","finally",
-]);
-// KEYWORD4: constants and built-in variables -- always colored
-const KEYWORD4 = new Set([
-  "PI","HALF_PI","QUARTER_PI","TWO_PI","TAU","E","DEG_TO_RAD","RAD_TO_DEG",
-  "mouseX","mouseY","pmouseX","pmouseY","mouseDX","mouseDY",
-  "mouseButton","mousePressed","keyPressed","keyCode","key",
-  "width","height","frameCount","frameRate","displayWidth","displayHeight",
-  "focused","_frameRate","deltaTime",
-  "LEFT","RIGHT","CENTER","TOP","BOTTOM","BASELINE",
-  "CORNER","CORNERS","RADIUS","CENTER",
-  "POINTS","LINES","TRIANGLES","TRIANGLE_FAN","TRIANGLE_STRIP",
-  "QUADS","QUAD_STRIP","CLOSE",
-  "RGB","HSB","HSL","ARGB","ALPHA",
-  "BLEND","ADD","SUBTRACT","DARKEST","LIGHTEST","DIFFERENCE",
-  "EXCLUSION","MULTIPLY","SCREEN","OVERLAY","HARD_LIGHT","SOFT_LIGHT",
-  "DODGE","BURN","REPLACE","REMOVE",
-  "THRESHOLD","GRAY","INVERT","POSTERIZE","BLUR","OPAQUE","ERODE","DILATE",
-  "OPEN","CHORD","PIE",
-  "ROUND","SQUARE","PROJECT","MITER","BEVEL",
-  "UP","DOWN","ALT","CONTROL","SHIFT","BACKSPACE","TAB","ENTER","RETURN",
-  "ESC","DELETE","CODED","ARROW_LEFT","ARROW_RIGHT","ARROW_UP","ARROW_DOWN",
-  "P2D","P3D","JAVA2D","PDF","SVG","DXF","FX2D",
-  "ENABLE_DEPTH_TEST","DISABLE_DEPTH_TEST",
-  "ENABLE_DEPTH_MASK","DISABLE_DEPTH_MASK",
-  "true","false","null","nullptr","NULL",
-  "WHITE","BLACK","RED","GREEN","BLUE","YELLOW","CYAN","MAGENTA",
-]);
-// KEYWORD5: types -- always colored
-const KEYWORD5 = new Set([
-  "color","PVector","PImage","PGraphics","PFont","PShape","PApplet",
-  "ArrayList","IntList","FloatList","StringList","HashMap","HashSet",
-  "int","float","double","boolean","bool","byte","char","long","short",
-  "void","String","string","auto","size_t","uint32_t","uint8_t",
-]);
-// KEYWORD6: language keywords -- always colored
-const KEYWORD6 = new Set([
-  "class","struct","public","private","protected","virtual","override","final",
-  "static","const","constexpr","inline","explicit","friend","operator",
-  "new","delete","this","super","extends","implements","import","package",
-  "namespace","using","typedef","typename","template","sizeof","alignof",
-  "noexcept","decltype","nullptr","true","false",
-  "include","define","ifdef","ifndef","endif","pragma",
-]);
-
-// ── Token class → CSS class mapping ──────────────────────────────────────────
-// We emit custom token names that map to CSS via CodeMirror's token naming
-// cm-keyword1 etc aren't standard; we use cm-def for FUNCTION1, etc.
-
-CodeMirror.defineMode("schememode", function(config) {
-  var clikeMode = CodeMirror.getMode(config, "text/x-c++src");
-
+// CodeMirror mode for Processing Scheme Mode, colored like the Processing IDE.
+// Word lists come from Scheme Mode's keywords.txt.
+(function(mod) { mod(CodeMirror); })(function(CodeMirror) {
+const FN = new Set(["abs", "acos", "add", "add-child", "add-column", "add-row", "addChild", "addColumn", "addRow", "alpha", "ambient", "ambient-light", "ambientLight", "angle", "angle-between", "angleBetween", "append", "apply", "apply-matrix", "applyMatrix", "arc", "arc-mode", "array", "asin", "assoc", "assq", "assv", "atan", "atan2", "background", "begin-camera", "begin-contour", "begin-draw", "begin-raw", "begin-record", "begin-shape", "beginCamera", "beginContour", "beginDraw", "beginRaw", "beginRecord", "beginShape", "bezier", "bezier-detail", "bezier-point", "bezier-tangent", "bezier-vertex", "bezierDetail", "bezierPoint", "bezierTangent", "bezierVertex", "binary", "blend", "blend-mode", "blendMode", "bloom", "blue", "boolean?", "box", "brightness", "caaar", "caar", "cadar", "cadddr", "caddr", "cadr", "call-with-current-continuation", "call-with-output-string", "call-with-values", "call/cc", "camera", "camera-center", "camera-distance", "camera-look-at", "camera-max-distance", "camera-min-distance", "camera-position", "camera-reset", "camera-speed", "capsule", "capture-mouse", "captureMouse", "car", "cdar", "cdddr", "cddr", "cdr", "ceil", "ceiling", "char->integer", "char-alphabetic?", "char-downcase", "char-lower-case?", "char-numeric?", "char-upcase", "char-upper-case?", "char-whitespace?", "char<?", "char=?", "char>?", "char?", "circle", "clamp", "clear", "clear-text-features", "clear-text-variations", "clip", "close", "close-input-port", "close-output-port", "close-port", "color-hex", "color-mode", "colorMode", "concat", "cond", "cone", "conical-frustum", "cons", "constrain", "copy", "copy-from", "cos", "create-buffer", "create-compute", "create-font", "create-geometry", "create-graphics", "create-image", "create-input", "create-material", "create-output", "create-particles", "create-reader", "create-shader", "create-shape", "create-table", "create-window", "create-writer", "createFont", "createGraphics", "createImage", "createInput", "createOutput", "createReader", "createShape", "createWriter", "cross", "current-output-port", "cursor", "curve", "curve-detail", "curve-point", "curve-tangent", "curve-tightness", "curve-vertex", "curveDetail", "curvePoint", "curveTangent", "curveTightness", "curveVertex", "cylinder", "day", "degrees", "delay", "digit-value", "directional-light", "directionalLight", "disable-camera", "disable-style", "disableStyle", "display", "display-density", "displayDensity", "dist", "distance", "div", "do", "dot", "draw-geometry", "dynamic-wind", "ellipse", "ellipse-mode", "ellipseMode", "emissive", "enable-style", "enableStyle", "end-camera", "end-contour", "end-draw", "end-raw", "end-record", "end-shape", "endCamera", "endContour", "endRaw", "endRecord", "endShape", "eof-object", "eof-object?", "eq?", "equal?", "equals", "eqv?", "error", "error-object-irritants", "error-object-message", "error-object?", "even?", "exact", "exact-integer?", "exact?", "exit", "exp", "expt", "extend", "feedback", "fill", "filter", "find-row", "floor", "flush", "flush-output-port", "fold", "fold-left", "fold-right", "for-each", "format", "free-camera", "from-angle", "fromAngle", "frustum", "full-screen", "fullScreen", "gcd", "get", "get-boolean", "get-child", "get-child-count", "get-children", "get-clipboard", "get-column-count", "get-column-title", "get-content", "get-float", "get-int", "get-json-array", "get-json-object", "get-matrix", "get-name", "get-output-string", "get-row", "get-row-count", "get-string", "get-vertex", "get-vertex-count", "getChild", "getChildCount", "getChildren", "getClipboard", "getColumnCount", "getColumnTitle", "getContent", "getFloat", "getInt", "getName", "getRowCount", "getString", "getVertex", "getVertexCount", "green", "grid", "guard", "has-attribute", "has-key", "has-value", "hasAttribute", "hasKey", "hasValue", "hash-table->alist", "hash-table-clear!", "hash-table-contains?", "hash-table-copy", "hash-table-count", "hash-table-delete!", "hash-table-exists?", "hash-table-keys", "hash-table-ref", "hash-table-ref-default", "hash-table-set!", "hash-table-size", "hash-table-update!", "hash-table-update!/default", "hash-table-values", "hash-table-walk", "hash-table?", "heading", "hex", "hint", "hour", "hsla", "hsva", "hue", "hwba", "if", "image", "image-mode", "imageMode", "increment", "index", "inexact", "inexact?", "integer->char", "integer?", "iota", "is-alt-down", "is-ctrl-down", "is-looping", "is-null", "is-shift-down", "is-visible", "isAltDown", "isCtrlDown", "isNull", "isShiftDown", "join", "key-is-down", "key-just-pressed", "keys", "lab", "last-pair", "launch", "lch", "lcm", "length", "length-squared", "lerp", "lerp-color", "lerpColor", "light-falloff", "light-specular", "lightFalloff", "lightSpecular", "lights", "limit", "line", "linear-rgb", "list", "list->string", "list->vector", "list-attributes", "list-copy", "list-fonts", "list-ref", "list-sort", "list-tail", "list?", "load-bytes", "load-font", "load-gltf", "load-image", "load-jSONArray", "load-jSONObject", "load-json", "load-json-array", "load-json-object", "load-pixels", "load-shader", "load-shape", "load-strings", "load-table", "load-xML", "load-xml", "loadBytes", "loadFont", "loadImage", "loadJSONArray", "loadJSONObject", "loadPixels", "loadShader", "loadShape", "loadStrings", "loadTable", "loadXML", "log", "loop", "lower", "mag", "mag-sq", "magSq", "make-equal-hash-table", "make-eqv-hash-table", "make-hash-table", "make-string", "make-strong-eqv-hash-table", "make-vector", "map", "mask", "match", "match-all", "matchAll", "material", "max", "member", "memq", "memv", "metallic", "midi-connect", "midi-disconnect", "midi-list-ports", "midi-note-off", "midi-note-on", "midi-play-notes", "midi-refresh-ports", "millis", "min", "minute", "mode-2d", "mode-3d", "model-x", "model-y", "model-z", "modelX", "modelY", "modelZ", "modulo", "monitors", "month", "mult", "negative?", "newline", "nf", "nfc", "nfp", "nfs", "no-bloom", "no-clip", "no-cursor", "no-fill", "no-lights", "no-loop", "no-smooth", "no-stroke", "no-text-feature", "no-texture", "no-tint", "no-tonemapping", "noClip", "noCursor", "noFill", "noLights", "noLoop", "noSmooth", "noStroke", "noTint", "noise", "noise-detail", "noise-seed", "noiseDetail", "noiseSeed", "norm", "normal", "normalize", "not", "null?", "number->string", "number?", "odd?", "oklab", "oklch", "open-input-string", "open-output-string", "orbit-camera", "ortho", "pair?", "pan-camera", "parse-jSONArray", "parse-jSONObject", "parse-json-array", "parse-json-object", "parse-xML", "parse-xml", "parseJSONArray", "parseJSONObject", "parseXML", "particles", "peek-char", "peek-u8", "perpendicular", "perspective", "plane", "point", "point-light", "pointLight", "pop", "pop-matrix", "pop-style", "popMatrix", "popStyle", "positive?", "pow", "primary-monitor", "print", "print-array", "print-camera", "print-matrix", "print-projection", "printArray", "printCamera", "printMatrix", "printProjection", "println", "procedure?", "push", "push-matrix", "push-style", "pushMatrix", "pushStyle", "quad", "quadratic-vertex", "quadraticVertex", "quat", "quotient", "radians", "raise", "raise-continuable", "random", "random-gaussian", "random-seed", "random2-d", "random2D", "random3-d", "random3D", "randomGaussian", "randomSeed", "rational?", "read-char", "read-line", "read-string", "read-u8", "real?", "rect", "rect-mode", "rectMode", "red", "redraw", "reduce", "release-mouse", "releaseMouse", "remainder", "remap", "remove", "remove-row", "removeRow", "request-image", "requestImage", "reset-matrix", "reset-shader", "resetMatrix", "resetShader", "resize", "reverse", "rotate", "rotate-axis", "rotate-x", "rotate-y", "rotate-z", "rotateX", "rotateY", "rotateZ", "roughness", "round", "rows", "saturation", "save", "save-bytes", "save-frame", "save-jSONArray", "save-jSONObject", "save-json", "save-json-array", "save-json-object", "save-stream", "save-strings", "save-table", "save-xML", "save-xml", "saveBytes", "saveFrame", "saveJSONArray", "saveJSONObject", "saveStream", "saveStrings", "saveTable", "saveXML", "scale", "screen-x", "screen-y", "screen-z", "screenX", "screenY", "screenZ", "second", "select-folder", "select-input", "select-output", "selectFolder", "selectInput", "selectOutput", "set", "set-boolean", "set-car!", "set-cdr!", "set-clipboard", "set-content", "set-fill", "set-float", "set-heading", "set-int", "set-json-array", "set-json-object", "set-mag", "set-matrix", "set-string", "set-stroke", "set-stroke-weight", "set-vertex", "set-visible", "setClipboard", "setContent", "setFill", "setFloat", "setInt", "setMag", "setString", "setStroke", "setVertex", "setVisible", "shader", "shape", "shape-mode", "shapeMode", "shear-x", "shear-y", "shearX", "shearY", "shininess", "shuffle", "sin", "size", "smooth", "sort", "sort-reverse", "sortReverse", "specular", "sphere", "sphere-detail", "sphereDetail", "split", "split-tokens", "splitTokens", "spot-light", "spotLight", "sq", "sqrt", "square", "srgb", "str", "string->list", "string->number", "string->symbol", "string-append", "string-copy", "string-downcase", "string-for-each", "string-index", "string-length", "string-map", "string-ref", "string-set!", "string-upcase", "string<?", "string=?", "string>?", "string?", "stroke", "stroke-cap", "stroke-join", "stroke-weight", "strokeCap", "strokeJoin", "strokeWeight", "sub", "subset", "substring", "symbol->string", "symbol?", "tan", "tetrahedron", "text", "text-align", "text-ascent", "text-bounds", "text-descent", "text-feature", "text-font", "text-glyph-colors", "text-glyph-rects", "text-leading", "text-line-count", "text-lines", "text-mode", "text-size", "text-style", "text-to-contours", "text-to-model", "text-to-paths", "text-to-points", "text-variation", "text-weight", "text-width", "text-wrap", "textAlign", "textAscent", "textDescent", "textFont", "textLeading", "textMode", "textSize", "textWidth", "texture", "texture-mode", "texture-transform", "texture-wrap", "textureMode", "textureWrap", "thread", "tint", "to-list", "to-string", "toString", "tonemapping", "torus", "translate", "triangle", "trim", "truncate", "unbinary", "unhex", "unless", "unlit", "update-pixels", "updatePixels", "upper", "uv", "values", "vec-x", "vec-y", "vec-z", "vec2", "vec3", "vec4", "vector", "vector->list", "vector-fill!", "vector-for-each", "vector-length", "vector-map", "vector-ref", "vector-set!", "vector-set-x", "vertex", "vertex-count", "when", "window-always-on-top", "window-center-on", "window-decorated", "window-iconify", "window-maximize", "window-move", "window-opacity", "window-position-on", "window-resizable", "window-resize", "window-restore", "window-title", "window-visible", "windowMove", "windowResizable", "windowResize", "windowTitle", "with-exception-handler", "with-output-to-string", "world-x", "world-y", "world-z", "write", "write-char", "write-string", "write-u8", "xyz", "year", "zero?"]);
+const EVENTS = new Set(["draw", "key-released", "key-typed", "keyReleased", "keyTyped", "mouse-clicked", "mouse-dragged", "mouse-moved", "mouse-released", "mouse-wheel", "mouseClicked", "mouseDragged", "mouseMoved", "mouseReleased", "mouseWheel", "settings", "setup", "window-moved", "window-resized", "windowMoved", "windowResized"]);
+const FORMS = new Set(["and", "assert", "auto", "begin", "break", "case", "case-lambda", "class", "const", "continue", "default", "define", "define-record-type", "define-syntax", "define-values", "delay-force", "delete", "else", "enum", "extern", "false", "final", "import", "include", "inline", "lambda", "let", "let*", "let*-values", "let-syntax", "let-values", "letrec", "letrec*", "letrec-syntax", "make-promise", "namespace", "new", "nullptr", "or", "override", "parameterize", "private", "protected", "public", "quasiquote", "quote", "return", "set!", "sizeof", "static", "std", "struct", "syntax-rules", "template", "this", "transient", "true", "typedef", "typename", "union", "unquote", "unquote-splicing", "using", "virtual", "void", "volatile"]);
+const VARS = new Set(["ABS", "ACES", "ADD", "AFFINE", "AGE", "AGX", "ALT", "ARC", "ARGB", "ARROW", "ATTRACT", "BACKQUOTE", "BACKSLASH", "BACKSPACE", "BASELINE", "BEVEL", "BLEND", "BLENDER_FILMIC", "BLUR", "BOLD", "BOLD_ITALIC", "BOTTOM", "BOUNDS_BOX", "BOUNDS_SPHERE", "BOX", "BRACKET_LEFT", "BRACKET_RIGHT", "CENTER", "CHAR", "CHORD", "CLAMP", "CLOSE", "CODED", "COMBINE", "COMMA", "CONSTANT", "CONTROL", "CORNER", "CORNERS", "COUNT", "CROSS", "CUBIC", "CUSTOM", "DARKEST", "DEG_TO_RAD", "DELETE", "DENSITY", "DIAMETER", "DIFFERENCE", "DILATE", "DISABLE_DEPTH_SORT", "DISABLE_DEPTH_TEST", "DISABLE_OPENGL_ERRORS", "DISABLE_STROKE_PERSPECTIVE", "DISABLE_TEXTURE_MIPMAPS", "DIV", "DOWN", "DRAG", "DXF", "ELLIPSE", "ENABLE_DEPTH_SORT", "ENABLE_DEPTH_TEST", "ENABLE_OPENGL_ERRORS", "ENABLE_STROKE_PERSPECTIVE", "ENABLE_TEXTURE_MIPMAPS", "END", "ENTER", "EQ", "EQUAL", "ERODE", "ESC", "ESCAPE", "EXCLUSION", "EXTRACT", "F1", "F10", "F11", "F12", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "FIELD", "FIND_NEIGHBORS", "FLOOR", "FORCE", "GAUSSIAN", "GENERATE", "GEQ", "GIF", "GRAY", "GREATER", "GROUP", "HALF_PI", "HAND", "HOME", "HSB", "HSL", "HSV", "HWB", "IMAGE", "IMPULSE", "INSERT", "INTEGRATE", "INVERSE", "INVERSE_SQUARE", "INVERT", "ITALIC", "JAVA2D", "JPEG", "KEY_0", "KEY_1", "KEY_2", "KEY_3", "KEY_4", "KEY_5", "KEY_6", "KEY_7", "KEY_8", "KEY_9", "KEY_A", "KEY_B", "KEY_C", "KEY_D", "KEY_E", "KEY_F", "KEY_G", "KEY_H", "KEY_I", "KEY_J", "KEY_K", "KEY_L", "KEY_M", "KEY_N", "KEY_O", "KEY_P", "KEY_Q", "KEY_R", "KEY_S", "KEY_T", "KEY_U", "KEY_V", "KEY_W", "KEY_X", "KEY_Y", "KEY_Z", "LAB", "LCH", "LEFT", "LEFT_ARROW", "LENGTH", "LEQ", "LESS", "LIGHTEST", "LIMIT", "LINE", "LINEAR", "LINES", "LINE_STRIP", "LOOKUP", "MAP", "MAX", "MEAN", "MIN", "MINUS", "MIRROR", "MITER", "MIX", "MODEL", "MOVE", "MUL", "MULTIPLY", "NEAREST", "NEGATE", "NEIGHBOR", "NEQ", "NOISE", "NORMAL", "NORMALIZE", "NULL", "OKLAB", "OKLCH", "ONE", "OPAQUE", "OPEN", "ORIENT", "OVERLAY", "P2D", "P3D", "PACK", "PAGE_DOWN", "PAGE_UP", "PATH", "PBR_NEUTRAL", "PDF", "PERIOD", "PI", "PIE", "POINT", "POINTS", "POLYGON", "POSTERIZE", "POW", "PROJECT", "QUAD", "QUADRATIC", "QUADS", "QUAD_STRIP", "QUARTER_PI", "QUOTE", "RADIUS", "RAD_TO_DEG", "RECT", "REDUCE", "REINHARD", "REINHARD_LUMINANCE", "REPEAT", "REPLACE", "RETURN", "RGB", "RIGHT", "RIGHT_ARROW", "ROUND", "SCREEN", "SEMICOLON", "SHAPE", "SHIFT", "SIGNED", "SLASH", "SMOOTHSTEP", "SOMEWHAT_BORING_DISPLAY_TRANSFORM", "SPACE", "SPHERE", "SQRT", "SQUARE", "SRGB", "SUB", "SUBTRACT", "SUM", "SUMSQ", "SUPER", "SVG", "TAB", "TAU", "TEXT", "THRESHOLD", "TONY_MC_MAPFACE", "TOP", "TRANSFORM", "TRIANGLE", "TRIANGLES", "TRIANGLE_FAN", "TRIANGLE_STRIP", "TWO_PI", "UNIFORM", "UP", "VORTEX", "WAIT", "WORD", "XYZ", "_frameRate", "_keyPressed", "_mousePressed", "delta-time", "deltaTime", "display-height", "display-width", "displayHeight", "displayWidth", "focused", "frame-count", "frame-rate", "frameCount", "frameRate", "height", "key", "key-code", "key-pressed", "keyCode", "keyPressed", "mouse-button", "mouse-dX", "mouse-dY", "mouse-pressed", "mouse-x", "mouse-y", "mouseButton", "mouseDX", "mouseDY", "mousePressed", "mouseX", "mouseY", "pixel-density", "pixel-height", "pixel-width", "pixelDensity", "pixelHeight", "pixelWidth", "pixels", "pmouse-x", "pmouse-y", "pmouseX", "pmouseY", "width"]);
+const TYPES = new Set(["ArrayList", "BufferedReader", "Byte", "Character", "Float", "FloatDict", "FloatList", "HashMap", "IntDict", "IntList", "Integer", "JSONArray", "JSONObject", "PFont", "PGraphics", "PImage", "PShader", "PShape", "PVector", "PrintWriter", "String", "StringDict", "StringList", "Table", "TableRow", "XML", "bool", "char", "color", "double", "float", "int", "long", "short", "signed", "string", "unsigned"]);
+const SYM = /^[^\s()\[\]{}"';`,]+/;
+CodeMirror.defineMode("schememode", function() {
   return {
-    startState: function() {
-      return {
-        clike: CodeMirror.startState(clikeMode),
-        lastToken: null,
-        lastWord: null,
-        parenNext: false,  // true if we just emitted a paren-sensitive word
-        pendingWord: null, // word waiting to see if ( follows
-        pendingType: null,
-      };
-    },
-
-    copyState: function(state) {
-      return {
-        clike: CodeMirror.copyState(clikeMode, state.clike),
-        lastToken: state.lastToken,
-        lastWord: state.lastWord,
-        parenNext: state.parenNext,
-        pendingWord: state.pendingWord,
-        pendingType: state.pendingType,
-      };
-    },
-
-    token: function(stream, state) {
-      // Skip whitespace
-      if (stream.eatSpace()) {
-        return null;
+    startState() { return { inBlock: 0, inString: false }; },
+    token(stream, state) {
+      if (state.inString) {
+        while (!stream.eol()) { const ch = stream.next(); if (ch === "\\") stream.next(); else if (ch === '"') { state.inString = false; break; } }
+        return "string";
       }
-
-      // Check for pending word -- did ( follow?
-      if (state.pendingWord) {
-        var ch = stream.peek();
-        var word = state.pendingWord;
-        var type = state.pendingType;
-        state.pendingWord = null;
-        state.pendingType = null;
-
-        if (ch === '(') {
-          // Yes -- emit as function
-          return type === 'f1' ? 'schememode-f1' : 'schememode-f2';
-        } else {
-          // No paren -- if it's a dual type/function word, emit as type
-          if (KEYWORD5.has(word)) return 'schememode-k5';
-          return null;
+      if (state.inBlock) {
+        while (!stream.eol()) {
+          if (stream.match("|#")) { state.inBlock--; if (!state.inBlock) break; }
+          else if (stream.match("#|")) state.inBlock++;
+          else stream.next();
         }
+        return "comment";
       }
-
-      var start = stream.pos;
-
-      // Identifiers / keywords
-      if (stream.match(/^[a-zA-Z_][a-zA-Z0-9_]*/)) {
-        var word = stream.current();
-
-        // KEYWORD3: control flow -- always
-        if (KEYWORD3.has(word)) return 'schememode-k3';
-
-        // KEYWORD6: language keywords -- always
-        if (KEYWORD6.has(word)) return 'schememode-k6';
-
-        // KEYWORD4: constants -- always
-        if (KEYWORD4.has(word)) return 'schememode-k4';
-
-        // FUNCTION1 always (entry points)
-        if (FUNCTION1_ALWAYS.has(word)) return 'schememode-f1';
-
-        // FUNCTION1 paren-sensitive (constructors)
-        if (FUNCTION1_PAREN.has(word)) {
-          // Peek ahead -- but we need to skip whitespace
-          // Use pending mechanism
-          state.pendingWord = word;
-          state.pendingType = 'f1';
-          // Consume this token now but defer color decision
-          // We'll decide next token call
-          return null; // temporarily uncolored -- will be resolved next call
-        }
-
-        // FUNCTION2: paren-sensitive API
-        if (FUNCTION2.has(word)) {
-          state.pendingWord = word;
-          state.pendingType = 'f2';
-          return null;
-        }
-
-        // KEYWORD5: types -- always (for things not in FUNCTION1_PAREN)
-        if (KEYWORD5.has(word)) return 'schememode-k5';
-
-        // Fall through to clike for other identifiers
-        stream.backUp(stream.current().length);
+      if (stream.eatSpace()) return null;
+      if (stream.peek() === ";") { stream.skipToEnd(); return "comment"; }
+      if (stream.match("#|")) { state.inBlock = 1; return "comment"; }
+      if (stream.peek() === '"') { stream.next(); state.inString = true; return this.token(stream, state); }
+      if (stream.match(/^#\\(space|newline|tab|x[0-9a-fA-F]+|.)/)) return "string";
+      if (stream.match(/^#[tf]\b/) || stream.match(/^#(true|false)\b/)) return "keyword1";
+      if (stream.match(/^#x[0-9a-fA-F]+/)) return "number";
+      if (stream.match(/^[-+]?(\d+\.?\d*|\.\d+)(e[-+]?\d+)?(?=[\s()\]]|$)/i)) return "number";
+      if (stream.match(/^[()\[\]'`,]/)) return "operator";
+      if (stream.match(SYM)) {
+        const w = stream.current();
+        const head = /\(\s*$/.test(stream.string.slice(0, stream.start));
+        const prev = stream.string.slice(0, stream.start);
+        if (FORMS.has(w)) return "keyword1";
+        if (EVENTS.has(w) && /\(define\s+\(\s*$/.test(prev)) return "function4";
+        if (/\(define\s+\(\s*$/.test(prev) && (w === "setup" || w === "draw" || w === "settings")) return "function4";
+        if (head && (FN.has(w) || EVENTS.has(w))) return "function2";
+        if (VARS.has(w)) return "keyword4";
+        if (TYPES.has(w)) return "keyword5";
+        return "variable";
       }
-
-      // Delegate to clike for everything else (strings, numbers, operators, etc.)
-      var tok = clikeMode.token(stream, state.clike);
-      return tok;
+      stream.next();
+      return null;
     },
-
-    indent: function(state, textAfter) {
-      return clikeMode.indent(state.clike, textAfter);
-    },
-
-    electricChars: clikeMode.electricChars,
-    lineComment: clikeMode.lineComment,
-    blockCommentStart: clikeMode.blockCommentStart,
-    blockCommentEnd: clikeMode.blockCommentEnd,
-    blockCommentContinue: clikeMode.blockCommentContinue,
-    fold: "brace",
+    lineComment: ";"
   };
 });
-
 CodeMirror.defineMIME("text/x-schememode", "schememode");
-
-}); // end module
+});

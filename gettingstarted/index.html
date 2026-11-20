@@ -136,8 +136,12 @@
     </div>
 
     <h2>1. Install Scheme Mode</h2>
-    <p>Open Processing, click the mode dropdown in the top-right of the editor, choose <strong>Add Mode...</strong>, then search for <strong>Scheme Mode</strong> in the Contribution Manager and click Install.</p>
-    <p>Full walkthrough with screenshots: see <a href="/downloads#cpp-mode" style="border-bottom:1px solid #ddd;">Looking for the Scheme Mode?</a> on the Downloads page.</p>
+    <p><ol>
+        <li>Download the Scheme Mode zip from the <a href="https://github.com/llamasjc/processing-scheme/releases/latest" style="border-bottom:1px solid #ddd;">latest release</a>.</li>
+        <li>Unzip it into the <strong>modes</strong> folder of your sketchbook (Processing shows where the sketchbook is in <strong>File &gt; Preferences</strong>), so you have <code>sketchbook/modes/SchemeMode</code>.</li>
+        <li>Restart Processing and pick <strong>Scheme</strong> from the mode dropdown in the top-right of the editor.</li>
+      </ol></p>
+    <p>More about installing: see <a href="/downloads#scheme-mode" style="border-bottom:1px solid #ddd;">Installing Scheme Mode</a> on the Downloads page.</p>
 
     <h2>2. Open a new sketch</h2>
     <div class="step">
@@ -167,15 +171,13 @@
 
     <h2>3. Write your first sketch</h2>
     <p>Every sketch has two functions: <code>setup()</code> runs once when the sketch starts, and <code>draw()</code> runs over and over, once per frame. Type this into the editor:</p>
-    <pre><code>void setup() {
-  size(640, 360);
-}
+    <pre><code>(define (setup)
+  (size 640 360))
 
-void draw() {
-  background(20);
-  ellipse(mouseX, mouseY, 40, 40);
-}</code></pre>
-    <p><code>size()</code> sets the window dimensions. <code>background()</code> clears the frame to a color each time it's drawn. <code>ellipse()</code> draws a circle that follows wherever the mouse is, using the built-in <code>mouseX</code> and <code>mouseY</code> variables.</p>
+(define (draw)
+  (background 20)
+  (ellipse mouse-x mouse-y 40 40))</code></pre>
+    <p><code>size()</code> sets the window dimensions. <code>background()</code> clears the frame to a color each time it's drawn. <code>ellipse()</code> draws a circle that follows wherever the mouse is, using the built-in <code>mouse-x</code> and <code>mouse-y</code> variables.</p>
 
     <h2>4. Run it</h2>
     <div class="step">
@@ -203,12 +205,12 @@ void draw() {
       </div>
     </div>
 
-    <p>That's a complete sketch. Under the hood it's compiling to real Scheme and running natively, but everything about writing it looks and feels like any other Processing mode.</p>
+    <p>That's a complete sketch. Under the hood it runs as Python on the same engine as Scheme Mode, but everything about writing it looks and feels like any other Processing mode.</p>
 
     <div class="next-steps">
       <a href="/reference">Browse the reference →</a>
       <a href="/examples">See more examples →</a>
-      <a href="/downloads">Using your own editor instead? →</a>
+      <a href="/whats-new">Coming from Java? →</a>
     </div>
   </div>
 </div>

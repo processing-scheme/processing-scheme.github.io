@@ -179,6 +179,7 @@
       button[onclick="toggleHeroEditor()"] { display: none; }
     }
   </style>
+<style>button[onclick="toggleHeroEditor()"], #hero-sketch-run-btn { display: none !important; }</style>
 </head>
 <body>
 
@@ -199,7 +200,7 @@
         <div class="hero-actions">
           <a class="hero-link" href="/reference">Reference</a>
           <a class="hero-btn-download" href="/downloads">Download</a>
-          <a class="hero-btn-download hero-btn-editor" href="/editor">Open Editor</a>
+          
         </div>
         <textarea id="hero-editor" style="display:none;"></textarea>
 
@@ -538,12 +539,12 @@ function mousePressed() {
       <div class="gs-cards">
         <div class="gs-card">
           <h3>Looking for the Scheme Mode?</h3>
-          <p>Install Scheme Mode straight from the Processing IDE's Contribution Manager. No separate download needed.</p>
+          <p>Download one zip, unzip it into your sketchbook's modes folder, and restart Processing.</p>
           <a class="gs-card-link" href="/downloads#cpp-mode">See how →</a>
         </div>
         <div class="gs-card">
-          <h3>Download the headers</h3>
-          <p>Using your own editor and build system? Drop the engine into your project as a plug-and-play folder or a CMake target.</p>
+          <h3>Get the standalone pack</h3>
+          <p>Want to run sketches from your own editor? The standalone pack runs a .scm file with nothing else installed.</p>
           <a class="gs-card-link" href="/downloads">Go to downloads →</a>
         </div>
         <div class="gs-card">

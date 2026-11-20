@@ -59,7 +59,6 @@
         var s = document.querySelector('.sidebar-outer, .sidebar');
         if(s) s.classList.toggle('open');
       ">☰</button>
-      <a href="${prefix}error/index.html" id="nav-errors-link"${isActive('error') ? ' class="active"' : ''}>Errors</a>
       <button id="nav-dark-btn" onclick="window.__toggleDark&&window.__toggleDark()" style="background:#111;color:#fff;border:none;padding:4px 12px;border-radius:4px;font-size:12px;cursor:pointer;margin-left:0.5rem;font-weight:600;">🌙 Dark</button>
     `;
   }
@@ -74,7 +73,6 @@
       ${link('tutorials', 'Tutorials')}
       ${link('reference', 'Reference')}
       ${link('examples', 'Examples')}
-      ${link('editor', 'Editor')}
       ${link('about', 'About')}
       <a href="https://discord.gg/Un3DFmrUje" target="_blank" style="color:#5865F2;font-weight:600;">Discord</a>
     `;
